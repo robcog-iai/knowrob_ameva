@@ -18,6 +18,10 @@ pkg_check_modules(LIBWEBSOCKETS REQUIRED libwebsockets)
 link_directories(${LIBWEBSOCKETS_LIBRARY_DIRS})
 message(STATUS "LIBWEBSOCKETS found.")
 
+pkg_check_modules(CURLPP REQUIRED curlpp)
+link_directories(${CURLPP_LIBRARY_DIRS})
+message(STATUS "LIBWEBSOCKETS found.")
+
 set(proto_dir ${PROJECT_SOURCE_DIR}/src/proto)
 file(GLOB proto_files "${proto_dir}/*.proto")
 message(STATUS "Proto Source Dir: ${proto_dir}")
@@ -69,10 +73,10 @@ target_link_libraries(knowrob_ameva_proto ${PROTOBUF_LIBRARIES})
 add_dependencies(knowrob_ameva_proto knowrob_ameva_generate_headers)
 
 
-include_directories(include ${SWIPL_INCLUDE_DIRS} ${LIBWEBSOCKETS_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} ${proto_gen_cpp_dir})
+include_directories(include ${SWIPL_INCLUDE_DIRS} ${LIBWEBSOCKETS_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} ${proto_gen_cpp_dir} ${CURLPP_INCLUDE_DIRS})
 
 add_library(knowrob_ameva SHARED 
     src/knowrob_ameva.cpp
     )
-target_link_libraries(knowrob_ameva  knowrob_ameva_proto ${LIBWEBSOCKETS_LIBRARIES} ${SWIPL_LIBRARIES} ${catkin_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} )
+target_link_libraries(knowrob_ameva  knowrob_ameva_proto ${LIBWEBSOCKETS_LIBRARIES} ${SWIPL_LIBRARIES} ${catkin_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${CURLPP_LIBRARIES})
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_proto)

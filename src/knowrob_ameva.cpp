@@ -6,6 +6,12 @@
 #include <thread>
 #include <queue>
 #include <string>
+#include <sstream> 
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
+
+using namespace curlpp::options;
 
 class RequestTask 
 {
@@ -15,13 +21,15 @@ public:
 	RequestTask(int i, std::string m) : client_id(i), msg(m) {}
 };
 
-const char* LOG_LABEL = "[AMEVA] ";      // log label
-static const int CLIENT_NUM = 128;       // maximun connected client
+const char* gs_launcher_addr = "127.0.0.1:9090";
 
-static int interrupted;                  // stop server
-static std::queue<RequestTask*> queue;   // messages to send
-static struct lws *clients[CLIENT_NUM];  // unreal client 
-static int client_id = 0;                // client id
+const char* LOG_LABEL = "[AMEVA] ";      	// log label
+static const int CLIENT_NUM = 128; 			// maximun connected client
+
+static int interrupted;                  	// stop server
+static std::queue<RequestTask*> queue;  	// messages to send
+static struct lws *clients[CLIENT_NUM];  	// unreal client 
+static int client_id = 0;                	// client id
 
 
 // HTTP handler
@@ -178,6 +186,7 @@ sl_pb::MarkerType get_mesh_type(char* type)
 	return sl_pb::Box;
 }
 
+// Check if given client id valid
 bool check_client_connected(int client)
 {
 	if (clients[client] == NULL) {
@@ -187,12 +196,14 @@ bool check_client_connected(int client)
 	return true;
 }
 
+// Start websocket server on port 8080
 PREDICATE(ue_start_srv, 0)
 { 
 	std::thread (server_thread, 8080).detach();
 	return TRUE;
 }
 
+// Display all the connected clients
 PREDICATE(ue_show_clients, 0)
 { 
 	std::cout << LOG_LABEL << "Connected clients:\n";
@@ -206,6 +217,7 @@ PREDICATE(ue_show_clients, 0)
 	return TRUE;
 }
 
+// Set the task 
 PREDICATE(ue_set_task, 2)
 {
 	sl_pb::KRAmevaEvent ameva_event;
@@ -220,6 +232,7 @@ PREDICATE(ue_set_task, 2)
 	return TRUE;
 }
 
+// Set the episode
 PREDICATE(ue_set_episode, 2)
 {
 	sl_pb::KRAmevaEvent ameva_event;
@@ -234,6 +247,7 @@ PREDICATE(ue_set_episode, 2)
 	return TRUE;
 }
 
+// Call the draw marker function
 PREDICATE(ue_draw_marker, 7)
 { 
 	if (!check_client_connected((int)A1))
@@ -247,7 +261,7 @@ PREDICATE(ue_draw_marker, 7)
 	marker_params->set_marker(get_mesh_type((char*)A4));
 	marker_params->set_color((char*)A5);
 	marker_params->set_scale((double)A6);
-	marker_params->set_unlit((char*)A7);
+	marker_params->set_material((char*)A7);
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	RequestTask* task = new RequestTask((int) A1, proto_str);
@@ -256,6 +270,7 @@ PREDICATE(ue_draw_marker, 7)
 	return TRUE;
 }
 
+// Call the draw marker trajectory function
 PREDICATE(ue_draw_marker, 8)
 { 
 	if (!check_client_connected((int)A1))
@@ -270,7 +285,7 @@ PREDICATE(ue_draw_marker, 8)
 	marker_traj_params->set_marker(get_mesh_type((char*)A5));
 	marker_traj_params->set_color((char*)A6);
 	marker_traj_params->set_scale((double)A7);
-	marker_traj_params->set_unlit((char*)A7);
+	marker_traj_params->set_material((char*)A8);
 
 	std::string proto_str = ameva_event.SerializeAsString();
 	RequestTask* task = new RequestTask((int) A1, proto_str);
@@ -278,9 +293,77 @@ PREDICATE(ue_draw_marker, 8)
 	return TRUE;
 }
 
+// Close the websocket server
 PREDICATE(ue_close_srv, 0)
 { 
 	interrupted = 1;
 	return TRUE;
 }
 
+// Create a PixelStreaming game server instance
+PREDICATE(ue_create_gs, 0)
+{
+	try
+	{
+		std::list<std::string> header;
+		header.push_back("Content-Type: application/json");
+
+		std::string url;
+		url.append(gs_launcher_addr);
+		url.append("/game-server");
+
+		std::string body = "{ \"KRServerPort\" : 8080, \"KRProtocol\" : \"prolog_websocket\" }";
+
+		curlpp::Cleanup cleanup;
+		curlpp::Easy request;
+		request.setOpt(new curlpp::options::Url(url));
+		request.setOpt(new curlpp::options::HttpHeader(header));
+		request.setOpt(new curlpp::options::PostFields(body));
+		request.setOpt(new curlpp::options::PostFieldSize(body.length()));
+
+		std::ostringstream response;
+		request.setOpt(new curlpp::options::WriteStream(&response));
+
+		request.perform();
+		std::cout << std::string(response.str());
+	}
+	catch(curlpp::RuntimeError & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch(curlpp::LogicError & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return TRUE;
+}
+
+// List all the PixelStreaming game server 
+PREDICATE(ue_list_gs, 0)
+{
+	try
+	{
+		// That's all that is needed to do cleanup of used resources (RAII style).
+		curlpp::Cleanup cleanup;
+		// request to be sent.
+		curlpp::Easy request;
+		// Set the URL.
+		std::string url;
+		url.append(gs_launcher_addr);
+		url.append("/game-servers");
+		request.setOpt<Url>(url);
+		
+		// Send request and get a result.
+		// By default the result goes to standard output.
+		request.perform();
+	}
+	catch(curlpp::RuntimeError & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch(curlpp::LogicError & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return TRUE;
+}
