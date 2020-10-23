@@ -72,11 +72,10 @@ add_library(knowrob_ameva_proto
 target_link_libraries(knowrob_ameva_proto ${PROTOBUF_LIBRARIES})
 add_dependencies(knowrob_ameva_proto knowrob_ameva_generate_headers)
 
-
 include_directories(include ${SWIPL_INCLUDE_DIRS} ${LIBWEBSOCKETS_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} ${proto_gen_cpp_dir} ${CURLPP_INCLUDE_DIRS})
 
 add_library(knowrob_ameva SHARED 
-    src/knowrob_ameva.cpp
+    src/ue_ws_conn.cpp src/ameva_viz.cpp src/ameva_control.cpp src/tutorial.cpp src/agones_conn.cpp src/KRWSServer.cpp
     )
 target_link_libraries(knowrob_ameva  knowrob_ameva_proto ${LIBWEBSOCKETS_LIBRARIES} ${SWIPL_LIBRARIES} ${catkin_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${CURLPP_LIBRARIES})
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_proto)
