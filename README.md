@@ -4,10 +4,11 @@
   
 
 ## Tutorial of creating query to communicate with Unreal
-Goal : Create prolog query hello_world('Current time is`, 12.43), which will send a string and a float to KnowrobManager in Unreal.
+Goal : Create prolog query `hello_world('Current time is', 12.43)`, which will send a string and a float to KnowrobManager in Unreal.
 
 1. Add new event in knowrob_ameva.proto file
-```
+
+```cpp
 // Define parameters to send to Unreal
 // In this case a string and a float
 message PrintHelloWorldParams {
@@ -28,6 +29,7 @@ message KRAmevaEvent {
   ...
 }
 ```
+
 2.  Compile the knowrob_ameva.proto file
 - Compile in knowrob_ameva (linux)
 Put the the knowrob_ameva.proto file in  
@@ -37,7 +39,8 @@ Put the the knowrob_ameva.proto file in
 	- Use this command to compile the proto file. `protoc.exe --cpp_out=. knowrob_ameva.proto`
 	- Put the generated *.pb.cpp and *.pd.h files in `\USemLog\Source\USemLog\Classes\Knowrob\Proto`
 3. Create predicate in knowrob_ameva
-```
+
+```cpp
 // Add one parameter to specify which unreal client to send
 PREDICATE(ue_hello_world, 3)
 {
@@ -64,9 +67,10 @@ queue.push(task);
 return TRUE;
 }
 ```
+
 4. Process data in KnowrobManager
 - Check the event in `FSLKREventDispatcher::ProcessProtobuf(std::string  ProtoStr)`
-	```
+	```cpp
 	void FSLKREventDispatcher::ProcessProtobuf(std::string ProtoStr)
 	{
 		sl_pb::KRAmevaEvent AmevaEvent;
@@ -80,9 +84,10 @@ return TRUE;
 		}
 		...
 	```
-- Get the parameters 
-	```
 	
+- Get the parameters 
+
+	```cpp	
 	void  FSLKREventDispatcher::CustomHanderForPrintHelloWorld(sl_pb::PrintHelloWorldParams  params)
 	{
 		// Get and log the paramter value and 
