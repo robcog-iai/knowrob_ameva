@@ -18,6 +18,7 @@ public:
     static KRWSServer* get_instance();
     void listen(int port);
     void print_clients();
+    int num_clients();
     bool check_client(int client_id);
     void send_message(KRMessage* message);
     void shutdown();
