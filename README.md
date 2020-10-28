@@ -1,7 +1,10 @@
 
 # knowrob_ameva
 
-  
+## Usage
+
+* `rosrun rosprolog rosprolog knowrob_ameva`
+* `ue_start_srv(8080).`
 
 ## Tutorial of creating query to communicate with Unreal
 Goal : Create prolog query hello_world('Current time is`, 12.43), which will send a string and a float to KnowrobManager in Unreal.
