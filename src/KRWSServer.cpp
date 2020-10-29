@@ -6,6 +6,7 @@ std::queue<KRMessage*> KRWSServer::queue;
 int KRWSServer::unique_id = 0;
 bool KRWSServer::is_listen = false;
 bool KRWSServer::is_finish = false;
+std::thread KRWSServer::thrd;
 
 // HTTP handler
 int KRWSServer::callback_http( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len )
@@ -107,6 +108,8 @@ KRWSServer* KRWSServer::get_instance()
 
 void KRWSServer::server_thread(int port) 
 {
+	std::cout << LOG_LABEL << "Starting thread.." << std::endl;
+
     struct lws_context_creation_info info;
 	struct lws_context *context;
 	int n = 0;
@@ -126,6 +129,7 @@ void KRWSServer::server_thread(int port)
 		return;
 	}
 
+	std::cout << LOG_LABEL << "Thread running.." << std::endl;
     while( n >= 0 && !is_finish )
 	{
 		// service andy pending websocket activity, non-blocking
@@ -148,16 +152,19 @@ void KRWSServer::server_thread(int port)
         lock.unlock();
 	}
 	lws_context_destroy( context );
-
+	std::cout << LOG_LABEL << "Thread finished.." << std::endl;
 }
+
 void KRWSServer::listen(int port)
 {
     if (is_listen)
     {
-        std::cout << LOG_LABEL << "Server is already listening";
+        std::cout << LOG_LABEL << "Server is already listening" << std::endl;
         return;
     }
-    std::thread (server_thread, port).detach();
+    //std::thread (server_thread, port).detach();
+	thrd = std::thread(server_thread, port);
+	thrd.detach();
     is_listen = true;
     is_finish = false;
 }
@@ -187,7 +194,7 @@ void KRWSServer::send_message(KRMessage* message)
 {
     if (!is_listen)
     {
-        std::cout << LOG_LABEL << "Server is not started yet";
+        std::cout << LOG_LABEL << "Server is not started yet" << std::endl;
         return;
     }
     lock.lock();
@@ -197,6 +204,7 @@ void KRWSServer::send_message(KRMessage* message)
 
 void KRWSServer::shutdown()
 {
+	std::cout << LOG_LABEL << "shutdown" << std::endl;
     unique_id = 0;
     client_ws.clear();
     std::queue<KRMessage*> empty;
@@ -204,4 +212,11 @@ void KRWSServer::shutdown()
 
     is_finish = true;
     is_listen = false;
+}
+
+// Dtor
+KRWSServer::~KRWSServer()
+{
+	std::cout << LOG_LABEL << "Dtor" << std::endl;
+	shutdown();
 }

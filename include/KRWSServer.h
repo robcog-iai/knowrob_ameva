@@ -25,9 +25,12 @@ public:
 
 private:
     KRWSServer() {}
-    ~KRWSServer() {}
+    ~KRWSServer();
 
     static void server_thread(int port);
+
+    //static void start_thread(int port);
+    //static void stop_thread(int port);
 
     static bool is_listen;
     static bool is_finish;
@@ -36,6 +39,8 @@ private:
     static std::queue<KRMessage*> queue;
     static std::mutex lock;
     static int unique_id;
+
+    static std::thread thrd;
 
 private:
     static int callback_http( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len );
