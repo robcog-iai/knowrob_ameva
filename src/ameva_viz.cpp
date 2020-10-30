@@ -35,7 +35,7 @@ PREDICATE(ue_set_task, 2)
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	std::string response = KRWSServer::get_instance()->send_message(message);
-	std::cout << response << "\n";
+	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
 
