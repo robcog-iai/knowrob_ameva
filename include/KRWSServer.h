@@ -20,7 +20,7 @@ public:
     void print_clients();
     int num_clients();
     bool check_client(int client_id);
-    void send_message(KRMessage* message);
+    std::string send_message(KRMessage* message);
     void shutdown();
 
 private:
@@ -34,10 +34,12 @@ private:
 
     static bool is_listen;
     static bool is_finish;
+    static bool ready_to_send;
+    static bool wait_for_recv;
 
     static std::map<int, struct lws *> client_ws;
-    static std::queue<KRMessage*> queue;
-    static std::mutex lock;
+    static KRMessage* send_buff;
+    static std::string recv_buff;
     static int unique_id;
 
     static std::thread thrd;
