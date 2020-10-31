@@ -1,11 +1,14 @@
 #include "KRWSServer.h"
 
-std::mutex KRWSServer::lock;
 std::map<int, struct lws *> KRWSServer::client_ws;
-std::queue<KRMessage*> KRWSServer::queue;
+KRMessage* KRWSServer::send_buff;
+std::string KRWSServer::recv_buff;
 int KRWSServer::unique_id = 0;
 bool KRWSServer::is_listen = false;
 bool KRWSServer::is_finish = false;
+bool KRWSServer::ready_to_send = false;
+bool KRWSServer::wait_for_recv = false;
+
 std::thread KRWSServer::thrd;
 
 // HTTP handler
@@ -35,8 +38,10 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
             { 
                 if (itr->second == wsi)
                 {
-                    std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n";
-                    break;
+					recv_buff = std::string((char*) in, len);
+                    //std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n";
+                    wait_for_recv = false;
+					break;
                 }
             } 
 			break;
@@ -44,18 +49,14 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
 		case LWS_CALLBACK_SERVER_WRITEABLE:
 		{
 			// check messages queue and send message
-			lock.lock();
-            if (queue.size() > 0)
+            if (send_buff != NULL)
 			{
-				KRMessage* kr_message = queue.front();
 				// LWS_PRE bytes before buffer for adding protocal info
 				std::string padding(LWS_PRE, ' ');
-				padding += kr_message->message;
+				padding += send_buff->message;
 				m = lws_write(wsi, (unsigned char*)&padding[LWS_PRE], padding.size(), LWS_WRITE_TEXT);
-				queue.pop();
-				delete kr_message;
+				delete send_buff;
 			}
-            lock.unlock();
 			break;
 		}
 		case LWS_CALLBACK_CLOSED:
@@ -136,20 +137,15 @@ void KRWSServer::server_thread(int port)
 		n = lws_service( context, /* timeout_ms = */ 50 );	
 		
 		// request a callback to write message
-        lock.lock();
-		if (queue.size() > 0)
+		if (!ready_to_send) continue;
+		if (client_ws.find(send_buff->client_id) == client_ws.end()) 
 		{
-			KRMessage* kr_message = queue.front();
-			if (client_ws.find(kr_message->client_id) == client_ws.end()) 
-			{
-				std::cout << LOG_LABEL << "Client " << kr_message->client_id << " is not connected\n";
-				queue.pop();
-				delete kr_message;
-			} else{
-				lws_callback_on_writable(client_ws.find(kr_message->client_id)->second);
-			}			
-		}	
-        lock.unlock();
+			std::cout << LOG_LABEL << "Client " << send_buff->client_id << " is not connected\n";
+			delete send_buff;
+		} else{
+			lws_callback_on_writable(client_ws.find(send_buff->client_id)->second);
+		}		
+		ready_to_send = false;	
 	}
 	lws_context_destroy( context );
 	std::cout << LOG_LABEL << "Thread finished.." << std::endl;
@@ -190,16 +186,18 @@ bool KRWSServer::check_client(int client_id)
 }
 
 
-void KRWSServer::send_message(KRMessage* message)
+std::string KRWSServer::send_message(KRMessage* message)
 {
     if (!is_listen)
     {
         std::cout << LOG_LABEL << "Server is not started yet" << std::endl;
-        return;
+        return NULL;
     }
-    lock.lock();
-    queue.push(message);
-    lock.unlock();
+	send_buff = message;
+	wait_for_recv = true;
+	ready_to_send = true;
+	while (wait_for_recv) { }
+	return recv_buff;
 }
 
 void KRWSServer::shutdown()
@@ -207,9 +205,11 @@ void KRWSServer::shutdown()
 	std::cout << LOG_LABEL << "shutdown" << std::endl;
     unique_id = 0;
     client_ws.clear();
-    std::queue<KRMessage*> empty;
-    std::swap(queue, empty);
+    recv_buff.empty();
+	send_buff = NULL;
 
+	ready_to_send = false;
+    wait_for_recv = false;
     is_finish = true;
     is_listen = false;
 }

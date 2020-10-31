@@ -34,7 +34,8 @@ PREDICATE(ue_set_task, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
 
