@@ -1,5 +1,5 @@
 #include "ameva.pb.h"
-#include "KRWSServer.h"
+#include "kr_ws_server.h"
 #include <SWI-cpp.h>
 
 
@@ -18,7 +18,7 @@ PREDICATE(ue_start_simulation, 2)
     }
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
     return TRUE;
 }
@@ -39,7 +39,7 @@ PREDICATE(ue_stop_simulation, 2)
     }
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
     return TRUE;
 }
@@ -54,7 +54,7 @@ PREDICATE(ue_start_symbolic_log, 3)
     start_log_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
     return TRUE;
 }
@@ -66,7 +66,7 @@ PREDICATE(ue_stop_symbolic_log, 1)
 	ameva_event.set_functocall(ameva_event.StopSymbolicLog);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL << response << "\n";
     return TRUE;
 }

@@ -1,28 +1,28 @@
-#include "KRWSServer.h"
+#include "kr_ws_server.h"
 #include "ameva.pb.h"
 
 
-std::map<int, struct lws *> KRWSServer::client_ws;
-KRMessage* KRWSServer::send_buff;
-std::string KRWSServer::recv_buff;
-std::string KRWSServer::file_name;
-std::ofstream KRWSServer::recv_file;
-int KRWSServer::unique_id = 0;
-bool KRWSServer::is_listen = false;
-bool KRWSServer::is_finish = false;
-bool KRWSServer::ready_to_send = false;
-bool KRWSServer::wait_for_recv = false;
+std::map<int, struct lws *> KRWSServer::client_ws_;
+KRMessage* KRWSServer::send_buff_;
+std::string KRWSServer::recv_buff_;
+std::string KRWSServer::file_name_;
+std::ofstream KRWSServer::recv_file_;
+int KRWSServer::unique_id_ = 0;
+bool KRWSServer::is_listen_ = false;
+bool KRWSServer::is_finish_ = false;
+bool KRWSServer::ready_to_send_ = false;
+bool KRWSServer::wait_for_recv_ = false;
 
-std::thread KRWSServer::thrd;
+std::thread KRWSServer::thrd_;
 
 // HTTP handler
-int KRWSServer::callback_http( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len )
+int KRWSServer::callbackHttp( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len )
 {
 	return 0;
 }
 
 // Websocket handler
-int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len )
+int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len )
 {
 	int m;
 	switch( reason )
@@ -30,20 +30,20 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
 		case LWS_CALLBACK_ESTABLISHED:
 		{
 			// save new connected client
-			std::cout << LOG_LABEL << "A new client connected. Client id : " << unique_id << "\n";
-            client_ws.insert(std::pair<int, struct lws *>(unique_id++, wsi));
+			std::cout << LOG_LABEL << "A new client connected. Client id : " << unique_id_ << "\n";
+            client_ws_.insert(std::pair<int, struct lws *>(unique_id_++, wsi));
 			break;
 		}	
 		case LWS_CALLBACK_RECEIVE:
 		{
             // print the message received from clients
             std::map<int, struct lws *>::iterator itr;
-            for (itr = client_ws.begin(); itr != client_ws.end(); ++itr) 
+            for (itr = client_ws_.begin(); itr != client_ws_.end(); ++itr) 
             { 
                 if (itr->second == wsi)
                 {
-					recv_buff = std::string((char*) in, len);
-					parse_response();
+					recv_buff_ = std::string((char*) in, len);
+					parseResponse();
                     //std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n"
 					break;
                 }
@@ -53,13 +53,13 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
 		case LWS_CALLBACK_SERVER_WRITEABLE:
 		{
 			// check messages queue and send message
-            if (send_buff != NULL)
+            if (send_buff_ != NULL)
 			{
 				// LWS_PRE bytes before buffer for adding protocal info
 				std::string padding(LWS_PRE, ' ');
-				padding += send_buff->message;
+				padding += send_buff_->message_;
 				m = lws_write(wsi, (unsigned char*)&padding[LWS_PRE], padding.size(), LWS_WRITE_TEXT);
-				delete send_buff;
+				delete send_buff_;
 			}
 			break;
 		}
@@ -67,13 +67,13 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
 		{
 			// close connection
             std::map<int, struct lws *>::iterator itr;
-            for (itr = client_ws.begin(); itr != client_ws.end(); ++itr) 
+            for (itr = client_ws_.begin(); itr != client_ws_.end(); ++itr) 
             { 
                 if (itr->second == wsi)
                 {
                     // TODO: probably need to delete wsi from memory or not necessary
                     std::cout << LOG_LABEL << "Client - " << itr->first << " disconnected.\n";
-                    client_ws.erase(client_ws.begin(), client_ws.find(itr->first));
+                    client_ws_.erase(client_ws_.begin(), client_ws_.find(itr->first));
                     break;
                 }
             }
@@ -86,56 +86,56 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
 	return 0;
 }
 
-struct lws_protocols KRWSServer::protocols[] =
+struct lws_protocols KRWSServer::protocols_[] =
 {
 	/* The first protocol must always be the HTTP handler */
 	{
 		"http-only",   	/* name */
-		callback_http, 	/* callback */
+		callbackHttp, 	/* callback */
 		0,             	/* No per session data. */
 		128,           	/* max frame size / rx buffer */
 	},
 	{
 		"kr_websocket",
-		callback_krwebsocket,
+		callbackKRWebsocket,
 		0,
 		128,
 	},
 	{ NULL, NULL, 0, 0 } /* terminator */
 };
 
-void KRWSServer::parse_response()
+void KRWSServer::parseResponse()
 {
-	if (recv_buff.size() == 0) return;
+	if (recv_buff_.size() == 0) return;
 	sl_pb::KRAmevaResponse response;
-	response.ParseFromString(recv_buff);
+	response.ParseFromString(recv_buff_);
 	switch (response.type())
 	{
 	case sl_pb::KRAmevaResponse::Text:
 	{
-		recv_buff = response.text();
-		wait_for_recv = false;
+		recv_buff_ = response.text();
+		wait_for_recv_ = false;
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileCreation:
 	{
-		file_name = response.filename();
-		recv_file.open( RECV_OWL_DIR + response.filename(), std::ios::binary );
+		file_name_ = response.filename();
+		recv_file_.open( RECV_OWL_DIR + response.filename(), std::ios::binary );
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileData:
 	{
-		recv_file.write(response.filedata().data(), response.datalength());
-		recv_file << std::flush;
+		recv_file_.write(response.filedata().data(), response.datalength());
+		recv_file_ << std::flush;
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileFinish:
 	{
-		if (file_name.compare(response.filename()) == 0)
+		if (file_name_.compare(response.filename()) == 0)
 		{
-			recv_file.close();
-			recv_buff = "Received file " + file_name;
-			wait_for_recv = false;
+			recv_file_.close();
+			recv_buff_ = "Received file " + file_name_;
+			wait_for_recv_ = false;
 		}
 		break;
 	}
@@ -144,13 +144,13 @@ void KRWSServer::parse_response()
 	}	
 }
 
-KRWSServer* KRWSServer::get_instance()
+KRWSServer* KRWSServer::getInstance()
 {
 	static KRWSServer instance;
 	return &instance;
 }
 
-void KRWSServer::server_thread(int port) 
+void KRWSServer::serverThread(int port) 
 {
 	std::cout << LOG_LABEL << "Starting thread.." << std::endl;
 
@@ -161,7 +161,7 @@ void KRWSServer::server_thread(int port)
     // websocket handler parameter
 	memset( &info, 0, sizeof(info) );
 	info.port = port;
-	info.protocols = protocols;
+	info.protocols = protocols_;
 	info.gid = -1;
 	info.uid = -1;
 
@@ -174,21 +174,21 @@ void KRWSServer::server_thread(int port)
 	}
 
 	std::cout << LOG_LABEL << "Thread running.." << std::endl;
-    while( n >= 0 && !is_finish )
+    while( n >= 0 && !is_finish_ )
 	{
 		// service andy pending websocket activity, non-blocking
 		n = lws_service( context, /* timeout_ms = */ 50 );	
 		
 		// request a callback to write message
-		if (!ready_to_send) continue;
-		if (client_ws.find(send_buff->client_id) == client_ws.end()) 
+		if (!ready_to_send_) continue;
+		if (client_ws_.find(send_buff_->client_id_) == client_ws_.end()) 
 		{
-			std::cout << LOG_LABEL << "Client " << send_buff->client_id << " is not connected\n";
-			delete send_buff;
+			std::cout << LOG_LABEL << "Client " << send_buff_->client_id_ << " is not connected\n";
+			delete send_buff_;
 		} else{
-			lws_callback_on_writable(client_ws.find(send_buff->client_id)->second);
+			lws_callback_on_writable(client_ws_.find(send_buff_->client_id_)->second);
 		}		
-		ready_to_send = false;	
+		ready_to_send_ = false;	
 	}
 	lws_context_destroy( context );
 	std::cout << LOG_LABEL << "Thread finished.." << std::endl;
@@ -196,65 +196,65 @@ void KRWSServer::server_thread(int port)
 
 void KRWSServer::listen(int port)
 {
-    if (is_listen)
+    if (is_listen_)
     {
         std::cout << LOG_LABEL << "Server is already listening" << std::endl;
         return;
     }
-    //std::thread (server_thread, port).detach();
-	thrd = std::thread(server_thread, port);
-	thrd.detach();
-    is_listen = true;
-    is_finish = false;
+    //std::thread (serverThread, port).detach();
+	thrd_ = std::thread(serverThread, port);
+	thrd_.detach();
+    is_listen_ = true;
+    is_finish_ = false;
 }
 
-void KRWSServer::print_clients()
+void KRWSServer::printClients()
 {
     std::cout << LOG_LABEL << "Connected clients:\n";
     std::map<int, struct lws *>::iterator itr;
-    for (itr = client_ws.begin(); itr != client_ws.end(); ++itr) 
+    for (itr = client_ws_.begin(); itr != client_ws_.end(); ++itr) 
     { 
         std::cout << "client - " << itr->first << "\n";
     } 
 }
 
-int KRWSServer::num_clients()
+int KRWSServer::numClients()
 {
-	return client_ws.size();
+	return client_ws_.size();
 }
 
-bool KRWSServer::check_client(int client_id)
+bool KRWSServer::checkClient(int client_id)
 {
-    return !(client_ws.find(client_id) == client_ws.end());
+    return !(client_ws_.find(client_id) == client_ws_.end());
 }
 
 
-std::string KRWSServer::send_message(KRMessage* message)
+std::string KRWSServer::sendMessage(KRMessage* message)
 {
-    if (!is_listen)
+    if (!is_listen_)
     {
         std::cout << LOG_LABEL << "Server is not started yet" << std::endl;
         return NULL;
     }
-	send_buff = message;
-	wait_for_recv = true;
-	ready_to_send = true;
-	while (wait_for_recv) { }
-	return recv_buff;
+	send_buff_ = message;
+	wait_for_recv_ = true;
+	ready_to_send_ = true;
+	while (wait_for_recv_) { }
+	return recv_buff_;
 }
 
 void KRWSServer::shutdown()
 {
 	std::cout << LOG_LABEL << "shutdown" << std::endl;
-    unique_id = 0;
-    client_ws.clear();
-    recv_buff.empty();
-	send_buff = NULL;
+    unique_id_ = 0;
+    client_ws_.clear();
+    recv_buff_.empty();
+	send_buff_ = NULL;
 
-	ready_to_send = false;
-    wait_for_recv = false;
-    is_finish = true;
-    is_listen = false;
+	ready_to_send_ = false;
+    wait_for_recv_ = false;
+    is_finish_ = true;
+    is_listen_ = false;
 }
 
 // Dtor
