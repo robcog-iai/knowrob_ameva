@@ -1,8 +1,12 @@
 #include "KRWSServer.h"
+#include "ameva.pb.h"
+
 
 std::map<int, struct lws *> KRWSServer::client_ws;
 KRMessage* KRWSServer::send_buff;
 std::string KRWSServer::recv_buff;
+std::string KRWSServer::file_name;
+std::ofstream KRWSServer::recv_file;
 int KRWSServer::unique_id = 0;
 bool KRWSServer::is_listen = false;
 bool KRWSServer::is_finish = false;
@@ -39,8 +43,8 @@ int KRWSServer::callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons
                 if (itr->second == wsi)
                 {
 					recv_buff = std::string((char*) in, len);
-                    //std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n";
-                    wait_for_recv = false;
+					parse_response();
+                    //std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n"
 					break;
                 }
             } 
@@ -100,6 +104,45 @@ struct lws_protocols KRWSServer::protocols[] =
 	{ NULL, NULL, 0, 0 } /* terminator */
 };
 
+void KRWSServer::parse_response()
+{
+	if (recv_buff.size() == 0) return;
+	sl_pb::KRAmevaResponse response;
+	response.ParseFromString(recv_buff);
+	switch (response.type())
+	{
+	case sl_pb::KRAmevaResponse::Text:
+	{
+		recv_buff = response.text();
+		wait_for_recv = false;
+		break;
+	}
+	case sl_pb::KRAmevaResponse::FileCreation:
+	{
+		file_name = response.filename();
+		recv_file.open( RECV_OWL_DIR + response.filename(), std::ios::binary );
+		break;
+	}
+	case sl_pb::KRAmevaResponse::FileData:
+	{
+		recv_file.write(response.filedata().data(), response.datalength());
+		recv_file << std::flush;
+		break;
+	}
+	case sl_pb::KRAmevaResponse::FileFinish:
+	{
+		if (file_name.compare(response.filename()) == 0)
+		{
+			recv_file.close();
+			recv_buff = "Received file " + file_name;
+			wait_for_recv = false;
+		}
+		break;
+	}
+	default:
+		break;
+	}	
+}
 
 KRWSServer* KRWSServer::get_instance()
 {

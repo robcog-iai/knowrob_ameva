@@ -3,6 +3,7 @@
 
 #define WS_PROTOCOL "kr_websocket"
 #define LOG_LABEL "[AMEVA] "
+#define RECV_OWL_DIR "/home/robcog/catkin_ws/data/"
 
 #include <libwebsockets.h>
 #include <map>
@@ -10,6 +11,7 @@
 #include <mutex>
 #include <iostream>
 #include <thread>
+#include <fstream>
 #include "KRMessage.h"
 
 class KRWSServer 
@@ -40,6 +42,8 @@ private:
     static std::map<int, struct lws *> client_ws;
     static KRMessage* send_buff;
     static std::string recv_buff;
+    static std::string file_name;
+    static std::ofstream recv_file;
     static int unique_id;
 
     static std::thread thrd;
@@ -48,6 +52,8 @@ private:
     static int callback_http( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len );
     static int callback_krwebsocket( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len );
     
+    static void parse_response(); 
+
     static struct lws_protocols protocols[];
 };
 
