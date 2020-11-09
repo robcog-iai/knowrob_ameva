@@ -1,5 +1,5 @@
 #include "ameva.pb.h"
-#include "KRWSServer.h"
+#include "kr_ws_server.h"
 #include <SWI-cpp.h>
 
 // Set the task 
@@ -12,6 +12,6 @@ PREDICATE(hello_world, 1)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	KRWSServer::get_instance()->send_message(message);
+	KRWSServer::getInstance()->sendMessage(message);
 	return TRUE;
 }

@@ -1,8 +1,8 @@
 #include "ameva.pb.h"
-#include "KRWSServer.h"
+#include "kr_ws_server.h"
 #include <SWI-cpp.h>
 
-sl_pb::MarkerType get_mesh_type(char* type)
+sl_pb::MarkerType getMeshType(char* type)
 {
 
 	if (strcmp(type, "sphere") == 0)
@@ -34,7 +34,7 @@ PREDICATE(ue_load_map, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
@@ -49,7 +49,7 @@ PREDICATE(ue_set_task, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
@@ -65,7 +65,7 @@ PREDICATE(ue_set_episode, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
@@ -73,7 +73,7 @@ PREDICATE(ue_set_episode, 2)
 // Call the draw marker function
 PREDICATE(ue_draw_marker, 7)
 { 
-	if (!KRWSServer::get_instance()->check_client((int)A1))
+	if (!KRWSServer::getInstance()->checkClient((int)A1))
 		return FALSE;
 
 	sl_pb::KRAmevaEvent ameva_event;
@@ -81,14 +81,14 @@ PREDICATE(ue_draw_marker, 7)
 	sl_pb::DrawMarkerAtParams* marker_params = ameva_event.mutable_drawmarkeratparams();
 	marker_params->set_id((char*)A2);
 	marker_params->set_timestamp((double)A3);
-	marker_params->set_marker(get_mesh_type((char*)A4));
+	marker_params->set_marker(getMeshType((char*)A4));
 	marker_params->set_color((char*)A5);
 	marker_params->set_scale((double)A6);
 	marker_params->set_material((char*)A7);
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }
@@ -96,7 +96,7 @@ PREDICATE(ue_draw_marker, 7)
 // Call the draw marker trajectory function
 PREDICATE(ue_draw_marker, 8)
 { 
-	if (!KRWSServer::get_instance()->check_client((int)A1))
+	if (!KRWSServer::getInstance()->checkClient((int)A1))
 		return FALSE;
 
 	sl_pb::KRAmevaEvent ameva_event;
@@ -105,14 +105,14 @@ PREDICATE(ue_draw_marker, 8)
 	marker_traj_params->set_id((char*)A2);
 	marker_traj_params->set_start((double)A3);
 	marker_traj_params->set_end((double)A4);
-	marker_traj_params->set_marker(get_mesh_type((char*)A5));
+	marker_traj_params->set_marker(getMeshType((char*)A5));
 	marker_traj_params->set_color((char*)A6);
 	marker_traj_params->set_scale((double)A7);
 	marker_traj_params->set_material((char*)A8);
 
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::get_instance()->send_message(message);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
 	std::cout << LOG_LABEL<< response << "\n";
 	return TRUE;
 }

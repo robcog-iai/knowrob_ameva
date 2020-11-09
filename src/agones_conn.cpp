@@ -6,7 +6,7 @@
 
 using namespace curlpp::options;
 
-const char* gs_launcher_addr = "127.0.0.1:9090";
+const char* g_gs_launcher_addr = "127.0.0.1:9090";
 
 // Create a PixelStreaming game server instance
 PREDICATE(ue_create_gs, 0)
@@ -17,7 +17,7 @@ PREDICATE(ue_create_gs, 0)
 		header.push_back("Content-Type: application/json");
 
 		std::string url;
-		url.append(gs_launcher_addr);
+		url.append(g_gs_launcher_addr);
 		url.append("/game-server");
 
 		std::string body = "{ \"KRServerPort\" : 8080, \"KRProtocol\" : \"kr_websocket\" }";
@@ -57,7 +57,7 @@ PREDICATE(ue_list_gs, 0)
 		curlpp::Easy request;
 		// Set the URL.
 		std::string url;
-		url.append(gs_launcher_addr);
+		url.append(g_gs_launcher_addr);
 		url.append("/game-servers");
 		request.setOpt<Url>(url);
 		
