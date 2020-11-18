@@ -8,9 +8,9 @@ import "control.proto";
 
 message KRAmevaEvent {
   enum FuncToCall {
-    SetTask = 1;
-    SetEpisode = 2;
-    DrawMarkerAt = 3;
+    SetTask = 1;                          
+    SetEpisode = 2;                   
+    DrawMarkerAt = 3;           
     DrawMarkerTraj = 4;
     HelloWorld = 5;
     LoadMap = 6;
@@ -19,6 +19,7 @@ message KRAmevaEvent {
     StartSimulation = 9;
     StopSimulation = 10;
     MoveIndividual = 11;
+    SimulateAndLogForSeconds = 12;
   } 
   required FuncToCall funcToCall = 1;
   optional SetTaskParams setTaskParam = 2;
@@ -31,6 +32,7 @@ message KRAmevaEvent {
   optional StopSimulationParams stopSimulationParams = 9;
   optional MoveIndividualParams moveIndividualParams = 10;
   optional StartSymbolicLogParams startSymbolicLogParams = 11;
+  optional SimulateAndLogForSecondsParams simulateAndLogForSecondsParams = 12; 
 }
 
 message KRAmevaResponse {
