@@ -60,6 +60,7 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
 				padding += send_buff_->message_;
 				m = lws_write(wsi, (unsigned char*)&padding[LWS_PRE], padding.size(), LWS_WRITE_TEXT);
 				delete send_buff_;
+				send_buff_ = NULL;
 			}
 			break;
 		}
@@ -73,7 +74,8 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
                 {
                     // TODO: probably need to delete wsi from memory or not necessary
                     std::cout << LOG_LABEL << "Client - " << itr->first << " disconnected.\n";
-                    client_ws_.erase(client_ws_.begin(), client_ws_.find(itr->first));
+                    itr->second = nullptr;
+					client_ws_.erase(client_ws_.begin(), client_ws_.find(itr->first));
                     break;
                 }
             }
