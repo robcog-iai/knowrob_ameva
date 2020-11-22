@@ -112,3 +112,23 @@ PREDICATE(ue_simulate_and_log, 5)
 	std::cout << LOG_LABEL<< response << "\n";
     return TRUE;
 }
+
+// Start simulation and symbolic logging for seconds
+PREDICATE(ue_simulate_for_seconds, 3)
+{
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.SimulateForSeconds);
+	sl_pb::SimulateForSecondesParams* simulate_for_sec_params = ameva_event.mutable_simulateforsecondsparams();
+	simulate_for_sec_params->set_seconds((int)A2);
+	PlTail tail(A3);
+    PlTerm e;
+    while (tail.next(e)) {
+        std::string* id = simulate_for_sec_params->add_id();
+        *id = (char*)e;
+    }
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	std::string response = KRWSServer::getInstance()->sendMessage(message);
+	std::cout << LOG_LABEL<< response << "\n";
+    return TRUE;
+}

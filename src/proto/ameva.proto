@@ -20,6 +20,7 @@ message KRAmevaEvent {
     StopSimulation = 10;
     MoveIndividual = 11;
     SimulateAndLogForSeconds = 12;
+    SimulateForSeconds = 13;
   } 
   required FuncToCall funcToCall = 1;
   optional SetTaskParams setTaskParam = 2;
@@ -33,6 +34,7 @@ message KRAmevaEvent {
   optional MoveIndividualParams moveIndividualParams = 10;
   optional StartSymbolicLogParams startSymbolicLogParams = 11;
   optional SimulateAndLogForSecondsParams simulateAndLogForSecondsParams = 12; 
+  optional SimulateForSecondesParams simulateForSecondsParams = 13;
 }
 
 message KRAmevaResponse {
