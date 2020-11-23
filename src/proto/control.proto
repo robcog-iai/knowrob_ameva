@@ -32,3 +32,8 @@ message SimulateAndLogForSecondsParams {
     repeated string id = 3;
     required int32  seconds = 4;
 }
+
+message SimulateForSecondesParams {
+    repeated string id = 1;
+    required int32 seconds = 2;
+}   
