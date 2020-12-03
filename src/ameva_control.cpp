@@ -4,7 +4,7 @@
 
 
 // Start simulation
-PREDICATE(ue_start_simulation, 2)
+PREDICATE(ue_start_simulation, 3)
 {
 	sl_pb::KRAmevaEvent ameva_event;
 	ameva_event.set_functocall(ameva_event.StartSimulation);
@@ -16,15 +16,16 @@ PREDICATE(ue_start_simulation, 2)
         std::string* id = start_simulation_params->add_id();
         *id = (char*)e;
     }
+	start_simulation_params->set_seconds((double)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
     return TRUE;
 }
 
 // Stop simulation
-PREDICATE(ue_stop_simulation, 2)
+PREDICATE(ue_stop_simulation, 3)
 {
 	sl_pb::KRAmevaEvent ameva_event;
 	ameva_event.set_functocall(ameva_event.StopSimulation);
@@ -36,10 +37,11 @@ PREDICATE(ue_stop_simulation, 2)
         std::string* id = stop_simulation_params->add_id();
         *id = (char*)e;
     }
+	stop_simulation_params->set_seconds((double)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
     return TRUE;
 }
 
@@ -53,8 +55,8 @@ PREDICATE(ue_start_symbolic_log, 3)
     start_log_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
     return TRUE;
 }
 
@@ -65,70 +67,59 @@ PREDICATE(ue_stop_symbolic_log, 1)
 	ameva_event.set_functocall(ameva_event.StopSymbolicLog);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL << response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
+    return TRUE;
+}
+// Receive symbolic log result
+PREDICATE(ue_recv_symbolic_log, 3)
+{
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.RecvSymbolicLog);
+	sl_pb::RecvSymbolicLogParams* recv_log_params = ameva_event.mutable_recvsymboliclogparams();
+    recv_log_params->set_taskid((char*)A2);
+    recv_log_params->set_episodeid((char*)A3);
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
+    return TRUE;
+}
+
+// Set individual pose
+PREDICATE(ue_set_individual_pose, 9)
+{
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.SetIndividualPose);
+	sl_pb::SetIndividualPoseParams* set_individual_pose_params = ameva_event.mutable_setindividualposeparams();
+	set_individual_pose_params ->set_id((char*)A2);
+	set_individual_pose_params->set_vecx((int)A3);
+	set_individual_pose_params->set_vecy((int)A4);
+	set_individual_pose_params->set_vecz((int)A5);
+	set_individual_pose_params->set_quatw((int)A6);
+	set_individual_pose_params->set_quatx((int)A7);
+	set_individual_pose_params->set_quaty((int)A8);
+	set_individual_pose_params->set_quatz((int)A9);
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
     return TRUE;
 }
 
 // Move Individual
-PREDICATE(ue_move_individual, 9)
+PREDICATE(ue_apply_force_to, 5)
 {
 	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.MoveIndividual);
-	sl_pb::MoveIndividualParams* move_individual_params = ameva_event.mutable_moveindividualparams();
-	move_individual_params->set_id((char*)A2);
-	move_individual_params->set_vecx((int)A3);
-	move_individual_params->set_vecy((int)A4);
-	move_individual_params->set_vecz((int)A5);
-	move_individual_params->set_quatw((int)A6);
-	move_individual_params->set_quatx((int)A7);
-	move_individual_params->set_quaty((int)A8);
-	move_individual_params->set_quatz((int)A9);
+	ameva_event.set_functocall(ameva_event.ApplyForceTo);
+	sl_pb::ApplyForceToParams* apply_force_params = ameva_event.mutable_applyforcetoparams();
+	apply_force_params->set_id((char*)A2);
+	apply_force_params->set_forcex((int)A3);
+	apply_force_params->set_forcey((int)A4);
+	apply_force_params->set_forcez((int)A5);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
-    return TRUE;
-}
-
-// Start simulation and symbolic logging for seconds
-PREDICATE(ue_simulate_and_log, 5)
-{
-	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.SimulateAndLogForSeconds);
-	sl_pb::SimulateAndLogForSecondsParams* simulate_and_log_params = ameva_event.mutable_simulateandlogforsecondsparams();
-	simulate_and_log_params->set_taskid((char*)A2);
-	simulate_and_log_params->set_episodeid((char*)A3);
-	simulate_and_log_params->set_seconds((int)A4);
-	PlTail tail(A5);
-    PlTerm e;
-    while (tail.next(e)) {
-        std::string* id = simulate_and_log_params->add_id();
-        *id = (char*)e;
-    }
-	std::string proto_str = ameva_event.SerializeAsString();
-	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
-    return TRUE;
-}
-
-// Start simulation and symbolic logging for seconds
-PREDICATE(ue_simulate_for_seconds, 3)
-{
-	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.SimulateForSeconds);
-	sl_pb::SimulateForSecondesParams* simulate_for_sec_params = ameva_event.mutable_simulateforsecondsparams();
-	simulate_for_sec_params->set_seconds((int)A2);
-	PlTail tail(A3);
-    PlTerm e;
-    while (tail.next(e)) {
-        std::string* id = simulate_for_sec_params->add_id();
-        *id = (char*)e;
-    }
-	std::string proto_str = ameva_event.SerializeAsString();
-	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
     return TRUE;
 }

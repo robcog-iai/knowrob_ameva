@@ -24,18 +24,18 @@ sl_pb::MarkerType getMeshType(char* type)
 	return sl_pb::Box;
 }
 
-// Load Map 
+// Load level 
 PREDICATE(ue_load_map, 2)
 {
 	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.LoadMap);
-	sl_pb::LoadMapParams* load_map_params = ameva_event.mutable_loadmapparams();
-	load_map_params->set_map((char*)A2);
+	ameva_event.set_functocall(ameva_event.LoadLevel);
+	sl_pb::LoadLevelParams* load_level_params = ameva_event.mutable_loadlevelparams();
+	load_level_params->set_level((char*)A2);
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -49,8 +49,7 @@ PREDICATE(ue_set_task, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
 	return TRUE;
 }
 
@@ -65,8 +64,8 @@ PREDICATE(ue_set_episode, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -88,8 +87,8 @@ PREDICATE(ue_draw_marker, 7)
 	std::string proto_str = ameva_event.SerializeAsString();
 
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -112,7 +111,7 @@ PREDICATE(ue_draw_marker, 8)
 
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-	std::string response = KRWSServer::getInstance()->sendMessage(message);
-	std::cout << LOG_LABEL<< response << "\n";
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }

@@ -22,7 +22,7 @@ public:
     void printClients();
     int numClients();
     bool checkClient(int client_id);
-    std::string sendMessage(KRMessage* message);
+    void sendMessage(KRMessage* message);
     void shutdown();
 
 private:
@@ -52,7 +52,7 @@ private:
     static int callbackHttp( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len );
     static int callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons reason, void *user, void *in, size_t len );
     
-    static void parseResponse(); 
+    static void parseResponse(int client); 
 
     static struct lws_protocols protocols_[];
 };
