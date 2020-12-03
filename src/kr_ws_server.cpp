@@ -43,8 +43,7 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
                 if (itr->second == wsi)
                 {
 					recv_buff_ = std::string((char*) in, len);
-					parseResponse();
-                    //std::cout << LOG_LABEL << "Message from client - " << itr->first << " : " << (char*) in <<"\n"
+					parseResponse(itr->first);
 					break;
                 }
             } 
@@ -59,7 +58,6 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
 				std::string padding(LWS_PRE, ' ');
 				padding += send_buff_->message_;
 				m = lws_write(wsi, (unsigned char*)&padding[LWS_PRE], padding.size(), LWS_WRITE_TEXT);
-				delete send_buff_;
 				send_buff_ = NULL;
 			}
 			break;
@@ -75,7 +73,7 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
                     // TODO: probably need to delete wsi from memory or not necessary
                     std::cout << LOG_LABEL << "Client - " << itr->first << " disconnected.\n";
                     itr->second = nullptr;
-					client_ws_.erase(client_ws_.begin(), client_ws_.find(itr->first));
+					client_ws_.erase(client_ws_.find(itr->first));
                     break;
                 }
             }
@@ -106,7 +104,7 @@ struct lws_protocols KRWSServer::protocols_[] =
 	{ NULL, NULL, 0, 0 } /* terminator */
 };
 
-void KRWSServer::parseResponse()
+void KRWSServer::parseResponse(int client)
 {
 	if (recv_buff_.size() == 0) return;
 	sl_pb::KRAmevaResponse response;
@@ -117,6 +115,7 @@ void KRWSServer::parseResponse()
 	{
 		recv_buff_ = response.text();
 		wait_for_recv_ = false;
+		std::cout << LOG_LABEL << "CLIENT-" << client << " : " << recv_buff_ << std::endl;
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileCreation:
@@ -138,6 +137,7 @@ void KRWSServer::parseResponse()
 			recv_file_.close();
 			recv_buff_ = "Received file " + file_name_;
 			wait_for_recv_ = false;
+			std::cout << LOG_LABEL << "CLIENT-" << client << " : " << recv_buff_ << std::endl;
 		}
 		break;
 	}
@@ -186,8 +186,9 @@ void KRWSServer::serverThread(int port)
 		if (client_ws_.find(send_buff_->client_id_) == client_ws_.end()) 
 		{
 			std::cout << LOG_LABEL << "Client " << send_buff_->client_id_ << " is not connected\n";
-			delete send_buff_;
-		} else{
+			send_buff_ = NULL;
+			wait_for_recv_ = false;
+		} else {
 			lws_callback_on_writable(client_ws_.find(send_buff_->client_id_)->second);
 		}		
 		ready_to_send_ = false;	
@@ -231,18 +232,16 @@ bool KRWSServer::checkClient(int client_id)
 }
 
 
-std::string KRWSServer::sendMessage(KRMessage* message)
+void KRWSServer::sendMessage(KRMessage* message)
 {
     if (!is_listen_)
     {
-        std::cout << LOG_LABEL << "Server is not started yet" << std::endl;
-        return NULL;
+        std::cout << LOG_LABEL << "Server is not started yet\n";
     }
 	send_buff_ = message;
 	wait_for_recv_ = true;
 	ready_to_send_ = true;
 	while (wait_for_recv_) { }
-	return recv_buff_;
 }
 
 void KRWSServer::shutdown()

@@ -37,6 +37,6 @@ message DrawMarkerTrajParams {
   required string material = 7;
 }
 
-message LoadMapParams {
-  required string map = 1;
+message LoadLevelParams {
+  required string level = 1;
 }

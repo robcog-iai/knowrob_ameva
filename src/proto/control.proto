@@ -4,13 +4,15 @@ package sl_pb;
 
 message StartSimulationParams{
     repeated string id = 1;
+    required int32 seconds = 2;
 }
 
 message StopSimulationParams{
     repeated string id = 1;
+    required int32 seconds = 2;
 }
 
-message MoveIndividualParams {
+message SetIndividualPoseParams {
     required string id = 1;
     required float vecX = 2;
     required float vecY = 3;
@@ -26,14 +28,14 @@ message StartSymbolicLogParams {
     required string episodeId = 2;
 }
 
-message SimulateAndLogForSecondsParams {
+message RecvSymbolicLogParams {
     required string taskId = 1;
     required string episodeId = 2;
-    repeated string id = 3;
-    required int32  seconds = 4;
 }
 
-message SimulateForSecondesParams {
-    repeated string id = 1;
-    required int32 seconds = 2;
-}   
+message ApplyForceToParams {
+    required string id = 1;
+    required float forceX = 2;
+    required float forceY = 3;
+    required float forceZ = 4;
+}

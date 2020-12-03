@@ -12,29 +12,27 @@ message KRAmevaEvent {
     SetEpisode = 2;                   
     DrawMarkerAt = 3;           
     DrawMarkerTraj = 4;
-    HelloWorld = 5;
-    LoadMap = 6;
-    StartSymbolicLog = 7;
-    StopSymbolicLog = 8;
+    LoadLevel = 5;
+    StartSymbolicLog = 6;
+    StopSymbolicLog = 7;
+    RecvSymbolicLog = 8; 
     StartSimulation = 9;
     StopSimulation = 10;
-    MoveIndividual = 11;
-    SimulateAndLogForSeconds = 12;
-    SimulateForSeconds = 13;
+    SetIndividualPose = 11;
+    ApplyForceTo = 12;
   } 
   required FuncToCall funcToCall = 1;
   optional SetTaskParams setTaskParam = 2;
   optional SetEpisodeParams setEpisodeParams = 3;
   optional DrawMarkerAtParams drawMarkerAtParams = 4;
   optional DrawMarkerTrajParams drawMarkerTrajParams = 5;
-  optional HelloWorldParams helloWorldParams = 6;
-  optional LoadMapParams loadMapParams = 7;
-  optional StartSimulationParams startSimulationParams = 8;
-  optional StopSimulationParams stopSimulationParams = 9;
-  optional MoveIndividualParams moveIndividualParams = 10;
-  optional StartSymbolicLogParams startSymbolicLogParams = 11;
-  optional SimulateAndLogForSecondsParams simulateAndLogForSecondsParams = 12; 
-  optional SimulateForSecondesParams simulateForSecondsParams = 13;
+  optional LoadLevelParams loadLevelParams = 6;
+  optional StartSymbolicLogParams startSymbolicLogParams = 7;
+  optional RecvSymbolicLogParams recvSymbolicLogParams = 8;
+  optional StartSimulationParams startSimulationParams = 9;
+  optional StopSimulationParams stopSimulationParams = 10;
+  optional SetIndividualPoseParams setIndividualPoseParams = 11;
+  optional ApplyForceToParams applyForceToParams = 12;
 }
 
 message KRAmevaResponse {
