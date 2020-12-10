@@ -16,7 +16,7 @@ PREDICATE(ue_start_simulation, 3)
         std::string* id = start_simulation_params->add_id();
         *id = (char*)e;
     }
-	start_simulation_params->set_seconds((double)A3);
+	start_simulation_params->set_duration((double)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
@@ -25,7 +25,7 @@ PREDICATE(ue_start_simulation, 3)
 }
 
 // Stop simulation
-PREDICATE(ue_stop_simulation, 3)
+PREDICATE(ue_stop_simulation, 2)
 {
 	sl_pb::KRAmevaEvent ameva_event;
 	ameva_event.set_functocall(ameva_event.StopSimulation);
@@ -37,7 +37,6 @@ PREDICATE(ue_stop_simulation, 3)
         std::string* id = stop_simulation_params->add_id();
         *id = (char*)e;
     }
-	stop_simulation_params->set_seconds((double)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
@@ -93,13 +92,13 @@ PREDICATE(ue_set_individual_pose, 9)
 	ameva_event.set_functocall(ameva_event.SetIndividualPose);
 	sl_pb::SetIndividualPoseParams* set_individual_pose_params = ameva_event.mutable_setindividualposeparams();
 	set_individual_pose_params ->set_id((char*)A2);
-	set_individual_pose_params->set_vecx((int)A3);
-	set_individual_pose_params->set_vecy((int)A4);
-	set_individual_pose_params->set_vecz((int)A5);
-	set_individual_pose_params->set_quatw((int)A6);
-	set_individual_pose_params->set_quatx((int)A7);
-	set_individual_pose_params->set_quaty((int)A8);
-	set_individual_pose_params->set_quatz((int)A9);
+	set_individual_pose_params->set_vecx((double)A3);
+	set_individual_pose_params->set_vecy((double)A4);
+	set_individual_pose_params->set_vecz((double)A5);
+	set_individual_pose_params->set_quatw((double)A6);
+	set_individual_pose_params->set_quatx((double)A7);
+	set_individual_pose_params->set_quaty((double)A8);
+	set_individual_pose_params->set_quatz((double)A9);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
