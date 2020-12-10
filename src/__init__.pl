@@ -1,66 +1,44 @@
-
 :- module(testcase,   
     [
-        test_case_one_A/2,
-        test_case_one_B/2,
-        test_case_one_C/2,
-        test_case_two_A/1,
-        test_case_two_B/1
+        
+        remove_namespace/2,
+        place_above/7,
+        scenario_apple/2,
+        scenario_apple_two/2
     ]).
 
 :- use_foreign_library('libknowrob_ameva.so').
-:- use_module('./simulation_valiadtion.pl').
+:- use_module('./ue_symbolic_log.pl').
+:- use_module('./ue_semantic_map.pl').
 
-% hard code test case one
-test_case_one_A(Client, Supporting) :-
-    get_named_individual_id('mCjrWZo54kyS8eIV9f4MFA', OwlId),
-    ue_move_individual(Client, 'mCjrWZo54kyS8eIV9f4MFA', -240, -20, 110, 0, 0, 0, 0),
-    ue_simulate_and_log(Client, 'Task2','Episode1-1', 5, ['mCjrWZo54kyS8eIV9f4MFA']),
+% Put an apple on the plate and simulate for 10s
+scenario_apple(Client, X) :-
+    import_semantic_map('TaskOne', Map),
+    get_individual_by_class('http://knowrob.org/kb/knowrob.owl#MPAppleRed', Map, AppleInMap),
+    get_individual_by_class('http://knowrob.org/kb/knowrob.owl#ClassicPlate16cm', Map, PlateInMap),
+    ue_start_symbolic_log(Client, 'Task1','Episode1-1'),
+    remove_namespace(AppleInMap, AppleId),
+    remove_namespace(PlateInMap, PlateId),
+    ue_start_simulation(Client, [AppleId, PlateId], 10),
+    place_above(Client, Map, AppleInMap, PlateInMap, 0, 0, 10),
+    sleep(10),
+    ue_stop_symbolic_log(Client),
+    ue_recv_symbolic_log(Client, 'Task1', 'Episode1-1'),
     tripledb_load('/home/robcog/catkin_ws/data/Episode1-1_ED.owl'),
-    get_supporting_individual(OwlId, Supporting).
+    add_log_namespace(AppleId, AppleInLog),
+    get_supporting_individual(AppleInLog, X).
 
-test_case_one_B(Client, Supporting) :-
-    get_named_individual_id('mCjrWZo54kyS8eIV9f4MFA', OwlId),
-    ue_move_individual(Client, 'mCjrWZo54kyS8eIV9f4MFA', -240, -33, 130, 0, 0, 0, 0),
-    ue_simulate_and_log(Client, 'Task2','Episode1-2', 5, ['mCjrWZo54kyS8eIV9f4MFA']),
-    tripledb_load('/home/robcog/catkin_ws/data/Episode1-2_ED.owl'),
-    get_supporting_individual(OwlId, Supporting).
+% Place an individual above other given individual
+place_above(Client, MapId, IndividualToPlace, IndividualToPlaceAt, RelativeX, RelativeY, RelativeZ) :-
+    get_translation(MapId, IndividualToPlaceAt, PATX, PATY, PATZ),
+    get_quaternion(MapId, IndividualToPlace, PQX, PQY, PQZ, PQW),
+    NewX is PATX+RelativeX,
+    NewY is PATY+RelativeY,
+    NewZ is PATZ+RelativeZ,
+    remove_namespace(IndividualToPlace, IndividualToPlaceId),
+    ue_set_individual_pose(Client, IndividualToPlaceId, NewX, NewY, NewZ, PQX, PQY, PQZ, PQW).
 
-test_case_one_C(Client, Supporting) :-
-    get_named_individual_id('mCjrWZo54kyS8eIV9f4MFA', OwlId),
-    ue_move_individual(Client, 'mCjrWZo54kyS8eIV9f4MFA', -250, -20, 165, 0, 0, 0, 0),
-    ue_simulate_and_log(Client, 'Task2','Episode1-3', 5, ['mCjrWZo54kyS8eIV9f4MFA']),
-    tripledb_load('/home/robcog/catkin_ws/data/Episode1-3_ED.owl'),
-    get_supporting_individual(OwlId, Supporting).
-
-% hard code test case two
-test_case_two_A(Client) :-
-    get_named_individual_id('JEkITyZgxUS6KcUONncr3w', OwlIdPlateZero),
-    get_named_individual_id('ZMk26jazvkyD9oPT61Coqw', OwlIdPlateOne),
-    get_named_individual_id('Ncvil7sD10-wcWVQq3CuSg', OwlIdPlateTwo),
-    ue_start_symbolic_log(Client,'Task2','Episode2-1-1'),
-    ue_move_individual(Client, 'ZMk26jazvkyD9oPT61Coqw', -181, 111, 106, 0, 0, 0, 0),
-    ue_simulate_for_seconds(Client, 5, ['ZMk26jazvkyD9oPT61Coqw', 'JEkITyZgxUS6KcUONncr3w']),
-    ue_move_individual(Client, 'Ncvil7sD10-wcWVQq3CuSg', -178, 108, 115, 0, 0, 0, 0),
-    ue_simulate_for_seconds(Client, 5, ['Ncvil7sD10-wcWVQq3CuSg', 'ZMk26jazvkyD9oPT61Coqw', 'JEkITyZgxUS6KcUONncr3w']),
-    ue_stop_symbolic_log(Client),
-    tripledb_load('/home/robcog/catkin_ws/data/Episode2-1-1_ED.owl'),
-    check_if_supported(OwlIdPlateOne, OwlIdPlateZero),
-    check_if_supported(OwlIdPlateTwo, OwlIdPlateOne).
-
-test_case_two_B(Client) :-
-    get_named_individual_id('JEkITyZgxUS6KcUONncr3w', OwlIdPlateZero),
-    get_named_individual_id('ZMk26jazvkyD9oPT61Coqw', OwlIdPlateOne),
-    get_named_individual_id('Ncvil7sD10-wcWVQq3CuSg', OwlIdPlateTwo),
-    ue_start_symbolic_log(Client,'Task2','Episode2-1-1'),
-    ue_move_individual(Client, 'ZMk26jazvkyD9oPT61Coqw', -181, 111, 120, 0, 0, 0, 0),
-    ue_simulate_for_seconds(Client, 5, ['ZMk26jazvkyD9oPT61Coqw', 'JEkITyZgxUS6KcUONncr3w']),
-    ue_move_individual(Client, 'Ncvil7sD10-wcWVQq3CuSg', -170, 100, 150, 0, 0, 0, 0),
-    ue_simulate_for_seconds(Client, 5, ['Ncvil7sD10-wcWVQq3CuSg', 'ZMk26jazvkyD9oPT61Coqw', 'JEkITyZgxUS6KcUONncr3w']),
-    ue_stop_symbolic_log(Client),
-    tripledb_load('/home/robcog/catkin_ws/data/Episode2-1-1_ED.owl'),
-    check_if_supported(OwlIdPlateOne, OwlIdPlateZero),
-    check_if_supported(OwlIdPlateTwo, OwlIdPlateOne).
-
-get_named_individual_id(Id, OwlId) :- 
-    atom_concat('http://knowrob.org/kb/Experiment.owl#', Id, OwlId).
+% Remove namespace to get the individual id
+remove_namespace(Individual, Id) :-
+    split_string(Individual, "#", "", StrList),
+    nth1(2, StrList, Id).

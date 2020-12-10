@@ -237,6 +237,7 @@ void KRWSServer::sendMessage(KRMessage* message)
     if (!is_listen_)
     {
         std::cout << LOG_LABEL << "Server is not started yet\n";
+		return;
     }
 	send_buff_ = message;
 	wait_for_recv_ = true;
