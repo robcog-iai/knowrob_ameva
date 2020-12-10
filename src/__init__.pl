@@ -28,17 +28,34 @@ scenario_apple(Client, X) :-
     add_log_namespace(AppleId, AppleInLog),
     get_supporting_individual(AppleInLog, X).
 
+%% place_above(+Client, +Map, +IndividualToPlace, +IndividualToPlaceAt, +RelativeX, +RelativeY, +RelativeZ)
+%
 % Place an individual above other given individual
-place_above(Client, MapId, IndividualToPlace, IndividualToPlaceAt, RelativeX, RelativeY, RelativeZ) :-
-    get_translation(MapId, IndividualToPlaceAt, PATX, PATY, PATZ),
-    get_quaternion(MapId, IndividualToPlace, PQX, PQY, PQZ, PQW),
+%
+% @param Client the unreal client to send
+% @param Map the semantic environment map
+% @param IndividualToPlace the given individual to move
+% @param IndividualToPlaceAt the individual which is placed at
+% @param RelativeX the relative x value
+% @param RelativeY the relative y value
+% @param RelativeZ the relative z value
+%
+place_above(Client, Map, IndividualToPlace, IndividualToPlaceAt, RelativeX, RelativeY, RelativeZ) :-
+    get_translation(Map, IndividualToPlaceAt, PATX, PATY, PATZ),
+    get_quaternion(Map, IndividualToPlace, PQX, PQY, PQZ, PQW),
     NewX is PATX+RelativeX,
     NewY is PATY+RelativeY,
     NewZ is PATZ+RelativeZ,
     remove_namespace(IndividualToPlace, IndividualToPlaceId),
     ue_set_individual_pose(Client, IndividualToPlaceId, NewX, NewY, NewZ, PQX, PQY, PQZ, PQW).
 
+%% remove_namespace(+Individual, -Id) is nondet
+%
 % Remove namespace to get the individual id
+%
+% @param Individual the named individual
+% @param Id the individual without namespace
+%
 remove_namespace(Individual, Id) :-
     split_string(Individual, "#", "", StrList),
     nth1(2, StrList, Id).
