@@ -2,7 +2,8 @@
     [
         add_log_namespace/2,
         check_if_supported/2,
-        get_supporting_individual/2
+        get_supporting_individual/2,
+        import_symbolic_log/2
     ]).
 
 %% add_log_namespace(+IndividualId, -Individual) is det
@@ -38,3 +39,15 @@ get_supporting_individual(Supported, Supporting) :-
 check_if_supported(Supported, Supporting) :- 
     triple(Evt, knowrob:isSupported, Supported),
     triple(Evt, knowrob:isSupporting, Supporting).
+
+%% import_symbolic_log(+Log, -Experiment) is det
+%
+% Load the semantic map and return the map id with namespace
+%
+% @param Log the symbolic log file
+% @param Experiment the experiment individual
+%
+import_symbolic_log(Log, Experiment) :-
+    atomic_list_concat(['/home/robcog/catkin_ws/data/', Log, '.owl'], OwlFile),
+    tripledb_load(OwlFile),
+    triple(Map, rdf:type, 'http://knowrob.org/kb/knowrob.owl#UnrealExperiment').
