@@ -2,9 +2,12 @@
     [
         import_semantic_map/2,
         get_individual_by_class/3,
+        get_individual_list_by_class/3,
         get_translation/5,
         get_quaternion/6,
         get_pose/9,
+        get_height/2,
+        get_depth/2,
         add_ue_iai_kitchen_namespace/2
     ]).
 
@@ -32,7 +35,7 @@ add_ue_iai_kitchen_namespace(IndividualId, Individual) :-
 % @param TZ the z of quaternion
 % @param TW the w of quaternion
 %
-get_pose(+Map, +Individual, -TX, -TY, -TZ, -QX, -QY, -QZ, -QW) :-
+get_pose(Map, Individual, TX, TY, TZ, QX, QY, QZ, QW) :-
     get_translation(Map, Individual, TX, TY, TZ),
     get_quaternion(Map, Individual, QX, QY, QZ, QW).
 
@@ -83,9 +86,35 @@ get_quaternion(Map, Individual, X, Y, Z, W) :-
     number_string(Z, ZStr),
     number_string(W, WStr).
 
+%% get_height(+Class, -Height) is det
+%
+% Get the heigth property of the class
+%
+% @param Map the semantic environment map 
+% @param Class the calss
+% @param Height the heigth property of the class
+%
+get_height(Class, Height) :-
+    triple(Class,rdfs:subClassOf, Description),
+    triple(Description, owl:onProperty, 'http://knowrob.org/kb/knowrob.owl#heightOfObject'),
+    triple(Description, owl:hasValue, Height).
+
+%% get_depth(+Class, -Depth) is det
+%
+% Get the heigth property of the class
+%
+% @param Map the semantic environment map 
+% @param Class the class
+% @param Depth the depth property of the class
+%
+get_depth(Class, Depth) :-
+    triple(Class,rdfs:subClassOf, Description),
+    triple(Description, owl:onProperty, 'http://knowrob.org/kb/knowrob.owl#depthOfObject'),
+    triple(Description, owl:hasValue, Depth).
+
 %% get_individual_by_class(+Class, +Map, -Individual) is nondet
 %
-% Get all individuals of specific class
+% Get all individuals of given class
 %
 % @param Class the class of named individual
 % @param Map the semantic environment map 
@@ -94,6 +123,17 @@ get_quaternion(Map, Individual, X, Y, Z, W) :-
 get_individual_by_class(Class, Map, Individual) :-
     triple(Individual, knowrob:describedInMap, Map),
     triple(Individual, rdf:type, Class).
+
+%% get_individual_list_by_class(+Class, +Map, -List) is det
+%
+% Get a list of individuals of given class
+%
+% @param Class the class of named individual
+% @param Map the semantic environment map 
+% @param List the list of the individual
+%
+get_individual_list_by_class(Class, Map, List) :-
+    findall(Individual, (triple(Individual, rdf:type, Class), triple(Individual, knowrob:describedInMap, Map)), List).
     
 %% import_semantic_map(+Task, -Map) is det
 %
