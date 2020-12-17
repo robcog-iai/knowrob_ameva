@@ -45,13 +45,13 @@ PREDICATE(ue_stop_simulation, 2)
 }
 
 // Start Symbolic Log
-PREDICATE(ue_start_symbolic_log, 3)
+PREDICATE(ue_start_loggers, 3)
 {
 	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.StartSymbolicLog);
-	sl_pb::StartSymbolicLogParams* start_log_params = ameva_event.mutable_startsymboliclogparams();
-    start_log_params->set_taskid((char*)A2);
-    start_log_params->set_episodeid((char*)A3);
+	ameva_event.set_functocall(ameva_event.StartLoggers);
+	sl_pb::StartLoggersParams* start_loggers_params = ameva_event.mutable_startloggersparams();
+    start_loggers_params->set_taskid((char*)A2);
+    start_loggers_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
@@ -60,10 +60,10 @@ PREDICATE(ue_start_symbolic_log, 3)
 }
 
 // Stop Symbolic Log
-PREDICATE(ue_stop_symbolic_log, 1)
+PREDICATE(ue_stop_loggers, 1)
 {
 	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.StopSymbolicLog);
+	ameva_event.set_functocall(ameva_event.StopLoggers);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
@@ -71,11 +71,11 @@ PREDICATE(ue_stop_symbolic_log, 1)
     return TRUE;
 }
 // Receive symbolic log result
-PREDICATE(ue_recv_symbolic_log, 3)
+PREDICATE(ue_get_episode_data, 3)
 {
 	sl_pb::KRAmevaEvent ameva_event;
-	ameva_event.set_functocall(ameva_event.RecvSymbolicLog);
-	sl_pb::RecvSymbolicLogParams* recv_log_params = ameva_event.mutable_recvsymboliclogparams();
+	ameva_event.set_functocall(ameva_event.GetEpisodeData);
+	sl_pb::GetEpisodeDataParams* recv_log_params = ameva_event.mutable_getepisodedataparams();
     recv_log_params->set_taskid((char*)A2);
     recv_log_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
