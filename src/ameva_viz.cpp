@@ -115,3 +115,55 @@ PREDICATE(ue_draw_marker, 8)
 	delete message;
 	return TRUE;
 }
+
+PREDICATE(ue_highlight, 4)
+{
+	if (!KRWSServer::getInstance()->checkClient((int)A1))
+		return FALSE;
+	
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.Highlight);
+	sl_pb::HighlightParams* highlight_params = ameva_event.mutable_highlightparams();
+	highlight_params->set_id((char*)A2);
+	highlight_params->set_color((char*)A3);
+	highlight_params->set_material((char*)A4);
+
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
+	return TRUE;
+}
+
+PREDICATE(ue_remove_highlight, 2)
+{
+	if (!KRWSServer::getInstance()->checkClient((int)A1))
+		return FALSE;
+	
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.RemoveHighlight);
+	sl_pb::RemoveHighlightParams* highlight_params = ameva_event.mutable_removehighlightparams();
+	highlight_params->set_id((char*)A2);
+
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
+	return TRUE;
+}
+
+
+PREDICATE(ue_remove_all_highlight, 1)
+{
+	if (!KRWSServer::getInstance()->checkClient((int)A1))
+		return FALSE;
+	
+	sl_pb::KRAmevaEvent ameva_event;
+	ameva_event.set_functocall(ameva_event.RemoveAllHighlight);
+	
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
+	return TRUE;
+}
