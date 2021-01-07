@@ -28,3 +28,17 @@ PREDICATE(ue_close_srv, 0)
 	KRWSServer::getInstance()->shutdown();
 	return TRUE;
 }
+
+PREDICATE(ue_wait_client, 1)
+{
+	int target_num = (int)A1;
+	while (KRWSServer::getInstance()->numClients() < target_num) {}
+	return TRUE;	
+}
+
+PREDICATE(ue_recent_client, 1)
+{
+	A1 = KRWSServer::getInstance()->recentId();
+	if (A1 < 0) return FALSE;
+	return TRUE;
+}

@@ -226,6 +226,11 @@ int KRWSServer::numClients()
 	return client_ws_.size();
 }
 
+int KRWSServer::recentId()
+{
+	return unique_id_ - 1;
+}
+
 bool KRWSServer::checkClient(int client_id)
 {
     return !(client_ws_.find(client_id) == client_ws_.end());

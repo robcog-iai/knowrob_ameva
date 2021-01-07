@@ -1058,15 +1058,15 @@
 
 	<!-- Individuals -->
 
-	<!-- Semantic Map N7ZcofmtGUawBi-QdTvL1g -->
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g">
+	<!-- Semantic Map -hZPCEuXpUy6u8-PHC2NUQ -->
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ">
 		<rdf:type rdf:resource="&knowrob;SemanticEnvironmentMap"/>
 	</owl:NamedIndividual>
 
 	<!-- Individual IAIIslandArea -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg">
 		<rdf:type rdf:resource="&knowrob;IAIIslandArea"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;bvKhNRtSokmtp8VF7YHs9A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;xxAWFFSYDUO8VqxWdkfXPg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;vq_e9YUL3EqHkJuCnJfshg"/>
@@ -1079,11 +1079,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3D25ADFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;gCzRuqeBM0iHE-hqPQdgiA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIIslandArea.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;GWucrVkVCkCHhlUGMvFRWg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIIslandArea;Id,HmRgFTCqhUSWDywFHkC2sg;VisMask,3D25ADFF;RenderedVisMask,3F29ABFF;VisualMask,E6CD49FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;gCzRuqeBM0iHE-hqPQdgiA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;GWucrVkVCkCHhlUGMvFRWg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 -0.000000 1.000000 0.000002</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">192.972046 345.486755 42.812706</knowrob:translation>
@@ -1092,7 +1091,7 @@
 	<!-- Individual IAIOvenArea -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;6f_gS9_ow0OP_lXT6DkMqQ">
 		<rdf:type rdf:resource="&knowrob;IAIOvenArea"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;t6Ub41jLZUeiLpfeo_DZTA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;KdMBTchi9UuTQNuxXK4OpQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;onPzvRUntkyXohB1w8K8bQ"/>
@@ -1102,11 +1101,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">94334AFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;lebbgr9i5EezU657YTxOqQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenArea.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;YxphxxUSwE-GUQeAI5dNOA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenArea;Id,6f_gS9_ow0OP_lXT6DkMqQ;VisMask,94334AFF;RenderedVisMask,92364BFF;VisualMask,199E6BFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;lebbgr9i5EezU657YTxOqQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;YxphxxUSwE-GUQeAI5dNOA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-68.856117 367.668243 75.314705</knowrob:translation>
@@ -1115,7 +1113,7 @@
 	<!-- Individual IAIFridgeArea -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeArea"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;nIorJeWcdEa2QF70Q-sf1Q"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw"/>
@@ -1127,11 +1125,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">C4DBA0FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;f8w7yzQrzU-dZMrtzjN-CQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeArea.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;71_A6D9FTkSx99TL9VvFKA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeArea;Id,QUSGHBGfYE2DpjujEFPEAw;VisMask,C4DBA0FF;RenderedVisMask,C2D99EFF;VisualMask,5869B3FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;f8w7yzQrzU-dZMrtzjN-CQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;71_A6D9FTkSx99TL9VvFKA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-69.183159 71.439964 75.411430</knowrob:translation>
@@ -1140,7 +1137,7 @@
 	<!-- Individual IAISinkArea -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;_xFvuxlkBkiY0_EPp58t_A">
 		<rdf:type rdf:resource="&knowrob;IAISinkArea"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;X8v3rZpn9E6nQd2f12MWww"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;uGIRx-2fqEerIrnwk0PAiw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;yIcSTM_mgk2KwycdPHm6Wg"/>
@@ -1150,11 +1147,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3BA5A0FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;YkSeBL1OIEaNyAXQs4Aw5A"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAISinkArea.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;KMmTeXUIWEW58v0AI2kBxA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAISinkArea;Id,_xFvuxlkBkiY0_EPp58t_A;VisMask,3BA5A0FF;RenderedVisMask,3DA39EFF;VisualMask,C541FDFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;YkSeBL1OIEaNyAXQs4Aw5A">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KMmTeXUIWEW58v0AI2kBxA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.868904 204.677490 42.205719</knowrob:translation>
@@ -1163,7 +1159,7 @@
 	<!-- Individual IAIOvenCase -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ">
 		<rdf:type rdf:resource="&knowrob;IAIOvenCase"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;9ZHn_BDo306CrD4iYh-z-Q"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;zFpiyd1cRkamRJxf2IpJbg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;2gzVjv6yGkyYVsVd7xZDeQ"/>
@@ -1176,11 +1172,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">970BC6FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;Ny3uIXiDOk-_XZPoYfb6yA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenCase.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;aKWRvdk41UWCHV8Fe7J9sA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenCase;Id,0JbhSAwAdkut1yRUSHJJAQ;VisMask,970BC6FF;RenderedVisMask,9513C4FF;VisualMask,EA921AFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Ny3uIXiDOk-_XZPoYfb6yA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;aKWRvdk41UWCHV8Fe7J9sA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-67.653404 367.693024 117.242546</knowrob:translation>
@@ -1189,7 +1184,7 @@
 	<!-- Individual IAIDishwasherCase -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;2XrXZWrsy0GjnaRuAyfaUA">
 		<rdf:type rdf:resource="&knowrob;IAIDishwasherCase"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;m9KNJFES30iniDDrVnOZAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;61nqVeqryECsFlyF5fjcBQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Dkkpmdu-L0Ssc3R5YJTftw"/>
@@ -1199,11 +1194,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">AA592EFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;Tln-L9C3-k2z_33rJfKtwQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDishwasherCase.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;Yecl1ksxVU2PdyaklWpPzw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDishwasherCase;Id,2XrXZWrsy0GjnaRuAyfaUA;VisMask,AA592EFF;RenderedVisMask,A85931FF;VisualMask,D85FACFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Tln-L9C3-k2z_33rJfKtwQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Yecl1ksxVU2PdyaklWpPzw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-73.024193 195.006989 47.268379</knowrob:translation>
@@ -1212,7 +1206,7 @@
 	<!-- Individual IAIFridgeCasing -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeCasing"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;rqsIbprOkEqFI4qY5npSGQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;899vGlROcEiXoh0QQfuEyw"/>
@@ -1225,11 +1219,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">7C6798FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;qX5JEGP6Akea2OSKxkgapw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeCasing.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;z__53SPbvEGBRFddpzSv2A"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeCasing;Id,mhpEOoZMjUuGfwi_JTfNdg;VisMask,7C6798FF;RenderedVisMask,7B6696FF;VisualMask,5C96DBFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;qX5JEGP6Akea2OSKxkgapw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;z__53SPbvEGBRFddpzSv2A">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.735588 72.040886 96.315575</knowrob:translation>
@@ -1238,18 +1231,17 @@
 	<!-- Individual IAICooktop -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;XTgBwrmtlkOQcPKf6iYLtQ">
 		<rdf:type rdf:resource="&knowrob;IAICooktop"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">6.36445</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">C13952FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;VVG2LRO3OkCQO_Cxer299w"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAICooktop.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;jg58BYD7W06nuMuV8YdBLg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAICooktop;Id,XTgBwrmtlkOQcPKf6iYLtQ;VisMask,C13952FF;RenderedVisMask,BF3B52FF;VisualMask,7D788FFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VVG2LRO3OkCQO_Cxer299w">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jg58BYD7W06nuMuV8YdBLg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">193.032043 421.914429 85.948715</knowrob:translation>
@@ -1258,7 +1250,7 @@
 	<!-- Individual IAISink -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;97o09wxWok-YBuhMzSYcfQ">
 		<rdf:type rdf:resource="&knowrob;IAISink"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;_xFvuxlkBkiY0_EPp58t_A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;ISnUqjDeD0igoz5FGNzRPw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;EXp2gCvlkUyTrDVwHdTRHQ"/>
@@ -1269,11 +1261,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">BB1391FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;tWhQIYZrfU28nFpY6e0bfg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAISink.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;87fIRMeP9UWQv1bmqN_0iA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAISink;Id,97o09wxWok-YBuhMzSYcfQ;VisMask,BB1391FF;RenderedVisMask,B9198FFF;VisualMask,9558EEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;tWhQIYZrfU28nFpY6e0bfg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;87fIRMeP9UWQv1bmqN_0iA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.902489 156.170273 75.126274</knowrob:translation>
@@ -1282,7 +1273,7 @@
 	<!-- Individual IAIOvenKnob -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;cIAVf1AsUEC3mmjNRU5tXw">
 		<rdf:type rdf:resource="&knowrob;IAIOvenKnob"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;75Y9Bk_LaUuYOffF3bcs2Q"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1290,11 +1281,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">9C36ADFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;0xcxTeBRWEq-VXz3gCWROg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenKnob.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;duUxF0xVGUShABLjjCFtWg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenKnob;Id,cIAVf1AsUEC3mmjNRU5tXw;VisMask,9C36ADFF;RenderedVisMask,9A38ABFF;VisualMask,CEAAD0FF; EDCookTopButtonController;HeatingElementIndex,1;Radius,3.0;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;0xcxTeBRWEq-VXz3gCWROg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;duUxF0xVGUShABLjjCFtWg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 389.521027 138.475845</knowrob:translation>
@@ -1303,7 +1293,7 @@
 	<!-- Individual IAIOvenKnob -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-ddAE3F2KUigked3AZZNlQ">
 		<rdf:type rdf:resource="&knowrob;IAIOvenKnob"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;qMpdBhgk9UeTbPHnbdWl2w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1311,11 +1301,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">769FA6FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;kEsscfywV0O03flv8ZRw5g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenKnob.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;alhqPvqd5E22VQLVUmU0Ug"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenKnob;Id,-ddAE3F2KUigked3AZZNlQ;VisMask,769FA6FF;RenderedVisMask,759DA4FF;VisualMask,EB23DBFF; EDCookTopButtonController;HeatingElementIndex,0;Radius,3.0;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;kEsscfywV0O03flv8ZRw5g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;alhqPvqd5E22VQLVUmU0Ug">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 376.837921 138.475845</knowrob:translation>
@@ -1324,7 +1313,7 @@
 	<!-- Individual IAIOvenKnob -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;L7xmO9UFR0mHhSeVIQIZnQ">
 		<rdf:type rdf:resource="&knowrob;IAIOvenKnob"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;seA8qcmTfkCmfg_U2lzqIA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1332,11 +1321,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">683A10FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;y_NXfdaTFUOpxthXgkqFxQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenKnob.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;93r2An2SVUe_PIzk4DGTNg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenKnob;Id,L7xmO9UFR0mHhSeVIQIZnQ;VisMask,683A10FF;RenderedVisMask,673C17FF;VisualMask,946A75FF; EDCookTopButtonController;HeatingElementIndex,3;Radius,3.0;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;y_NXfdaTFUOpxthXgkqFxQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;93r2An2SVUe_PIzk4DGTNg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 383.078583 138.475845</knowrob:translation>
@@ -1345,7 +1333,7 @@
 	<!-- Individual IAIOvenKnob -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;USIvvUBc9UW_P3b1R1o9nw">
 		<rdf:type rdf:resource="&knowrob;IAIOvenKnob"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;fATghIN1pEWt3I5FU84YYw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1353,11 +1341,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">388AABFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;jO0wTe5NbkW2wNCrDi2kHQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenKnob.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;nMzZFZ4O9EGpvFb-jMB4MA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenKnob;Id,USIvvUBc9UW_P3b1R1o9nw;VisMask,388AABFF;RenderedVisMask,3A88A9FF;VisualMask,A3B3D1FF; EDOvenButtonController;HeatingElementIndex,1;OvenLightIndex,2;Radius,3;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jO0wTe5NbkW2wNCrDi2kHQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nMzZFZ4O9EGpvFb-jMB4MA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 352.345734 138.719879</knowrob:translation>
@@ -1366,7 +1353,7 @@
 	<!-- Individual IAIOvenKnob -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;2gzVjv6yGkyYVsVd7xZDeQ">
 		<rdf:type rdf:resource="&knowrob;IAIOvenKnob"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;1bGVWKjxkkqldaIQyq56tQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1374,11 +1361,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">62C1FBFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;HsqZd0TVYk-OM5_6ZklF-A"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenKnob.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;3agrw0sZbEO29a7Fgdd0lw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenKnob;Id,2gzVjv6yGkyYVsVd7xZDeQ;VisMask,62C1FBFF;RenderedVisMask,61BFFAFF;VisualMask,7C2F5CFF; EDCookTopButtonController;HeatingElementIndex,2;Radius,3.0;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;HsqZd0TVYk-OM5_6ZklF-A">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;3agrw0sZbEO29a7Fgdd0lw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 370.780365 138.475845</knowrob:translation>
@@ -1387,18 +1373,17 @@
 	<!-- Individual IAIOvenBars -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;zFpiyd1cRkamRJxf2IpJbg">
 		<rdf:type rdf:resource="&knowrob;IAIOvenBars"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">1.685457</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">4EF7C4FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;oQTiuXj4v0iPL7K6_mnpFw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenBars.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;ZxdzjjzfkEWLGSKcUytGJw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenBars;Id,zFpiyd1cRkamRJxf2IpJbg;VisMask,4EF7C4FF;RenderedVisMask,4FF6C2FF;VisualMask,62F891FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;oQTiuXj4v0iPL7K6_mnpFw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ZxdzjjzfkEWLGSKcUytGJw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.266685 367.870819 108.475670</knowrob:translation>
@@ -1407,7 +1392,7 @@
 	<!-- Individual IAIDrawerW60H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;zVBHGrf9n0qEVqc8aDbF-w">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;pGE9XOQ-L0mLboBpLqFu5g"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;RmB-MfAsD0eX5oThhsrGSA"/>
@@ -1416,20 +1401,19 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">1BD531FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;U6CRjaD4g0mQLHLm0fkAiw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H29.dae</knowrob:pathToCadModel>
-		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H29;Id,zVBHGrf9n0qEVqc8aDbF-w;VisMask,1BD531FF;RenderedVisMask,20D334FF;VisualMask,648E0DFF;</knowrob:tagsData>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;KpnFtPNrQ0aFuIesbIG7aQ"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H29;Id,zVBHGrf9n0qEVqc8aDbF-w;VisMask,1BD531FF;RenderedVisMask,20D334FF;VisualMask,648E0DFF; SemLogColl;ExtY,30.638042;LocZ,0.0;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;U6CRjaD4g0mQLHLm0fkAiw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KpnFtPNrQ0aFuIesbIG7aQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
-		<knowrob:translation rdf:datatype="&xsd;string">138.878143 264.864197 50.812706</knowrob:translation>
+		<knowrob:translation rdf:datatype="&xsd;string">148.878143 264.864197 50.812706</knowrob:translation>
 	</owl:NamedIndividual>
 
 	<!-- Individual IAIDrawerW60H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;xC5gUQiYJ0GvAXhAkIrD0w">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;cIuckcePIEaoDzQxkMF1mw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;SUQw8QFCdUmcYC4co-v1jA"/>
@@ -1438,11 +1422,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">FBC87DFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;FhK8LS3_EEisxsvn0gkwuQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;gPVa4k-x5UycYJJ7Ba33wQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H29;Id,xC5gUQiYJ0GvAXhAkIrD0w;VisMask,FBC87DFF;RenderedVisMask,FAC67CFF;VisualMask,74A9C3FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;FhK8LS3_EEisxsvn0gkwuQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;gPVa4k-x5UycYJJ7Ba33wQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">188.878174 425.864014 50.812706</knowrob:translation>
@@ -1451,7 +1434,7 @@
 	<!-- Individual IAIDrawerW60H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;iRS79lDuQUiW9iJ6He13cQ">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;ZGfqfEpkK0OCIlMr6WS61w"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Am3u-QRO4U2Xg8jQzSUQOA"/>
@@ -1460,11 +1443,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">69EC62FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;jnOrDALs_kCaeNIQYbMT_g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;KQJhRHCOuEuwndKiQsCnRQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H29;Id,iRS79lDuQUiW9iJ6He13cQ;VisMask,69EC62FF;RenderedVisMask,68EB61FF;VisualMask,977390FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jnOrDALs_kCaeNIQYbMT_g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KQJhRHCOuEuwndKiQsCnRQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">188.878174 425.864014 21.812706</knowrob:translation>
@@ -1473,7 +1455,7 @@
 	<!-- Individual IAIDrawerW100H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;vq_e9YUL3EqHkJuCnJfshg">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW100H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;tyx0IqY9A0-FWZU7Y2juSA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;eCwDujQ7oU20iK7Qi4mTSQ"/>
@@ -1482,11 +1464,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">727B1FFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;qTFtGOg_xUa36CEhzLq4eQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW100H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;hSn9uHf4lUewmRWIv-wHBA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW100H29;Id,vq_e9YUL3EqHkJuCnJfshg;VisMask,727B1FFF;RenderedVisMask,717A24FF;VisualMask,5B61F4FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;qTFtGOg_xUa36CEhzLq4eQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;hSn9uHf4lUewmRWIv-wHBA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">188.878174 345.364136 50.812706</knowrob:translation>
@@ -1495,7 +1476,7 @@
 	<!-- Individual IAIDrawerW100H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;xxAWFFSYDUO8VqxWdkfXPg">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW100H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;S2iWIg7yKECxyOKBb8KJNw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;LtrswhI-k0idK6vsxJLu1g"/>
@@ -1504,11 +1485,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">2B566CFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;KXwhH6Qi5kuDfce0Baiv-w"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW100H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;95spTEUr3UOwoBYTwKEI6A"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW100H29;Id,xxAWFFSYDUO8VqxWdkfXPg;VisMask,2B566CFF;RenderedVisMask,2E566BFF;VisualMask,AACCC3FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KXwhH6Qi5kuDfce0Baiv-w">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;95spTEUr3UOwoBYTwKEI6A">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">188.878159 345.364197 21.812706</knowrob:translation>
@@ -1517,7 +1497,7 @@
 	<!-- Individual IAIDrawerW60H36 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;AVzMVYk0Lk6-e3DYjnFtRA">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H36"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;qpxxnc6b902hCFd2gIPObQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;H-0rrqRUA06MaasJqK4uVg"/>
@@ -1526,11 +1506,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">FA1C19FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ljBHaU4-LUGlpZ-DI-IdWw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H36.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;IlFc72IS50OgukxiwhMS1Q"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H36;Id,AVzMVYk0Lk6-e3DYjnFtRA;VisMask,FA1C19FF;RenderedVisMask,F9211EFF;VisualMask,1EA86EFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ljBHaU4-LUGlpZ-DI-IdWw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;IlFc72IS50OgukxiwhMS1Q">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-65.765854 71.314697 35.570255</knowrob:translation>
@@ -1539,7 +1518,7 @@
 	<!-- Individual IAIDrawerW60H58 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;y4LNhgXw9U2QA0lUXlrfOg">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H58"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;6f_gS9_ow0OP_lXT6DkMqQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;DyhP38KEtESx5sjPqYTsCA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;QWhzC4GLVUmWasZ1hqSyOg"/>
@@ -1548,11 +1527,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">39783FFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;DT0aWk7X60uupI8qm_VhhQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H58.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;V6g62-kZ5UWw6MKGnhM-UQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H58;Id,y4LNhgXw9U2QA0lUXlrfOg;VisMask,39783FFF;RenderedVisMask,3B7741FF;VisualMask,D300BEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;DT0aWk7X60uupI8qm_VhhQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;V6g62-kZ5UWw6MKGnhM-UQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-65.589729 367.409058 46.561462</knowrob:translation>
@@ -1561,7 +1539,7 @@
 	<!-- Individual IAIDrawerW60H14 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;onPzvRUntkyXohB1w8K8bQ">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H14"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;6f_gS9_ow0OP_lXT6DkMqQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;VKEF119YnUuiGmSosl9svQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;THvFpHfaE0-OllpLpeGquA"/>
@@ -1570,11 +1548,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">9177B7FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;h6Dlkc8yGUu2mrRSlrqIhw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H14.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;kqjdSap890yvblBkyKs77Q"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H14;Id,onPzvRUntkyXohB1w8K8bQ;VisMask,9177B7FF;RenderedVisMask,8F76B5FF;VisualMask,B92F12FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;h6Dlkc8yGUu2mrRSlrqIhw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;kqjdSap890yvblBkyKs77Q">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">-0.000000 -0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-65.560493 367.668182 80.076736</knowrob:translation>
@@ -1583,7 +1560,7 @@
 	<!-- Individual IAIDrawerW30H132 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KdMBTchi9UuTQNuxXK4OpQ">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW30H132"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;6f_gS9_ow0OP_lXT6DkMqQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;57pqxz4xB0Sh_4Sef47eUg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;-4mJTBk3Xki4h9LetPhg8g"/>
@@ -1592,11 +1569,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">C08185FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;r-76aHRteE6OgMltMgiiAg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW30H132.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;UxwygoHfx0OQ-5DA6WZUdQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW30H132;Id,KdMBTchi9UuTQNuxXK4OpQ;VisMask,C08185FF;RenderedVisMask,BE7F83FF;VisualMask,B26BBEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;r-76aHRteE6OgMltMgiiAg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;UxwygoHfx0OQ-5DA6WZUdQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-65.355461 412.448425 80.527992</knowrob:translation>
@@ -1605,7 +1581,7 @@
 	<!-- Individual IAIDrawerW30H132 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;t6Ub41jLZUeiLpfeo_DZTA">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW30H132"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;6f_gS9_ow0OP_lXT6DkMqQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;IrZOf9u9xEuP2mNyF1OxyQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;DSSIxvftZ0eMktco4ix_7w"/>
@@ -1614,11 +1590,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">7B04BFFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;zRjc32osYUCJvkxR1bn1JA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW30H132.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;aZtepd8nAEmK51FCw_i8Kg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW30H132;Id,t6Ub41jLZUeiLpfeo_DZTA;VisMask,7B04BFFF;RenderedVisMask,7A0BBDFF;VisualMask,9D08C9FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;zRjc32osYUCJvkxR1bn1JA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;aZtepd8nAEmK51FCw_i8Kg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-65.520157 322.667877 80.315498</knowrob:translation>
@@ -1627,7 +1602,7 @@
 	<!-- Individual IAIOvenDoor -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;9ZHn_BDo306CrD4iYh-z-Q">
 		<rdf:type rdf:resource="&knowrob;IAIOvenDoor"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;0JbhSAwAdkut1yRUSHJJAQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;lcnKBSJTV0iyHWF-eLSTuw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;HGDj8rJJp0mFs0S7UzEzbQ"/>
@@ -1636,11 +1611,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">10189EFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;hSIU3APnYEWfVe_AwvHjlA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenDoor.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;6sZxK-Xic0yAUZdSZKCsPA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenDoor;Id,9ZHn_BDo306CrD4iYh-z-Q;VisMask,10189EFF;RenderedVisMask,171E9CFF;VisualMask,281D12FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;hSIU3APnYEWfVe_AwvHjlA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;6sZxK-Xic0yAUZdSZKCsPA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-42.213509 367.693024 110.571266</knowrob:translation>
@@ -1649,7 +1623,7 @@
 	<!-- Individual IAIDishwasherDoor -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;zoAfiCIbi0KJP-fecLJkoQ">
 		<rdf:type rdf:resource="&knowrob;IAIDishwasherDoor"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;2XrXZWrsy0GjnaRuAyfaUA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;bMvGp2FEZUKgZkzrDnY-dg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Sywl8OIeHkGp0pXaEZlyBQ"/>
@@ -1658,11 +1632,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">E63A5AFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;I3upksJmIEu5OG-kMvT6uQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDishwasherDoor.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;0jYJQaaVrkK_g0ghwUaRvA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDishwasherDoor;Id,zoAfiCIbi0KJP-fecLJkoQ;VisMask,E63A5AFF;RenderedVisMask,E53C5AFF;VisualMask,E909BCFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;I3upksJmIEu5OG-kMvT6uQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;0jYJQaaVrkK_g0ghwUaRvA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-47.039944 194.945282 47.024044</knowrob:translation>
@@ -1671,7 +1644,7 @@
 	<!-- Individual IAIDishwasherLowerRack -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Dkkpmdu-L0Ssc3R5YJTftw">
 		<rdf:type rdf:resource="&knowrob;IAIDishwasherLowerRack"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;2XrXZWrsy0GjnaRuAyfaUA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;yhW22AJ3JUmvk8ZoHV9E_A"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1679,11 +1652,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">EC36F1FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;7JMvRsVABkeyfJi3lY2HDQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDishwasherLowerRack.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;m4-dYEP4sku7hho3ISeGhA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDishwasherLowerRack;Id,Dkkpmdu-L0Ssc3R5YJTftw;VisMask,EC36F1FF;RenderedVisMask,EB38F0FF;VisualMask,168C0EFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;7JMvRsVABkeyfJi3lY2HDQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;m4-dYEP4sku7hho3ISeGhA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-71.473991 194.983185 35.070847</knowrob:translation>
@@ -1692,7 +1664,7 @@
 	<!-- Individual IAIDishwasherUpperRack -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;61nqVeqryECsFlyF5fjcBQ">
 		<rdf:type rdf:resource="&knowrob;IAIDishwasherUpperRack"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;2XrXZWrsy0GjnaRuAyfaUA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Xnl5debJ0E2eQZAwQKybRA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1700,11 +1672,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">741EA7FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;bn3F-Xrc302YeRM443zX5g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDishwasherUpperRack.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;IeAf34bqDUyQGH2fhag1lA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDishwasherUpperRack;Id,61nqVeqryECsFlyF5fjcBQ;VisMask,741EA7FF;RenderedVisMask,7323A5FF;VisualMask,E26A19FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;bn3F-Xrc302YeRM443zX5g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;IeAf34bqDUyQGH2fhag1lA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-72.804619 194.983185 60.610748</knowrob:translation>
@@ -1713,7 +1684,7 @@
 	<!-- Individual IAIDrawerW80H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yIcSTM_mgk2KwycdPHm6Wg">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW80H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;_xFvuxlkBkiY0_EPp58t_A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;4BWaQp4o8UKlhZN94n7xcw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;5sZ4HC2xD0O_pLrSJMoFTg"/>
@@ -1722,11 +1693,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">C636BAFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ULbP-0MyjEeqWf1DCsYQMw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW80H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;IfmEV_y0x0WxeEy6bVs2JA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW80H29;Id,yIcSTM_mgk2KwycdPHm6Wg;VisMask,C636BAFF;RenderedVisMask,C438B8FF;VisualMask,0192D6FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ULbP-0MyjEeqWf1DCsYQMw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;IfmEV_y0x0WxeEy6bVs2JA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-66.447083 264.361389 23.818039</knowrob:translation>
@@ -1735,7 +1705,7 @@
 	<!-- Individual IAIDrawerW80H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;uGIRx-2fqEerIrnwk0PAiw">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW80H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;_xFvuxlkBkiY0_EPp58t_A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;eXptgrgijUOlqtlgxWC19A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;v1mfMPMZ_kGxKFQawPvEbw"/>
@@ -1744,11 +1714,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">7EA4B3FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;H00zlZI1bk6FEwXi6ocrXA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW80H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;ScIDm4C-ZkGNmj9TNYGU2Q"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW80H29;Id,uGIRx-2fqEerIrnwk0PAiw;VisMask,7EA4B3FF;RenderedVisMask,7DA2B1FF;VisualMask,38F302FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;H00zlZI1bk6FEwXi6ocrXA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ScIDm4C-ZkGNmj9TNYGU2Q">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-66.253883 264.361389 52.644547</knowrob:translation>
@@ -1757,7 +1726,7 @@
 	<!-- Individual IAIDrawerW80H14 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;m9KNJFES30iniDDrVnOZAQ">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW80H14"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;2XrXZWrsy0GjnaRuAyfaUA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;ckJFQ-s4ikaVpb5k4bT-eA"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;65owwSemsEecpBehVlwIKA"/>
@@ -1766,11 +1735,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3153E4FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;Ti0Z_oZKukGvP4j7jQ4nhg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW80H14.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;Va1fdHskx0i9J9pIk6mWOQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW80H14;Id,m9KNJFES30iniDDrVnOZAQ;VisMask,3153E4FF;RenderedVisMask,3453E3FF;VisualMask,2A07B6FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Ti0Z_oZKukGvP4j7jQ4nhg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Va1fdHskx0i9J9pIk6mWOQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-66.292763 264.361389 74.289139</knowrob:translation>
@@ -1779,7 +1747,7 @@
 	<!-- Individual IAIDrawerW60H58 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;X8v3rZpn9E6nQd2f12MWww">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H58"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;_xFvuxlkBkiY0_EPp58t_A"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;FZxoj5sf9UOV85G39G0nUQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;nJi1vPF84kmrfRlRXbHprA"/>
@@ -1788,11 +1756,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">9A607BFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;tTPdg__5Ok2pLKeJsBIzgQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H58.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;TRsSK_pv80eSDro3vOUTuA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H58;Id,X8v3rZpn9E6nQd2f12MWww;VisMask,9A607BFF;RenderedVisMask,98607AFF;VisualMask,2CACA5FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;tTPdg__5Ok2pLKeJsBIzgQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TRsSK_pv80eSDro3vOUTuA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-66.213348 134.240891 40.702469</knowrob:translation>
@@ -1801,7 +1768,7 @@
 	<!-- Individual IAIDrawerW60H29 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;bvKhNRtSokmtp8VF7YHs9A">
 		<rdf:type rdf:resource="&knowrob;IAIDrawerW60H29"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;HmRgFTCqhUSWDywFHkC2sg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;c9AFjnrP90qMeXqJRhcKSw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Jkd95R66Hk2HQFv_NaxnOQ"/>
@@ -1810,11 +1777,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">7DC41CFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;QUka2D7UjU-J7JoFpX8syA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDrawerW60H29.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;eIDptguiVUKvigwJG8T6Ww"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDrawerW60H29;Id,bvKhNRtSokmtp8VF7YHs9A;VisMask,7DC41CFF;RenderedVisMask,7CC221FF;VisualMask,DBB765FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;QUka2D7UjU-J7JoFpX8syA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eIDptguiVUKvigwJG8T6Ww">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">188.878143 264.864197 21.812706</knowrob:translation>
@@ -1823,7 +1789,7 @@
 	<!-- Individual IAIFridgeDrawer -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;wUWYqNxCEUWg_CTtHHjoqw">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDrawer"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;yDAguIrDUkWSm6ZIANnK9w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -1831,11 +1797,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">7D9602FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;Lkpm_Vc-QESO-a6rHzY7DA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDrawer.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;hFtvHoCZTESr5sHggyB26g"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDrawer;Id,wUWYqNxCEUWg_CTtHHjoqw;VisMask,7D9602FF;RenderedVisMask,7C9408FF;VisualMask,D8FA57FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Lkpm_Vc-QESO-a6rHzY7DA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;hFtvHoCZTESr5sHggyB26g">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-66.766525 72.000000 60.821774</knowrob:translation>
@@ -1844,7 +1809,7 @@
 	<!-- Individual IAIFridgeDoor -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDoor"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;g5QTfSoeZ0q5_LPgaHc4kQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;JcDhY-nWsEio4l6E2pP0sg"/>
@@ -1855,11 +1820,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">F3AD46FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;6QmS7M1510avmdlsbaGTYg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDoor.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;G5KhQzdOfkmx1OeMmbTYzg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDoor;Id,P_hbPIoOTU6RLUtx_tEbYw;VisMask,F3AD46FF;RenderedVisMask,F2AB47FF;VisualMask,D7164DFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;6QmS7M1510avmdlsbaGTYg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;G5KhQzdOfkmx1OeMmbTYzg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-45.565899 71.769592 96.192039</knowrob:translation>
@@ -1868,7 +1832,7 @@
 	<!-- Individual IAIFridgeDoorPanel -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDoorPanel"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;Og1pn3DVU0Wz7LB6uJLiWg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;D3ljwJ2QyEq40l_5vUmJ2g"/>
@@ -1879,11 +1843,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">A1FED8FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;FoCDcLR4QEm_BboNXoPceA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDoorPanel.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;AgSUowEnokiXLkSKD2b2vg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDoorPanel;Id,ttkwREqAcEqjL0V62U23xA;VisMask,A1FED8FF;RenderedVisMask,9FFED6FF;VisualMask,86F00AFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;FoCDcLR4QEm_BboNXoPceA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;AgSUowEnokiXLkSKD2b2vg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -1.000000 0.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.011562 71.558380 99.483887</knowrob:translation>
@@ -1892,18 +1855,17 @@
 	<!-- Individual LightBlockFridge -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nIorJeWcdEa2QF70Q-sf1Q">
 		<rdf:type rdf:resource="&knowrob;LightBlockFridge"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;QUSGHBGfYE2DpjujEFPEAw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">64193CFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;NcPBHC-Bvk2FPqYCghbWUw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/LightBlockFridge.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;9em8UeUdO0GbloFMvK1nsw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LightBlockFridge;Id,nIorJeWcdEa2QF70Q-sf1Q;VisMask,64193CFF;RenderedVisMask,631E3EFF;VisualMask,A10302FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;NcPBHC-Bvk2FPqYCghbWUw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;9em8UeUdO0GbloFMvK1nsw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-77.019173 71.483009 100.773560</knowrob:translation>
@@ -1912,13 +1874,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Jkd95R66Hk2HQFv_NaxnOQ">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;bvKhNRtSokmtp8VF7YHs9A"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;akOw0pQ-r06xcFLRdlbu_Q"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;pZhZVXYoakWmAy0LNpwrtw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,Jkd95R66Hk2HQFv_NaxnOQ;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;akOw0pQ-r06xcFLRdlbu_Q">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;pZhZVXYoakWmAy0LNpwrtw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.000000 -1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">166.296265 269.170685 23.462967</knowrob:translation>
@@ -1927,13 +1889,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;65owwSemsEecpBehVlwIKA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;m9KNJFES30iniDDrVnOZAQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;yY0GYEjn7EOa6V262cnT2Q"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;iQ2IAO3_f0m6kz0jaCIdBw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,65owwSemsEecpBehVlwIKA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yY0GYEjn7EOa6V262cnT2Q">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;iQ2IAO3_f0m6kz0jaCIdBw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.792763 263.994873 74.289551</knowrob:translation>
@@ -1942,13 +1904,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;v1mfMPMZ_kGxKFQawPvEbw">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;uGIRx-2fqEerIrnwk0PAiw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;UeOI6hGPmUyAhkjh6ehbZQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;L1mF_1aBa0SXVeIXtAYs1Q"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,v1mfMPMZ_kGxKFQawPvEbw;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;UeOI6hGPmUyAhkjh6ehbZQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;L1mF_1aBa0SXVeIXtAYs1Q">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.753883 264.554779 52.302246</knowrob:translation>
@@ -1957,13 +1919,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;5sZ4HC2xD0O_pLrSJMoFTg">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;yIcSTM_mgk2KwycdPHm6Wg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ScR2oc0DbUut9G4miTjLUQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;igGmN7_qQkSVZfQ98unOEA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,5sZ4HC2xD0O_pLrSJMoFTg;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ScR2oc0DbUut9G4miTjLUQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;igGmN7_qQkSVZfQ98unOEA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.947083 264.297424 28.211571</knowrob:translation>
@@ -1972,13 +1934,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nJi1vPF84kmrfRlRXbHprA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;X8v3rZpn9E6nQd2f12MWww"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;TamCSiTt006xo1ljYhG_IQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;T4tZ4-PSY0qD0rSVCpvvTA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,nJi1vPF84kmrfRlRXbHprA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TamCSiTt006xo1ljYhG_IQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;T4tZ4-PSY0qD0rSVCpvvTA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.713318 133.413132 44.697803</knowrob:translation>
@@ -1987,13 +1949,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Sywl8OIeHkGp0pXaEZlyBQ">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;zoAfiCIbi0KJP-fecLJkoQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;T5oGAgI_70y8PiQlqM663A"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;ux8-HDUQLkW4C91qVhoDQw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,Sywl8OIeHkGp0pXaEZlyBQ;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;T5oGAgI_70y8PiQlqM663A">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ux8-HDUQLkW4C91qVhoDQw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.841381 193.562805 11.124043</knowrob:translation>
@@ -2002,13 +1964,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yhW22AJ3JUmvk8ZoHV9E_A">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;Dkkpmdu-L0Ssc3R5YJTftw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;sC62J_JQBEqz6JSoSly_Ag"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;AQdikeYXE0eZymfwDNsIWw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,yhW22AJ3JUmvk8ZoHV9E_A;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;sC62J_JQBEqz6JSoSly_Ag">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;AQdikeYXE0eZymfwDNsIWw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-94.050499 195.417877 24.392612</knowrob:translation>
@@ -2017,13 +1979,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Xnl5debJ0E2eQZAwQKybRA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;61nqVeqryECsFlyF5fjcBQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;yWE4WX0bD0WifC7Kbz9iKA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;7fhJhZatyE6ra8Aa33JDKw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,Xnl5debJ0E2eQZAwQKybRA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yWE4WX0bD0WifC7Kbz9iKA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;7fhJhZatyE6ra8Aa33JDKw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-53.339256 193.761261 56.325260</knowrob:translation>
@@ -2032,13 +1994,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-4mJTBk3Xki4h9LetPhg8g">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;KdMBTchi9UuTQNuxXK4OpQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;yE2jJkxBM0uOOI5vkIHEdg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;QUTOiOPTlk6cGTS1dKHxhA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,-4mJTBk3Xki4h9LetPhg8g;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yE2jJkxBM0uOOI5vkIHEdg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;QUTOiOPTlk6cGTS1dKHxhA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-42.615379 416.134155 74.724548</knowrob:translation>
@@ -2047,13 +2009,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;DSSIxvftZ0eMktco4ix_7w">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;t6Ub41jLZUeiLpfeo_DZTA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;X9VBS7FjG0e6_dcMewpqIg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;eJk46cHwgEezvCTmlQ81Jw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,DSSIxvftZ0eMktco4ix_7w;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;X9VBS7FjG0e6_dcMewpqIg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eJk46cHwgEezvCTmlQ81Jw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.181320 323.306549 85.799545</knowrob:translation>
@@ -2062,13 +2024,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;QWhzC4GLVUmWasZ1hqSyOg">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;y4LNhgXw9U2QA0lUXlrfOg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;1quyRQxIkUOlMfCpdpuyhA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;TNNL-tTHc0e3oZWaRtKD1A"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,QWhzC4GLVUmWasZ1hqSyOg;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1quyRQxIkUOlMfCpdpuyhA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TNNL-tTHc0e3oZWaRtKD1A">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.089729 364.654968 44.090336</knowrob:translation>
@@ -2077,13 +2039,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;THvFpHfaE0-OllpLpeGquA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;onPzvRUntkyXohB1w8K8bQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;BmyVkKbIdkOtm47mq9D_RA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;uG2f67ADCEqh-4pXIIHpRA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,THvFpHfaE0-OllpLpeGquA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;BmyVkKbIdkOtm47mq9D_RA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;uG2f67ADCEqh-4pXIIHpRA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">-0.000000 -0.000000 -0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.072517 367.587738 79.354179</knowrob:translation>
@@ -2092,13 +2054,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;HGDj8rJJp0mFs0S7UzEzbQ">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;9ZHn_BDo306CrD4iYh-z-Q"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;LBlpFT2ezUGEihQxWW6Uyg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;010GafRvlUeKv8V_KnDCvQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,HGDj8rJJp0mFs0S7UzEzbQ;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;LBlpFT2ezUGEihQxWW6Uyg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;010GafRvlUeKv8V_KnDCvQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.407558 367.998322 88.259514</knowrob:translation>
@@ -2107,28 +2069,28 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;RmB-MfAsD0eX5oThhsrGSA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;zVBHGrf9n0qEVqc8aDbF-w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;EPZpk63-50m7iKmI6OUUsg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;fxESLnj_XEiDI4_dvdPoMA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,RmB-MfAsD0eX5oThhsrGSA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;EPZpk63-50m7iKmI6OUUsg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;fxESLnj_XEiDI4_dvdPoMA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.000000 -1.000000</knowrob:quaternion>
-		<knowrob:translation rdf:datatype="&xsd;string">113.899185 266.160828 52.163551</knowrob:translation>
+		<knowrob:translation rdf:datatype="&xsd;string">123.899185 266.160828 52.163551</knowrob:translation>
 	</owl:NamedIndividual>
 
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eCwDujQ7oU20iK7Qi4mTSQ">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;vq_e9YUL3EqHkJuCnJfshg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;PPyxUddxm0Wfb6WQYVGw8Q"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;nXXtTodapEqCZndckhRRJA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,eCwDujQ7oU20iK7Qi4mTSQ;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;PPyxUddxm0Wfb6WQYVGw8Q">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nXXtTodapEqCZndckhRRJA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 -1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">163.378174 346.157227 50.602814</knowrob:translation>
@@ -2137,13 +2099,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;LtrswhI-k0idK6vsxJLu1g">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;xxAWFFSYDUO8VqxWdkfXPg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ztkjMKSvPUm7bk2HFOI4iA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;1TaeUkwBrEadUm0VdMVJCQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,LtrswhI-k0idK6vsxJLu1g;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ztkjMKSvPUm7bk2HFOI4iA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1TaeUkwBrEadUm0VdMVJCQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 -1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">163.378174 346.714661 22.016785</knowrob:translation>
@@ -2152,13 +2114,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;SUQw8QFCdUmcYC4co-v1jA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;xC5gUQiYJ0GvAXhAkIrD0w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ShK_zQkFaUOuk4L7NYPFgg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;1n4Hm_xRwU-bPqJ232PQJQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,SUQw8QFCdUmcYC4co-v1jA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ShK_zQkFaUOuk4L7NYPFgg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1n4Hm_xRwU-bPqJ232PQJQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 -1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">163.378189 426.027954 51.292667</knowrob:translation>
@@ -2167,13 +2129,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Am3u-QRO4U2Xg8jQzSUQOA">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;iRS79lDuQUiW9iJ6He13cQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;VldHlWbhGUigIdwKh_PKKA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;Ptp2pGyX00-gc-eaeXHRtg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,Am3u-QRO4U2Xg8jQzSUQOA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VldHlWbhGUigIdwKh_PKKA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Ptp2pGyX00-gc-eaeXHRtg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 -1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">163.853394 429.087585 22.208685</knowrob:translation>
@@ -2182,13 +2144,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;H-0rrqRUA06MaasJqK4uVg">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;AVzMVYk0Lk6-e3DYjnFtRA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;RmGMhWmGnEypjHpZ_wZbKw"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;skwprgoV9EKYhou0ZsAPFw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,H-0rrqRUA06MaasJqK4uVg;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;RmGMhWmGnEypjHpZ_wZbKw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;skwprgoV9EKYhou0ZsAPFw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-40.446320 70.326233 36.376343</knowrob:translation>
@@ -2197,13 +2159,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yDAguIrDUkWSm6ZIANnK9w">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;wUWYqNxCEUWg_CTtHHjoqw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;-YOBxEc8vEOmaTG9ZxB7wA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;TFkCj-gHUESb5GbrwWpzVQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,yDAguIrDUkWSm6ZIANnK9w;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-YOBxEc8vEOmaTG9ZxB7wA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TFkCj-gHUESb5GbrwWpzVQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-57.300003 72.000000 62.000000</knowrob:translation>
@@ -2212,13 +2174,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;CDYnfKzbt02epkbwHO8Wsg">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;sdX81DNu_UO4AaoBVhwyGQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;jPiL84kd7kuBW7KVV_HTog"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,CDYnfKzbt02epkbwHO8Wsg;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;sdX81DNu_UO4AaoBVhwyGQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jPiL84kd7kuBW7KVV_HTog">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-43.750244 44.935711 97.649460</knowrob:translation>
@@ -2227,13 +2189,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;rV3poPHBWkCUUtwkxLd8hw">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;YumGp0gJNEieUI9ngV7PZw"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;-XoSwqU3rESMwIxiVMctSw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,rV3poPHBWkCUUtwkxLd8hw;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;YumGp0gJNEieUI9ngV7PZw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-XoSwqU3rESMwIxiVMctSw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.110332 42.000015 97.000000</knowrob:translation>
@@ -2242,7 +2204,7 @@
 	<!-- Individual IAITapMiddle -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TSX0foesNUOSQxLjOqpbSQ">
 		<rdf:type rdf:resource="&knowrob;IAITapMiddle"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;97o09wxWok-YBuhMzSYcfQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;bPg3jY8WwEmi9tRUWLrO0Q"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
@@ -2250,11 +2212,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">347AABFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;ltNa67RRu0mTxWCCyvahlg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAITapMiddle.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;yKpWnMy2gEaoI8c52iicwg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAITapMiddle;Id,TSX0foesNUOSQxLjOqpbSQ;VisMask,347AABFF;RenderedVisMask,3779A9FF;VisualMask,6EF294FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ltNa67RRu0mTxWCCyvahlg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;yKpWnMy2gEaoI8c52iicwg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-86.846848 157.080826 91.925606</knowrob:translation>
@@ -2263,18 +2224,17 @@
 	<!-- Individual IAIFilterSmall -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;GKytRxrPS0W8LIE3iF6g1Q">
 		<rdf:type rdf:resource="&knowrob;IAIFilterSmall"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;97o09wxWok-YBuhMzSYcfQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.008824</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3D9DCAFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;VAJhO0xEqUyKGdRoCwDC4Q"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFilterSmall.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;xKF0dMqJdUyiyWZdciVAJA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFilterSmall;Id,GKytRxrPS0W8LIE3iF6g1Q;VisMask,3D9DCAFF;RenderedVisMask,3F9BC8FF;VisualMask,115E81FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VAJhO0xEqUyKGdRoCwDC4Q">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;xKF0dMqJdUyiyWZdciVAJA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.918999 157.074081 84.577530</knowrob:translation>
@@ -2283,18 +2243,17 @@
 	<!-- Individual IAIFilterBig -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;EXp2gCvlkUyTrDVwHdTRHQ">
 		<rdf:type rdf:resource="&knowrob;IAIFilterBig"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;97o09wxWok-YBuhMzSYcfQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.115706</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">CFD9F8FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;G2PtjKxFO0GC-mLP96W-jw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFilterBig.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;mwErXlZu_UeVMV92HcRJeg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFilterBig;Id,EXp2gCvlkUyTrDVwHdTRHQ;VisMask,CFD9F8FF;RenderedVisMask,CDD7F7FF;VisualMask,20A946FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;G2PtjKxFO0GC-mLP96W-jw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;mwErXlZu_UeVMV92HcRJeg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-70.716492 133.216339 64.680176</knowrob:translation>
@@ -2303,18 +2262,17 @@
 	<!-- Individual IAIFridgeShelfGlas -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;URnu70fHu0GbmHpJ0OVRFw">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeShelfGlas"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">1.570863</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">EEF727FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;jz-v8XmezkyX1FpA6IdOLA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeShelfGlas.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;-DptLDCeGEeqxsyFy2oBtA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeShelfGlas;Id,URnu70fHu0GbmHpJ0OVRFw;VisMask,EEF727FF;RenderedVisMask,EDF62BFF;VisualMask,9C2CB0FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jz-v8XmezkyX1FpA6IdOLA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-DptLDCeGEeqxsyFy2oBtA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-73.900009 72.000000 74.106560</knowrob:translation>
@@ -2323,18 +2281,17 @@
 	<!-- Individual IAIFridgeShelf -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;4e39M1GUTU61rN7BLgERlQ">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeShelf"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">1.629651</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">EF037AFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;H9XN07hHWk642lqVd0OAeA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeShelf.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;D6T9zYqvhkiMHWsAu-Pw3g"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeShelf;Id,4e39M1GUTU61rN7BLgERlQ;VisMask,EF037AFF;RenderedVisMask,EE0A79FF;VisualMask,96E6E7FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;H9XN07hHWk642lqVd0OAeA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;D6T9zYqvhkiMHWsAu-Pw3g">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-73.900002 72.000000 87.225212</knowrob:translation>
@@ -2343,18 +2300,17 @@
 	<!-- Individual IAIFridgeShelf -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;pOiDji6I4EGZRJ46iKAvlg">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeShelf"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">1.629651</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">35F2F2FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;oRJvE43170WM_BREQCho5w"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeShelf.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;bpgj5XKUD0e5WRnpAvo1XA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeShelf;Id,pOiDji6I4EGZRJ46iKAvlg;VisMask,35F2F2FF;RenderedVisMask,38F1F1FF;VisualMask,0250C3FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;oRJvE43170WM_BREQCho5w">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;bpgj5XKUD0e5WRnpAvo1XA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-74.495964 72.000000 99.815262</knowrob:translation>
@@ -2363,18 +2319,17 @@
 	<!-- Individual IAIFridgeShelf -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;wTRYkaqOxEGQvtmMl6C_Xg">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeShelf"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">1.629651</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">47A916FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;OObgFRN2h0m0_tysz71zqw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeShelf.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;_KeC0tnqwEaX5JXMK9i52w"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeShelf;Id,wTRYkaqOxEGQvtmMl6C_Xg;VisMask,47A916FF;RenderedVisMask,48A71CFF;VisualMask,9DBB07FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;OObgFRN2h0m0_tysz71zqw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;_KeC0tnqwEaX5JXMK9i52w">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-73.900002 72.000000 120.913956</knowrob:translation>
@@ -2383,13 +2338,13 @@
 	<!-- Individual LightIndividual -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;899vGlROcEiXoh0QQfuEyw">
 		<rdf:type rdf:resource="&knowrob;LightIndividual"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;214ZoX_pzkSdV88BCgPFcA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;7Aj7QMl9VEaZeSzeZGOeIw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">EDLightSwitchFridge;Radius,1.0;LocX,24.554699;LocY,-2.782627;LocZ,0.0; SemLog;Id,899vGlROcEiXoh0QQfuEyw;Class,LightIndividual;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;214ZoX_pzkSdV88BCgPFcA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;7Aj7QMl9VEaZeSzeZGOeIw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-85.577034 50.775887 110.313988</knowrob:translation>
@@ -2398,38 +2353,36 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;pGE9XOQ-L0mLboBpLqFu5g">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;zVBHGrf9n0qEVqc8aDbF-w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3BEEFBFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;PYUfQLpl30213HVD69C4SQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;YHPZxqtZ4EWR1r_LKvkmOw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,pGE9XOQ-L0mLboBpLqFu5g;VisMask,3BEEFBFF;RenderedVisMask,3DEDFAFF;VisualMask,9A8B93FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;PYUfQLpl30213HVD69C4SQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;YHPZxqtZ4EWR1r_LKvkmOw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 0.000001</knowrob:quaternion>
-		<knowrob:translation rdf:datatype="&xsd;string">110.063271 264.864197 60.497425</knowrob:translation>
+		<knowrob:translation rdf:datatype="&xsd;string">120.063271 264.864197 60.497425</knowrob:translation>
 	</owl:NamedIndividual>
 
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;cIuckcePIEaoDzQxkMF1mw">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;xC5gUQiYJ0GvAXhAkIrD0w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">16644EFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;45EaJ2-tskKhCHSCpaRB-g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;QfjT97b77E6FuCC6bC2M5Q"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,cIuckcePIEaoDzQxkMF1mw;VisMask,16644EFF;RenderedVisMask,1C634FFF;VisualMask,494E54FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;45EaJ2-tskKhCHSCpaRB-g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;QfjT97b77E6FuCC6bC2M5Q">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000001</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">160.063293 425.864014 60.497425</knowrob:translation>
@@ -2438,18 +2391,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ZGfqfEpkK0OCIlMr6WS61w">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;iRS79lDuQUiW9iJ6He13cQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">5EAD12FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;OpOVc7P8g0iuVx3aYEh14A"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;w-uCn2D0KEGJLi6IzYeZzw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,ZGfqfEpkK0OCIlMr6WS61w;VisMask,5EAD12FF;RenderedVisMask,5EAB18FF;VisualMask,0189F7FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;OpOVc7P8g0iuVx3aYEh14A">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;w-uCn2D0KEGJLi6IzYeZzw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000001</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">160.689331 425.864014 31.497425</knowrob:translation>
@@ -2458,18 +2410,17 @@
 	<!-- Individual IAIHandleW100 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;tyx0IqY9A0-FWZU7Y2juSA">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW100"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;vq_e9YUL3EqHkJuCnJfshg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.312149</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">D882D1FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;nc93xOkILUeZ0WhRGMW3MA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW100.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;lrQDcWcHRkGnod1LmUWfcg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW100;Id,tyx0IqY9A0-FWZU7Y2juSA;VisMask,D882D1FF;RenderedVisMask,D680CFFF;VisualMask,249886FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nc93xOkILUeZ0WhRGMW3MA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;lrQDcWcHRkGnod1LmUWfcg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000001</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">160.063293 345.364136 60.497425</knowrob:translation>
@@ -2478,18 +2429,17 @@
 	<!-- Individual IAIHandleW100 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;S2iWIg7yKECxyOKBb8KJNw">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW100"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;xxAWFFSYDUO8VqxWdkfXPg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.312149</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">A11EA6FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;O2RzY4xLXEeDEZXLHeETjw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW100.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;0YhtUHzUX0Wyuk3XAITtzg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW100;Id,S2iWIg7yKECxyOKBb8KJNw;VisMask,A11EA6FF;RenderedVisMask,9F23A4FF;VisualMask,25F8A5FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;O2RzY4xLXEeDEZXLHeETjw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;0YhtUHzUX0Wyuk3XAITtzg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000001</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">160.689331 345.364197 31.497425</knowrob:translation>
@@ -2498,18 +2448,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;qpxxnc6b902hCFd2gIPObQ">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;AVzMVYk0Lk6-e3DYjnFtRA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">C631F1FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;HusN4wJ6k0-jA6fBAz3SMw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;6RVCOS0zTEekKzfDGL56sg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,qpxxnc6b902hCFd2gIPObQ;VisMask,C631F1FF;RenderedVisMask,C434F0FF;VisualMask,4F6A9EFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;HusN4wJ6k0-jA6fBAz3SMw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;6RVCOS0zTEekKzfDGL56sg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.166664 71.314697 48.772835</knowrob:translation>
@@ -2518,18 +2467,17 @@
 	<!-- Individual IAIHandleH132 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;57pqxz4xB0Sh_4Sef47eUg">
 		<rdf:type rdf:resource="&knowrob;IAIHandleH132"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;KdMBTchi9UuTQNuxXK4OpQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.492682</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">AA59F5FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;pp5eFxFmlE63r00e1cA6gA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleH132.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;N0xHXah4-kyjLzjUdNAcEg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleH132;Id,57pqxz4xB0Sh_4Sef47eUg;VisMask,AA59F5FF;RenderedVisMask,A859F4FF;VisualMask,E3FD1FFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;pp5eFxFmlE63r00e1cA6gA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;N0xHXah4-kyjLzjUdNAcEg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-35.730995 412.448456 80.527992</knowrob:translation>
@@ -2538,18 +2486,17 @@
 	<!-- Individual IAIHandleH132 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;IrZOf9u9xEuP2mNyF1OxyQ">
 		<rdf:type rdf:resource="&knowrob;IAIHandleH132"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;t6Ub41jLZUeiLpfeo_DZTA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.492682</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">AACCD3FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;jgfpXHwoW02kGE8C7et-jg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleH132.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;vXjsYREv4Ei5zVf9riJJPA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleH132;Id,IrZOf9u9xEuP2mNyF1OxyQ;VisMask,AACCD3FF;RenderedVisMask,A8CAD1FF;VisualMask,708496FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jgfpXHwoW02kGE8C7et-jg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;vXjsYREv4Ei5zVf9riJJPA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-36.012802 322.667938 80.315514</knowrob:translation>
@@ -2558,18 +2505,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;DyhP38KEtESx5sjPqYTsCA">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;y4LNhgXw9U2QA0lUXlrfOg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">9231D4FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;6CZozNhmr0WBemeofxk7iQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;ElMMU-V2mk6Aiyh8qx4REw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,DyhP38KEtESx5sjPqYTsCA;VisMask,9231D4FF;RenderedVisMask,9034D2FF;VisualMask,00E689FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;6CZozNhmr0WBemeofxk7iQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ElMMU-V2mk6Aiyh8qx4REw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-36.774857 367.409088 70.619904</knowrob:translation>
@@ -2578,18 +2524,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VKEF119YnUuiGmSosl9svQ">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;onPzvRUntkyXohB1w8K8bQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">1A1072FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;d8YrN4u-EECgQUbZ6ubBxw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;SUTDNhPX30GF_0ga4wXo3g"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,VKEF119YnUuiGmSosl9svQ;VisMask,1A1072FF;RenderedVisMask,1F1771FF;VisualMask,65AA49FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;d8YrN4u-EECgQUbZ6ubBxw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;SUTDNhPX30GF_0ga4wXo3g">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">-0.000000 -0.000000 0.000001 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-36.745621 367.668213 82.522766</knowrob:translation>
@@ -2598,18 +2543,17 @@
 	<!-- Individual IAIOvenDoorHandle -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;lcnKBSJTV0iyHWF-eLSTuw">
 		<rdf:type rdf:resource="&knowrob;IAIOvenDoorHandle"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;9ZHn_BDo306CrD4iYh-z-Q"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.35724</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">25F0F8FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;e9kF8q39rk-KM7auikQDKA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIOvenDoorHandle.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;1y-5JewEaUmHCIPi_59jng"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIOvenDoorHandle;Id,lcnKBSJTV0iyHWF-eLSTuw;VisMask,25F0F8FF;RenderedVisMask,29EFF7FF;VisualMask,B9205FFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;e9kF8q39rk-KM7auikQDKA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1y-5JewEaUmHCIPi_59jng">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-38.240791 367.693024 130.595825</knowrob:translation>
@@ -2618,7 +2562,7 @@
 	<!-- Individual IAITapBottom -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ISnUqjDeD0igoz5FGNzRPw">
 		<rdf:type rdf:resource="&knowrob;IAITapBottom"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;97o09wxWok-YBuhMzSYcfQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;_PkrtLFSYUSxPYZSHp4pRA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -2626,11 +2570,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">F5E229FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;i-RQ0ooq5ESpgi3kvcThPQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAITapBottom.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;TB8MWtPBuESh0_ffg1YuBg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAITapBottom;Id,ISnUqjDeD0igoz5FGNzRPw;VisMask,F5E229FF;RenderedVisMask,F4E12DFF;VisualMask,1F6A23FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;i-RQ0ooq5ESpgi3kvcThPQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;TB8MWtPBuESh0_ffg1YuBg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.707107 0.707107</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-79.362450 149.701752 92.382660</knowrob:translation>
@@ -2639,7 +2582,7 @@
 	<!-- Individual IAIDishwasherDoorPanel -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;bMvGp2FEZUKgZkzrDnY-dg">
 		<rdf:type rdf:resource="&knowrob;IAIDishwasherDoorPanel"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;zoAfiCIbi0KJP-fecLJkoQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;I3K4TBwkQ0a840fD1TeE3w"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
@@ -2647,11 +2590,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">3C6BC4FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;8A0d9iI7ukKjThzLbxeCtw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIDishwasherDoorPanel.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;uCkuDD5wIkK5yXKSEDKqzw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIDishwasherDoorPanel;Id,bMvGp2FEZUKgZkzrDnY-dg;VisMask,3C6BC4FF;RenderedVisMask,3E6AC2FF;VisualMask,6D5C94FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;8A0d9iI7ukKjThzLbxeCtw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;uCkuDD5wIkK5yXKSEDKqzw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.685955 194.588348 45.390697</knowrob:translation>
@@ -2660,18 +2602,17 @@
 	<!-- Individual IAIHandleW80 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ckJFQ-s4ikaVpb5k4bT-eA">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW80"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;m9KNJFES30iniDDrVnOZAQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.274894</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">4375F0FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;Oq_50uCfc0W24ZrBSrb7yw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW80.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;nXfasGKHFkSLK6UVT-0z_g"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW80;Id,ckJFQ-s4ikaVpb5k4bT-eA;VisMask,4375F0FF;RenderedVisMask,4474EFFF;VisualMask,8282DEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Oq_50uCfc0W24ZrBSrb7yw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nXfasGKHFkSLK6UVT-0z_g">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.520599 264.361389 76.735168</knowrob:translation>
@@ -2680,18 +2621,17 @@
 	<!-- Individual IAIHandleW80 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eXptgrgijUOlqtlgxWC19A">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW80"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;uGIRx-2fqEerIrnwk0PAiw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.274894</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">8F0184FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;59bKy0Og_06pEbkRSKevuw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW80.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;VqWxmB14Z02wT93vWJNDlw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW80;Id,eXptgrgijUOlqtlgxWC19A;VisMask,8F0184FF;RenderedVisMask,8D0682FF;VisualMask,62C4C3FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;59bKy0Og_06pEbkRSKevuw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VqWxmB14Z02wT93vWJNDlw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.439011 264.361389 62.329266</knowrob:translation>
@@ -2700,18 +2640,17 @@
 	<!-- Individual IAIHandleW80 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;4BWaQp4o8UKlhZN94n7xcw">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW80"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;yIcSTM_mgk2KwycdPHm6Wg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.274894</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">41E510FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;M1FllmgwUkOo6lEKlRxbCw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW80.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;y-bulHdlV02gLSB4qavnpg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW80;Id,4BWaQp4o8UKlhZN94n7xcw;VisMask,41E510FF;RenderedVisMask,43E417FF;VisualMask,32AC50FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;M1FllmgwUkOo6lEKlRxbCw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;y-bulHdlV02gLSB4qavnpg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.632210 264.361389 33.502758</knowrob:translation>
@@ -2720,18 +2659,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;FZxoj5sf9UOV85G39G0nUQ">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;X8v3rZpn9E6nQd2f12MWww"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">4F356EFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;LjXDz86iCkqN7JabBfZzRQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;h84Q_O2ALkW-w60w5DG6Jg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,FZxoj5sf9UOV85G39G0nUQ;VisMask,4F356EFF;RenderedVisMask,50386DFF;VisualMask,27C89EFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;LjXDz86iCkqN7JabBfZzRQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;h84Q_O2ALkW-w60w5DG6Jg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.567505 134.240891 64.730530</knowrob:translation>
@@ -2740,18 +2678,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;c9AFjnrP90qMeXqJRhcKSw">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;bvKhNRtSokmtp8VF7YHs9A"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">778A21FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;vHT3-SmvWUOl7NuBJx1vqQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;uo_HIji5l0iSnjbR_aBskQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,c9AFjnrP90qMeXqJRhcKSw;VisMask,778A21FF;RenderedVisMask,768826FF;VisualMask,114AE6FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;vHT3-SmvWUOl7NuBJx1vqQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;uo_HIji5l0iSnjbR_aBskQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 1.000000 -0.000001</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">160.689316 264.864197 31.497425</knowrob:translation>
@@ -2760,7 +2697,7 @@
 	<!-- Individual IAIFridgeLightSlider -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;rqsIbprOkEqFI4qY5npSGQ">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeLightSlider"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;mhpEOoZMjUuGfwi_JTfNdg"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;n-7uxjG1i0KJSjczoU8B8g"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -2768,11 +2705,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">901271FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;jYFlruMPbUGoAhXmBScLHA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeLightSlider.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;iEmUit7_CUS2yfNUhMFaLA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeLightSlider;Id,rqsIbprOkEqFI4qY5npSGQ;VisMask,901271FF;RenderedVisMask,8E1870FF;VisualMask,3BDACBFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jYFlruMPbUGoAhXmBScLHA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;iEmUit7_CUS2yfNUhMFaLA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.707107 0.707106</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-50.797306 48.000137 110.228775</knowrob:translation>
@@ -2781,18 +2717,17 @@
 	<!-- Individual IAIFridgeDoorShelfBig -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;owxQqnkS9EqxX-eVQSAkwg">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDoorShelfBig"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.896641</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">4B0347FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;EyKaQ_2xhEeTAA26MqLlhg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDoorShelfBig.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;Rc_uOd_IG0iikKxf36pjrA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDoorShelfBig;Id,owxQqnkS9EqxX-eVQSAkwg;VisMask,4B0347FF;RenderedVisMask,4C0A48FF;VisualMask,4FC701FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;EyKaQ_2xhEeTAA26MqLlhg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Rc_uOd_IG0iikKxf36pjrA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-48.154766 71.726646 60.238060</knowrob:translation>
@@ -2801,18 +2736,17 @@
 	<!-- Individual IAIFridgeDoorShelf -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;JcDhY-nWsEio4l6E2pP0sg">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDoorShelf"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.760596</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">45F537FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;C9uALCVxLUq_zHGwsy60mA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDoorShelf.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;wgAiZovw1EKy82fPeSDAjA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDoorShelf;Id,JcDhY-nWsEio4l6E2pP0sg;VisMask,45F537FF;RenderedVisMask,46F439FF;VisualMask,91AF65FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;C9uALCVxLUq_zHGwsy60mA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;wgAiZovw1EKy82fPeSDAjA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-48.210014 71.678856 125.738068</knowrob:translation>
@@ -2821,18 +2755,17 @@
 	<!-- Individual IAIFridgeDoorShelf -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;g5QTfSoeZ0q5_LPgaHc4kQ">
 		<rdf:type rdf:resource="&knowrob;IAIFridgeDoorShelf"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;P_hbPIoOTU6RLUtx_tEbYw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.760596</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">64DDF3FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;vfHcUDuR_k-YVfrVMUnbyg"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFridgeDoorShelf.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;m4L5mN6hKkC8S3UrBOlAQw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFridgeDoorShelf;Id,g5QTfSoeZ0q5_LPgaHc4kQ;VisMask,64DDF3FF;RenderedVisMask,63DCF2FF;VisualMask,6BFDDDFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;vfHcUDuR_k-YVfrVMUnbyg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;m4L5mN6hKkC8S3UrBOlAQw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-47.941036 71.948280 101.738068</knowrob:translation>
@@ -2841,18 +2774,17 @@
 	<!-- Individual IAIHandleW86 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Y4HAQC4nFkyPr22MqYNisg">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW86"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.31429</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">B67415FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;blfR30ov70OVUZQH2m9rig"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW86.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;FuaYkNj9kE6I2DrcqQEleQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW86;Id,Y4HAQC4nFkyPr22MqYNisg;VisMask,B67415FF;RenderedVisMask,B4731BFF;VisualMask,D50BABFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;blfR30ov70OVUZQH2m9rig">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;FuaYkNj9kE6I2DrcqQEleQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">-0.707106 -0.000000 0.000000 0.707107</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.081573 96.810257 100.483887</knowrob:translation>
@@ -2861,13 +2793,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;D3ljwJ2QyEq40l_5vUmJ2g">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;3_r16wITeEaiv7R2KUnSUA"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;R_WP5QAiLUaTQqQ04gsG9A"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,D3ljwJ2QyEq40l_5vUmJ2g;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;3_r16wITeEaiv7R2KUnSUA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;R_WP5QAiLUaTQqQ04gsG9A">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-41.940086 99.999283 97.000000</knowrob:translation>
@@ -2876,18 +2808,17 @@
 	<!-- Individual IAIFRidgeHingeBase -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Og1pn3DVU0Wz7LB6uJLiWg">
 		<rdf:type rdf:resource="&knowrob;IAIFRidgeHingeBase"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;ttkwREqAcEqjL0V62U23xA"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.022063</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">40902BFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;9_djwndhyUuYD9Kk8FieAw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIFRidgeHingeBase.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;xVTBec8ElU2PvPS7R_Ys7g"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIFRidgeHingeBase;Id,Og1pn3DVU0Wz7LB6uJLiWg;VisMask,40902BFF;RenderedVisMask,428E2EFF;VisualMask,FB264EFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;9_djwndhyUuYD9Kk8FieAw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;xVTBec8ElU2PvPS7R_Ys7g">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-42.062153 98.114494 111.479942</knowrob:translation>
@@ -2896,13 +2827,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;75Y9Bk_LaUuYOffF3bcs2Q">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;cIAVf1AsUEC3mmjNRU5tXw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;B1wKCErib0ubRVcvJDND3A"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;S2D9MBYeOkSBOyIQLOLvvg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,75Y9Bk_LaUuYOffF3bcs2Q;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;B1wKCErib0ubRVcvJDND3A">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;S2D9MBYeOkSBOyIQLOLvvg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 389.521027 138.475845</knowrob:translation>
@@ -2911,13 +2842,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1bGVWKjxkkqldaIQyq56tQ">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;2gzVjv6yGkyYVsVd7xZDeQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;NGGPWbRCZ0CcBBSJ7V1nWg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;Kqqm8VDymU6AZuX2aRamxA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,1bGVWKjxkkqldaIQyq56tQ;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;NGGPWbRCZ0CcBBSJ7V1nWg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;Kqqm8VDymU6AZuX2aRamxA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 370.780365 138.475845</knowrob:translation>
@@ -2926,13 +2857,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;seA8qcmTfkCmfg_U2lzqIA">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;L7xmO9UFR0mHhSeVIQIZnQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;eWrMxOGox0q-Jc5nlKLqXg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;5c_uhWYA406Kz0AHyNwShg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,seA8qcmTfkCmfg_U2lzqIA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eWrMxOGox0q-Jc5nlKLqXg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;5c_uhWYA406Kz0AHyNwShg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 383.078583 138.475845</knowrob:translation>
@@ -2941,13 +2872,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;qMpdBhgk9UeTbPHnbdWl2w">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;-ddAE3F2KUigked3AZZNlQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;YxHZ-nQ0gUygb9lioAglxQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;b4Psoqobn0CZYmOc0yrwtw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,qMpdBhgk9UeTbPHnbdWl2w;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;YxHZ-nQ0gUygb9lioAglxQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;b4Psoqobn0CZYmOc0yrwtw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 376.837921 138.475845</knowrob:translation>
@@ -2956,13 +2887,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;fATghIN1pEWt3I5FU84YYw">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;USIvvUBc9UW_P3b1R1o9nw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;MKz9SXqALUOkopixUHnVTg"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;FEu4BWvQVkGmro0eGYFcnA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,fATghIN1pEWt3I5FU84YYw;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;MKz9SXqALUOkopixUHnVTg">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;FEu4BWvQVkGmro0eGYFcnA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-39.839378 352.345734 138.719879</knowrob:translation>
@@ -2971,13 +2902,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;_PkrtLFSYUSxPYZSHp4pRA">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;ISnUqjDeD0igoz5FGNzRPw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;R_8K_J4NLkSAbo52l_jAig"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;y8vlCctdMkSCXiVxdZbokQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,_PkrtLFSYUSxPYZSHp4pRA;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;R_8K_J4NLkSAbo52l_jAig">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;y8vlCctdMkSCXiVxdZbokQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.382683 0.923879</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-86.804893 157.114410 84.736443</knowrob:translation>
@@ -2986,13 +2917,13 @@
 	<!-- Individual LinearJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;n-7uxjG1i0KJSjczoU8B8g">
 		<rdf:type rdf:resource="&knowrob;LinearJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;rqsIbprOkEqFI4qY5npSGQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;1__uT0dI0kekZzkPgIKphQ"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;C8qqy8q7TUmLuN0ArJY6LA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,LinearJoint;Id,n-7uxjG1i0KJSjczoU8B8g;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1__uT0dI0kekZzkPgIKphQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;C8qqy8q7TUmLuN0ArJY6LA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-47.915337 49.176746 110.193794</knowrob:translation>
@@ -3001,18 +2932,17 @@
 	<!-- Individual IAIHandleW60 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;I3K4TBwkQ0a840fD1TeE3w">
 		<rdf:type rdf:resource="&knowrob;IAIHandleW60"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;bMvGp2FEZUKgZkzrDnY-dg"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.223113</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">9CCE98FF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;eJ46iMdb5U-6uesTwzrrpw"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAIHandleW60.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;ApnnJPTtrEWxYbX5Nw2ygg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAIHandleW60;Id,I3K4TBwkQ0a840fD1TeE3w;VisMask,9CCE98FF;RenderedVisMask,9ACC96FF;VisualMask,240B80FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;eJ46iMdb5U-6uesTwzrrpw">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;ApnnJPTtrEWxYbX5Nw2ygg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-37.568501 194.588348 76.845810</knowrob:translation>
@@ -3021,7 +2951,7 @@
 	<!-- Individual IAITapTop -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;bPg3jY8WwEmi9tRUWLrO0Q">
 		<rdf:type rdf:resource="&knowrob;IAITapTop"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;TSX0foesNUOSQxLjOqpbSQ"/>
 		<knowrob:child rdf:resource="&ue-iai-kitchen;L0fHiY03MEm2O3SI5yA1Gw"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
@@ -3029,11 +2959,10 @@
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
 		<knowrob:maskColor rdf:datatype="&xsd;string">FD1ACDFF</knowrob:maskColor>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;RJm_-UMWEkOH043mihu7tQ"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/IAITapTop.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;_gUZyaATcUqfXAmQmVc9fQ"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,IAITapTop;Id,bPg3jY8WwEmi9tRUWLrO0Q;VisMask,FD1ACDFF;RenderedVisMask,FD1FCBFF;VisualMask,85D217FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;RJm_-UMWEkOH043mihu7tQ">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;_gUZyaATcUqfXAmQmVc9fQ">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 -0.707107 0.707107</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-85.258896 155.638107 96.826591</knowrob:translation>
@@ -3042,13 +2971,13 @@
 	<!-- Individual RevoluteJoint -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;L0fHiY03MEm2O3SI5yA1Gw">
 		<rdf:type rdf:resource="&knowrob;RevoluteJoint"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:parent rdf:resource="&ue-iai-kitchen;bPg3jY8WwEmi9tRUWLrO0Q"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;DihQ44qjkEWGJKYuh28A1w"/>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;_ORIScsKq0SmYlkJec4JJw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Class,RevoluteJoint;Id,L0fHiY03MEm2O3SI5yA1Gw;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;DihQ44qjkEWGJKYuh28A1w">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;_ORIScsKq0SmYlkJec4JJw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000001 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-86.878738 157.195313 95.853233</knowrob:translation>
@@ -3057,16 +2986,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;i_TMfhe9CUeG_uXUZO4E_w">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;UupEwxoEX0W3O_c3xBJLHA"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;-enNWxa1fEG2t8yzwxDXrA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,i_TMfhe9CUeG_uXUZO4E_w;Class,MPCupSet01;VisualMask,897C3FFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;UupEwxoEX0W3O_c3xBJLHA">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;-enNWxa1fEG2t8yzwxDXrA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-60.000000 230.000000 90.000000</knowrob:translation>
@@ -3075,16 +3003,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;DIBtnpwbrky_eFc4w6TpGg">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;VMMzezyjYEOGxYIVMkpn4g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;jrLwNphQz0age4IYfn2yJw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,DIBtnpwbrky_eFc4w6TpGg;Class,MPCupSet01;VisualMask,20118DFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;VMMzezyjYEOGxYIVMkpn4g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;jrLwNphQz0age4IYfn2yJw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-45.000000 230.000000 90.000000</knowrob:translation>
@@ -3093,16 +3020,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;0QM04ZkoeEuC0fIi_GtqVw">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;KL3zbw1pLEu8qv--r7B1_g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;n1dWBtT8mEW_TteeHzBqVA"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,0QM04ZkoeEuC0fIi_GtqVw;Class,MPCupSet01;VisualMask,DABBCEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;KL3zbw1pLEu8qv--r7B1_g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;n1dWBtT8mEW_TteeHzBqVA">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-75.000000 230.000000 90.000000</knowrob:translation>
@@ -3111,16 +3037,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;H-I2h7VA3kCzG_zA5UM7pQ">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;N_BsURu-pkiljpR_3eIa4g"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;9c0FQAC2IESJk0XFjnLQ7A"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,H-I2h7VA3kCzG_zA5UM7pQ;Class,MPCupSet01;VisualMask,8A02DEFF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;N_BsURu-pkiljpR_3eIa4g">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;9c0FQAC2IESJk0XFjnLQ7A">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-75.000000 215.000000 90.000000</knowrob:translation>
@@ -3129,16 +3054,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;1pBj_vXIgkW8dGzAXYpjTg">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;9MwisK4qzUm-Lslh6jNg1w"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;dbWqufe8R0ODTtlBwPRyqg"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,1pBj_vXIgkW8dGzAXYpjTg;Class,MPCupSet01;VisualMask,32FD09FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;9MwisK4qzUm-Lslh6jNg1w">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;dbWqufe8R0ODTtlBwPRyqg">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-60.000000 215.000000 90.000000</knowrob:translation>
@@ -3147,16 +3071,15 @@
 	<!-- Individual MPCupSet01 -->
 	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;UP-1A4-zpUeRIsxGfx_8sQ">
 		<rdf:type rdf:resource="&knowrob;MPCupSet01"/>
-		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;N7ZcofmtGUawBi-QdTvL1g"/>
+		<knowrob:describedInMap rdf:resource="&ue-iai-kitchen;-hZPCEuXpUy6u8-PHC2NUQ"/>
 		<knowrob:mobility rdf:datatype="&xsd;string">kinematic</knowrob:mobility>
 		<knowrob:mass rdf:datatype="&xsd;float">0.624842</knowrob:mass>
 		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
 		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
-		<knowrob:pose rdf:resource="&ue-iai-kitchen;nw9LUC9n00OqvYwIgre_ig"/>
-		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCupSet01.dae</knowrob:pathToCadModel>
+		<knowrob:pose rdf:resource="&ue-iai-kitchen;d6g3lf63J0-eBj-SpTLzkw"/>
 		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,UP-1A4-zpUeRIsxGfx_8sQ;Class,MPCupSet01;VisualMask,F92CB7FF;</knowrob:tagsData>
 	</owl:NamedIndividual>
-	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;nw9LUC9n00OqvYwIgre_ig">
+	<owl:NamedIndividual rdf:about="&ue-iai-kitchen;d6g3lf63J0-eBj-SpTLzkw">
 		<rdf:type rdf:resource="&knowrob;Pose"/>
 		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
 		<knowrob:translation rdf:datatype="&xsd;string">-45.000000 215.000000 90.000000</knowrob:translation>
