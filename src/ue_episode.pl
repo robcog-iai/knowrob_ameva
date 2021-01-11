@@ -10,7 +10,7 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 :- use_module('./ue_namespace.pl').
 
-% get the instance of the episode
+% get the instance of all the episodes
 ep_inst(EpInst) :-
     triple(EpInst, rdf:type, knowrob:'UnrealExperiment').
 
@@ -25,6 +25,6 @@ u_occurs(EpInst, EventInst, EventType) :-
 
 % load the episode by giving episode name
 u_load_episode(EpName, EpInst) :-
-    atomic_list_concat(['/home/robcog/catkin_ws/data/', EpName, '.owl'], OwlFile),
+    atomic_list_concat(['/home/robcog/catkin_ws/data/', EpName, '_ED.owl'], OwlFile),
     tripledb_load(OwlFile),
-    ep_inst(EpInst).
+    add_log_namespace(EpName,EpInst).
