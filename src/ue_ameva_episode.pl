@@ -1,14 +1,13 @@
 
-:- module(ue_episode,
+:- module(ue_ameva_episode,
     [
         ep_inst/1,
         u_occurs/2,
         u_occurs/3,
-        u_load_episode/2
+        u_load_ameva_episode/2
     ]).
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-:- use_module('./ue_namespace.pl').
 
 % get the instance of all the episodes
 ep_inst(EpInst) :-
@@ -24,7 +23,7 @@ u_occurs(EpInst, EventInst, EventType) :-
     triple(EventInst, rdf:type, EventType).
 
 % load the episode by giving episode name
-u_load_episode(EpName, EpInst) :-
+u_load_ameva_episode(EpName, EpInst) :-
     atomic_list_concat(['/home/robcog/catkin_ws/data/', EpName, '_ED.owl'], OwlFile),
     tripledb_load(OwlFile),
-    add_log_namespace(EpName,EpInst).
+    atom_concat('http://knowrob.org/kb/Experiment.owl#', EpName, EpInst).

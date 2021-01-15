@@ -226,7 +226,7 @@ int KRWSServer::numClients()
 	return client_ws_.size();
 }
 
-int KRWSServer::recentId()
+int KRWSServer::latestId()
 {
 	return unique_id_ - 1;
 }
