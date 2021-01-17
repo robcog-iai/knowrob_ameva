@@ -21,7 +21,7 @@ public:
     void listen(int port);
     void printClients();
     int numClients();
-    int recentId();
+    int latestId();
     bool checkClient(int client_id);
     void sendMessage(KRMessage* message);
     void shutdown();
