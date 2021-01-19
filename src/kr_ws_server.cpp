@@ -3,6 +3,7 @@
 
 
 std::map<int, struct lws *> KRWSServer::client_ws_;
+std::map<int, std::string> KRWSServer::client_addrs_;
 KRMessage* KRWSServer::send_buff_;
 std::string KRWSServer::recv_buff_;
 std::string KRWSServer::file_name_;
@@ -31,7 +32,8 @@ int KRWSServer::callbackKRWebsocket( struct lws *wsi, enum lws_callback_reasons 
 		{
 			// save new connected client
 			std::cout << LOG_LABEL << "A new client connected. Client id : " << unique_id_ << "\n";
-            client_ws_.insert(std::pair<int, struct lws *>(unique_id_++, wsi));
+            client_ws_.insert(std::pair<int, struct lws *>(unique_id_, wsi));
+			unique_id_++;
 			break;
 		}	
 		case LWS_CALLBACK_RECEIVE:
@@ -236,7 +238,6 @@ bool KRWSServer::checkClient(int client_id)
     return !(client_ws_.find(client_id) == client_ws_.end());
 }
 
-
 void KRWSServer::sendMessage(KRMessage* message)
 {
     if (!is_listen_)
@@ -248,6 +249,38 @@ void KRWSServer::sendMessage(KRMessage* message)
 	wait_for_recv_ = true;
 	ready_to_send_ = true;
 	while (wait_for_recv_) { }
+}
+
+void KRWSServer::setClientAddr(int client_id, std::string client_addr)
+{
+	if (!checkClient(client_id))
+	{
+		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		return;
+	}
+
+	client_addrs_.insert(std::pair<int, std::string>(client_id, client_addr));
+}
+
+std::string KRWSServer::getClientAddr(int client_id)
+{
+	if (!checkClient(client_id))
+	{
+		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		return "";
+	}
+
+	return client_addrs_.find(client_id)->second;	
+}
+
+void KRWSServer::removeClientAddr(int client_id)
+{
+	if (!checkClient(client_id))
+	{
+		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		return;
+	}
+	client_addrs_.erase(client_addrs_.find(client_id));
 }
 
 void KRWSServer::shutdown()
