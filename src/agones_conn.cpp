@@ -12,7 +12,7 @@ const char* g_gs_launcher_addr = "127.0.0.1:9090";
 
 
 // Create PixelStreaming game server instance
-PREDICATE(ag_create_gs, 2)
+PREDICATE(ag_create_clients, 2)
 {
 	int gs_num = (int) A1;
 	if (gs_num < 1) return FALSE;
@@ -67,7 +67,7 @@ PREDICATE(ag_create_gs, 2)
 }
 
 // List all the PixelStreaming game server 
-PREDICATE(ag_list_gs, 0)
+PREDICATE(ag_list_clients, 0)
 {
 	try
 	{
@@ -97,7 +97,7 @@ PREDICATE(ag_list_gs, 0)
 }
 
 // Shutdown PixelStreaming game server
-PREDICATE(ag_close_gs, 1)
+PREDICATE(ag_close_clients, 1)
 {
 	PlTail ue_client_list(A1);
     PlTerm ue_client;
