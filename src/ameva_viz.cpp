@@ -33,14 +33,9 @@ PREDICATE(ue_load_map, 2)
 	load_level_params->set_level((char*)A2);
 	std::string proto_str = ameva_event.SerializeAsString();
 
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -53,14 +48,8 @@ PREDICATE(ue_set_task, 2)
 	set_task_params->set_task((char*)A2);
 	std::string proto_str = ameva_event.SerializeAsString();
 
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
 	return TRUE;
 }
 
@@ -74,14 +63,9 @@ PREDICATE(ue_set_episode, 2)
 	set_episode_params->set_episode((char*)A2);
 	std::string proto_str = ameva_event.SerializeAsString();
 
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -102,14 +86,9 @@ PREDICATE(ue_draw_marker, 7)
 	marker_params->set_material((char*)A7);
 	std::string proto_str = ameva_event.SerializeAsString();
 
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -129,16 +108,11 @@ PREDICATE(ue_draw_marker, 8)
 	marker_traj_params->set_color((char*)A6);
 	marker_traj_params->set_scale((double)A7);
 	marker_traj_params->set_material((char*)A8);
+
 	std::string proto_str = ameva_event.SerializeAsString();
-	
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -153,16 +127,11 @@ PREDICATE(ue_highlight, 4)
 	highlight_params->set_id((char*)A2);
 	highlight_params->set_color((char*)A3);
 	highlight_params->set_material((char*)A4);
+
 	std::string proto_str = ameva_event.SerializeAsString();
-	
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -175,16 +144,11 @@ PREDICATE(ue_remove_highlight, 2)
 	ameva_event.set_functocall(ameva_event.RemoveHighlight);
 	sl_pb::RemoveHighlightParams* highlight_params = ameva_event.mutable_removehighlightparams();
 	highlight_params->set_id((char*)A2);
-	std::string proto_str = ameva_event.SerializeAsString();	
 
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }
 
@@ -196,15 +160,10 @@ PREDICATE(ue_remove_all_highlight, 1)
 	
 	sl_pb::KRAmevaEvent ameva_event;
 	ameva_event.set_functocall(ameva_event.RemoveAllHighlight);
-	std::string proto_str = ameva_event.SerializeAsString();
 	
-	PlTail ue_client_list(A1);
-    PlTerm ue_client;
-	while (ue_client_list.next(ue_client)) 
-	{
-		KRMessage* message = new KRMessage((int)ue_client, proto_str);
-		KRWSServer::getInstance()->sendMessage(message);
-		delete message;
-    }
+	std::string proto_str = ameva_event.SerializeAsString();
+	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRWSServer::getInstance()->sendMessage(message);
+	delete message;
 	return TRUE;
 }

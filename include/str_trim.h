@@ -1,3 +1,6 @@
+#ifndef STR_TRIM_H
+#define STR_TRIM_H
+
 #include <algorithm> 
 #include <functional> 
 #include <cctype>
@@ -21,3 +24,5 @@ static inline std::string &rtrim(std::string &s) {
 static inline std::string &trim(std::string &s) {
     return ltrim(rtrim(s));
 }
+
+#endif
