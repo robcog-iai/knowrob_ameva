@@ -13,8 +13,8 @@ message KRAmevaEvent {
     DrawMarkerAt = 3;           
     DrawMarkerTraj = 4;
     LoadLevel = 5;
-    StartLoggers = 6;
-    StopLoggers = 7;
+    StartLogging = 6;
+    StopLogging = 7;
     GetEpisodeData = 8; 
     StartSimulation = 9;
     StopSimulation = 10;
@@ -30,7 +30,7 @@ message KRAmevaEvent {
   optional DrawMarkerAtParams drawMarkerAtParams = 4;
   optional DrawMarkerTrajParams drawMarkerTrajParams = 5;
   optional LoadLevelParams loadLevelParams = 6;
-  optional StartLoggersParams startLoggersParams = 7;
+  optional StartLoggingParams startLoggingParams = 7;
   optional GetEpisodeDataParams getEpisodeDataParams = 8;
   optional StartSimulationParams startSimulationParams = 9;
   optional StopSimulationParams stopSimulationParams = 10;
