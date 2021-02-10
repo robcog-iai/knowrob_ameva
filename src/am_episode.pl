@@ -1,5 +1,5 @@
 
-:- module(ue_ameva_episode,
+:- module(am_episode,
     [
         am_ep_inst/1,
         am_occurs/2,
@@ -24,6 +24,6 @@ am_occurs(EpInst, EventInst, EventType) :-
 
 % load the episode by giving episode name
 am_load_episode(EpName, EpInst) :-
-    atomic_list_concat(['/home/robcog/catkin_ws/data/', EpName, '_ED.owl'], OwlFile),
+    atomic_list_concat(['package://knowrob_ameva/episodes/', EpName, '_ED.owl'], OwlFile),
     tripledb_load(OwlFile),
-    atom_concat('http://knowrob.org/kb/Experiment.owl#', EpName, EpInst).
+    atom_concat('http://knowrob.org/kb/ameva_log.owl#', EpName, EpInst).

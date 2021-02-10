@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF[
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY knowrob "http://knowrob.org/kb/knowrob.owl#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY log "http://knowrob.org/kb/ameva_log.owl#">
+]>
+
+<rdf:RDF xmlns="http://knowrob.org/kb/ameva_log.owl#"
+	 xml:base="http://knowrob.org/kb/ameva_log.owl#"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:log="http://knowrob.org/kb/ameva_log.owl#">
+
+	<!-- Ontologies: -->
+	<owl:Ontology rdf:about="http://knowrob.org/kb/ameva_log.owl">
+		<owl:imports rdf:resource="package://knowrob/owl/knowrob.owl"/>
+	</owl:Ontology>
+
+	<!-- Property Definitions -->
+	<owl:ObjectProperty rdf:about="&knowrob;performedInMap"/>
+	<owl:ObjectProperty rdf:about="&knowrob;taskDescription"/>
+
+	<!-- Task SneNouIEZEyd -->
+	<owl:NamedIndividual rdf:about="&log;SneNouIEZEyd">
+		<rdf:type rdf:resource="&knowrob;Task"/>
+		<knowrob:taskDescription rdf:datatype="&xsd;string">Simulating in the cloud an optimal way to empty the dishwasher.</knowrob:taskDescription>
+		<knowrob:performedInMap rdf:resource="&log;utJDwYBP8CA"/>
+	</owl:NamedIndividual>
+</rdf:RDF>

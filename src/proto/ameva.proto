@@ -3,7 +3,6 @@ syntax = "proto2";
 package sl_pb;
 
 import "viz.proto";
-import "tutorial.proto";
 import "control.proto";
 
 message KRAmevaEvent {

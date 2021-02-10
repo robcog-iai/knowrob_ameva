@@ -1,6 +1,6 @@
 #include "kr_ws_server.h"
 #include "ameva.pb.h"
-
+#include <ros/package.h>
 
 std::map<int, struct lws *> KRWSServer::client_ws_;
 std::map<int, std::string> KRWSServer::client_addrs_;
@@ -123,7 +123,8 @@ void KRWSServer::parseResponse(int client)
 	case sl_pb::KRAmevaResponse::FileCreation:
 	{
 		file_name_ = response.filename();
-		recv_file_.open( RECV_OWL_DIR + response.filename(), std::ios::binary );
+		std::string path = ros::package::getPath("knowrob_ameva") + "/episodes/";
+		recv_file_.open( path + response.filename(), std::ios::binary );
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileData:

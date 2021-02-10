@@ -1,4 +1,4 @@
-:- module(ue_ameva_semantic_map,   
+:- module(am_semantic_map,   
     [
         am_load_semantic_map/2,
         am_get_individual/3,
@@ -14,8 +14,8 @@
 
 % Get the translation and quaternion of given individual
 am_get_pose(MapInst, Individual, X, Y, Z, QX, QY, QZ, QW) :-
-    get_translation(MapInst, Individual, X, Y, Z),
-    get_quaternion(MapInst, Individual, QX, QY, QZ, QW).
+    am_get_translation(MapInst, Individual, X, Y, Z),
+    am_get_quaternion(MapInst, Individual, QX, QY, QZ, QW).
 
 % get the translation of given individual
 am_get_translation(MapInst, Individual, X, Y, Z) :-
@@ -78,6 +78,6 @@ am_get_individual_num(Class, MapInst, Num) :-
 
 % goad the semantic map and return instance of map
 am_load_semantic_map(Task, MapInst) :-
-    atomic_list_concat(['package://knowrob_ameva/maps/', Task, '.owl'], OwlFile),
+    atomic_list_concat(['package://knowrob_ameva/maps/', Task, '_SM.owl'], OwlFile),
     tripledb_load(OwlFile),
     triple(MapInst, rdf:type, 'http://knowrob.org/kb/knowrob.owl#SemanticEnvironmentMap').
