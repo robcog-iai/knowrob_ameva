@@ -3,7 +3,6 @@
 
 #define WS_PROTOCOL "kr_websocket"
 #define LOG_LABEL "[AMEVA] "
-#define RECV_OWL_DIR "/home/robcog/catkin_ws/data/"
 
 #include <libwebsockets.h>
 #include <map>

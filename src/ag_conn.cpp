@@ -12,11 +12,12 @@ const char* g_gs_launcher_addr = "127.0.0.1:9090";
 
 
 // Create PixelStreaming game server instance
-PREDICATE(ag_create_clients, 2)
+PREDICATE(ag_create_clients, 3)
 {
 	int gs_num = (int) A1;
 	if (gs_num < 1) return FALSE;
-	PlTail list(A2);
+	std::string level_name = std::string((char*) A2); 
+	PlTail list(A3);
  
 	for (int i = 0; i < gs_num; i ++)
 	{
@@ -32,7 +33,7 @@ PREDICATE(ag_create_clients, 2)
 			url.append(g_gs_launcher_addr);
 			url.append("/game-server");
 
-			std::string body = "{ \"KRServerPort\" : 8080, \"KRProtocol\" : \"kr_websocket\" }";
+			std::string body = "{ \"KRServerPort\" : 8080, \"KRProtocol\" : \"kr_websocket\", \"LevelName\" : \"" + level_name + "\"}";
 
 			curlpp::Cleanup cleanup;
 			curlpp::Easy request;
