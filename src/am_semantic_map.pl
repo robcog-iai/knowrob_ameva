@@ -8,7 +8,8 @@
         am_get_quaternion/6,
         am_get_pose/9,
         am_get_height/2,
-        am_get_depth/2
+        am_get_depth/2,
+        am_get_level_name/2
     ]).
 
 
@@ -56,6 +57,9 @@ am_get_depth(Class, Depth) :-
     triple(Class,rdfs:subClassOf, Description),
     triple(Description, owl:onProperty, knowrob:'depthOfObject'),
     triple(Description, owl:hasValue, Depth).
+
+am_get_level_name(MapInst, LevelName) :-
+    triple(MapInst, knowrob:'levelName', LevelName).
 
 % get individuals of given class
 am_get_individual(Class, MapInst, Individual) :-
