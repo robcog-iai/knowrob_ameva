@@ -8,7 +8,7 @@
 
 using namespace curlpp::options;
 
-const char* g_gs_launcher_addr = "127.0.0.1:9090";
+const char* g_gs_launcher_addr = "127.0.0.1:30002";
 
 
 // Create PixelStreaming game server instance
