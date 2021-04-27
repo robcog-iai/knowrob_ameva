@@ -1,7 +1,7 @@
 :- module(am_tasks,   
     [
-        am_task_stack/1,
-        am_check_episode/3
+        am_task_stack/2,
+        am_stack/6
     ]).
 :- use_foreign_library('libknowrob_ameva.so').
 :- use_module('./am_semantic_map.pl').
@@ -10,6 +10,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   Stack cups in the drawer in parallel      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+am_stack(Client, Task, Episode, OjectToStackClass, ObjNum, PushForce) :-
+    ue_start_logging(Client, Task, Episode),
+    am_load_semantic_map('utJDwYBP8CA', MapInst),
+    DrawerInst =  'http://knowrob.org/kb/ameva_log.owl#zVBHGrf9n0qEVqc8aDbF-w',
+    sleep(2),
+    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushForce, 30),
+    sleep(30),
+    ue_stop_logging(Client),
+    ue_get_episode_data(Client,Task, Episode).
 
 am_get_task(Task) :-
     Task = 'SneNouIEZEyd'.
@@ -20,31 +30,27 @@ am_get_semantic_map(SM) :-
 am_get_drawer_class(DrawerClass) :- 
     DrawerClass = 'http://knowrob.org/kb/knowrob.owl#IAIDrawerW60H29'.
 
-am_get_cup_class(CupClass) :-
-    CupClass = 'http://knowrob.org/kb/knowrob.owl#MPCupSet01'.
-
 am_select_drawer(DrawerClass, DrawerInst) :-
     DrawerInst = 'http://knowrob.org/kb/ameva_log.owl#zVBHGrf9n0qEVqc8aDbF-w'.
 
-am_task_stack(MaxCups) :-
+am_task_stack(MaxNumToStack, OjectToStackClass) :-
     am_get_task(Task),
     am_get_semantic_map(Map),
     am_load_semantic_map(Map, MapInst),
     am_get_level_name(MapInst,LevelName),
 
     am_get_drawer_class(DrawerClass),
-    am_get_cup_class(CupClass),
     am_select_drawer(DrawerClass, DrawerInst),
 
-    am_get_drawer_capacity(DrawerClass, CupClass, MaxNum),
+    am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum),
     am_get_max_batch_size(BatchSize),
     
-    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, CupClass, [], AllEpNames),
+    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, [], AllEpNames),
     am_create_stack_episode_params(MaxNum, AllEpParams),
     maplist(am_check_stack_episode, AllEpNames, AllEpParams, Results),
-    max_list(Results, MaxCups).
+    max_list(Results, MaxNumToStack).
 
-am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, CupClass, SubEpNames, AllEpNames) :-
+am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, SubEpNames, AllEpNames) :-
     (EpisodeIdx =< TotalEpisode -> Start is EpisodeIdx,
         (TotalEpisode - EpisodeIdx + 1 < BatchSize -> End is TotalEpisode; End is EpisodeIdx + BatchSize -1),
         EpisodeNum is End - Start + 1,
@@ -72,10 +78,10 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         am_get_simulation_time(Duration), 
         am_build_param_list(MapInst, EpisodeNum, MapInsts),
         am_build_param_list(DrawerInst, EpisodeNum, DrawerInsts),
-        am_build_param_list(CupClass, EpisodeNum, CupClasses),
+        am_build_param_list(OjectToStackClass, EpisodeNum, OjectToStackClasses),
         am_build_param_list(PushForce, EpisodeNum, PushForces),
         am_build_param_list(Duration, EpisodeNum, Durations),
-        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, CupClasses, EpParams, PushForces, Durations),
+        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushForces, Durations),
         ue_wait_simulation(Duration),
         
         maplist(ue_stop_logging, UEClients),
@@ -84,16 +90,16 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         ag_wait_close_clients,
 
         NextIdx is End + 1,
-        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, CupClass, NewSubEpNames, AllEpNames)
+        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, NewSubEpNames, AllEpNames)
         ; 
         AllEpNames = SubEpNames,
         true
     ).
 
 % check how many cups can be stacked in the drawer
-am_get_drawer_capacity(DrawerClass, CupClass, MaxNum) :-
+am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum) :-
     am_get_height(DrawerClass, DrawerHeight),
-    am_get_height(CupClass, CupHeight),
+    am_get_height(OjectToStackClass, CupHeight),
     Factor is DrawerHeight / CupHeight,
     MaxNum is floor(Factor).
 
