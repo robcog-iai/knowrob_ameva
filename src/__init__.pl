@@ -70,7 +70,7 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         am_build_param_list(PushZ, EpisodeNum, PushZs),
         am_build_param_list(Duration, EpisodeNum, Durations),
         maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs, Durations),
-        ue_wait_simulation(Duration),
+        sleep(15),
         
         maplist(ue_stop_logging, UEClients),
         maplist(ue_get_episode_data,  UEClients, Tasks, EpNames),
