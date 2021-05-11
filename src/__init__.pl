@@ -1,7 +1,7 @@
 :- module(am_tasks,   
     [
-        am_task_stack/2,
-        am_stack/6
+        am_get_drawer_stack_max/14,
+        am_stack_in_drawer/10
     ]).
 :- use_foreign_library('libknowrob_ameva.so').
 :- use_module('./am_semantic_map.pl').
@@ -11,46 +11,31 @@
 %%%%%   Stack cups in the drawer in parallel      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-am_stack(Client, Task, Episode, OjectToStackClass, ObjNum, PushForce) :-
+am_stack_in_drawer(Client, Map, Task, Episode, OjectToStackClass, ObjNum, DrawerInst, PushX, PushY, PushZ) :-
     ue_start_logging(Client, Task, Episode),
-    am_load_semantic_map('utJDwYBP8CA', MapInst),
-    DrawerInst =  'http://knowrob.org/kb/ameva_log.owl#zVBHGrf9n0qEVqc8aDbF-w',
+    am_load_semantic_map(Map, MapInst),
     sleep(2),
-    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushForce, 30),
-    sleep(30),
+    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushX, PushY, PushZ, 10),
+    sleep(10),
     ue_stop_logging(Client),
     ue_get_episode_data(Client,Task, Episode).
 
-am_get_task(Task) :-
-    Task = 'SneNouIEZEyd'.
 
-am_get_semantic_map(SM) :-
-    SM = 'utJDwYBP8CA'.
-
-am_get_drawer_class(DrawerClass) :- 
-    DrawerClass = 'http://knowrob.org/kb/knowrob.owl#IAIDrawerW60H29'.
-
-am_select_drawer(DrawerClass, DrawerInst) :-
-    DrawerInst = 'http://knowrob.org/kb/ameva_log.owl#zVBHGrf9n0qEVqc8aDbF-w'.
-
-am_task_stack(MaxNumToStack, OjectToStackClass) :-
-    am_get_task(Task),
-    am_get_semantic_map(Map),
+am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ) :-
     am_load_semantic_map(Map, MapInst),
     am_get_level_name(MapInst,LevelName),
 
-    am_get_drawer_class(DrawerClass),
-    am_select_drawer(DrawerClass, DrawerInst),
+    instance_of(DrawerInst, DrawerClass),
 
     am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum),
     am_get_max_batch_size(BatchSize),
     
-    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, [], AllEpNames),
+    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, [], AllEpNames),   
     am_create_stack_episode_params(MaxNum, AllEpParams),
     maplist(am_check_stack_episode, AllEpNames, AllEpParams, Results),
     max_list(Results, MaxNumToStack).
 
-am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, SubEpNames, AllEpNames) :-
+am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
     (EpisodeIdx =< TotalEpisode -> Start is EpisodeIdx,
         (TotalEpisode - EpisodeIdx + 1 < BatchSize -> End is TotalEpisode; End is EpisodeIdx + BatchSize -1),
         EpisodeNum is End - Start + 1,
@@ -61,27 +46,30 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         am_create_unique_episode_names(EpParams, EpNames),
         append(SubEpNames, EpNames, NewSubEpNames),
 
+        % start logging
         maplist(ue_start_logging, UEClients, Tasks, EpNames),
-          
-        am_find_dishwasher(DishWasher),  
-        am_find_dishwasher_door(DishWasher, DishWasherDoor),
-        am_build_param_list(DishWasherDoor,EpisodeNum,DishWasherDoors),
-        maplist(am_pull_objct, UEClients, DishWasherDoors),
-        am_find_upper_racket(DishWasher, UpperRacket),
-        am_build_param_list(UpperRacket,EpisodeNum,UpperRackets),
-        maplist(am_pull_objct, UEClients, UpperRackets),
-        am_find_lower_racket(DishWasher, LowerRacket),
-        am_build_param_list(LowerRacket, EpisodeNum, LowerRackets),
-        maplist(am_pull_objct, UEClients, LowerRackets),
 
-        am_get_push_force(PushForce),
+        % pull the dishwasher
+        am_build_param_list(PullX, EpisodeNum, PullXs), 
+        am_build_param_list(PullY, EpisodeNum, PullYs), 
+        am_build_param_list(PullZ, EpisodeNum, PullZs), 
+        am_build_param_list(LowerRacket, EpisodeNum, LowerRackets),
+        am_build_param_list(UpperRacket,EpisodeNum,UpperRackets),
+        am_build_param_list(DishWasherDoor,EpisodeNum,DishWasherDoors),
+        maplist(am_pull_objct, UEClients, DishWasherDoors, PullXs, PullYs, PullZs),
+        maplist(am_pull_objct, UEClients, UpperRackets, PullXs, PullYs, PullZs),
+        maplist(am_pull_objct, UEClients, LowerRackets, PullXs, PullYs, PullZs),
+        
+        % stack objects in the drawer
         am_get_simulation_time(Duration), 
         am_build_param_list(MapInst, EpisodeNum, MapInsts),
         am_build_param_list(DrawerInst, EpisodeNum, DrawerInsts),
         am_build_param_list(OjectToStackClass, EpisodeNum, OjectToStackClasses),
-        am_build_param_list(PushForce, EpisodeNum, PushForces),
+        am_build_param_list(PushX, EpisodeNum, PushXs),
+        am_build_param_list(PushY, EpisodeNum, PushYs),
+        am_build_param_list(PushZ, EpisodeNum, PushZs),
         am_build_param_list(Duration, EpisodeNum, Durations),
-        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushForces, Durations),
+        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs, Durations),
         ue_wait_simulation(Duration),
         
         maplist(ue_stop_logging, UEClients),
@@ -90,7 +78,7 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         ag_wait_close_clients,
 
         NextIdx is End + 1,
-        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, NewSubEpNames, AllEpNames)
+        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, NewSubEpNames, AllEpNames)
         ; 
         AllEpNames = SubEpNames,
         true
@@ -104,12 +92,12 @@ am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum) :-
     MaxNum is floor(Factor).
 
 % stack cups on the drawer
-am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, ObjClass, ObjNum, PushForce, SimTime) :-
+am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, ObjClass, ObjNum, PushX, PushY, PushZ, SimTime) :-
     am_get_individual_list(ObjClass, MapInst, ObjList),
     \+am_stack_up_on(UEClient, MapInst, DrawerInst, ObjList, 0, ObjNum),
     am_get_id(DrawerInst, DrawerId),
     ue_start_simulation(UEClient, [DrawerId], SimTime),
-    ue_apply_force_to(UEClient, DrawerId, PushForce, 0, 0).
+    ue_apply_force_to(UEClient, DrawerId, PushX, PushY, PushZ).
 
 % stack a list of objects on top of a base objects 
 am_stack_up_on(UEClient, MapInst, Base, ObjList, Index, Count) :-
@@ -142,21 +130,9 @@ am_check_stack_episode(EpName, EpParam, Result) :-
     length(EvtList, Count),
     (Count =:= 1 -> Result is EpParam; Result is 0 ).
 
-am_find_dishwasher(DishWasher) :-
-    DishWasher = '###'.
-
-am_find_dishwasher_door(DishWasher, DishWasherDoor) :-
-    DishWasherDoor = 'http://knowrob.org/kb/ameva_log.owl#zoAfiCIbi0KJP-fecLJkoQ'.
-
-am_find_upper_racket(DishWasher, Racket) :-
-    Racket = 'http://knowrob.org/kb/ameva_log.owl#61nqVeqryECsFlyF5fjcBQ'.
-
-am_find_lower_racket(DishWasher, Racket) :-
-    Racket = 'http://knowrob.org/kb/ameva_log.owl#Dkkpmdu-L0Ssc3R5YJTftw'.
-
-am_pull_objct(Client, Obj) :-
+am_pull_objct(Client, Obj, PullX, PullY, PullZ) :-
     am_get_id(Obj, Id),
-    ue_apply_force_to(Client, Id, 10, 0, 0),
+    ue_apply_force_to(Client, Id, PullX, PullY, PullZ),
     sleep(2).
 
 % get the id of the individual
@@ -181,18 +157,15 @@ ue_wait_simulation(Duration) :-
     SleepTime is Duration +  1,  
     sleep(SleepTime).
 
-ag_wait_close_clients :-
-    sleep(50).
-
-am_get_push_force(Force) :-
-    Force is 23.
-
-am_get_simulation_time(Duration) :-
-    Duration is 6.
-
 am_build_param_list(Obj, Num, List) :-
     length(List, Num), 
     maplist(=(Obj), List).
+
+ag_wait_close_clients :-
+    sleep(50).
+
+am_get_simulation_time(Duration) :-
+    Duration is 10.
 
 am_get_max_batch_size(BatchSize)  :-
     BatchSize is 2.

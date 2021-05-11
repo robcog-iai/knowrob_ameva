@@ -1,0 +1,3959 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF[
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY knowrob "http://knowrob.org/kb/knowrob.owl#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY log "http://knowrob.org/kb/ameva_log.owl#">
+]>
+
+<rdf:RDF xmlns="http://knowrob.org/kb/ameva_log.owl#"
+	 xml:base="http://knowrob.org/kb/ameva_log.owl#"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:log="http://knowrob.org/kb/ameva_log.owl#">
+
+	<!-- Ontologies: -->
+	<owl:Ontology rdf:about="http://knowrob.org/kb/ameva_log.owl">
+		<owl:imports rdf:resource="package://knowrob/owl/knowrob.owl"/>
+	</owl:Ontology>
+
+	<!-- Property Definitions -->
+	<owl:ObjectProperty rdf:about="&knowrob;describedInMap"/>
+	<owl:ObjectProperty rdf:about="&knowrob;pathToCadModel"/>
+	<owl:ObjectProperty rdf:about="&knowrob;overlapEvents"/>
+	<owl:ObjectProperty rdf:about="&knowrob;mobility"/>
+	<owl:ObjectProperty rdf:about="&knowrob;levelName"/>
+	<owl:ObjectProperty rdf:about="&knowrob;tagsData"/>
+	<owl:ObjectProperty rdf:about="&knowrob;gravity"/>
+	<owl:ObjectProperty rdf:about="&knowrob;mapDescription"/>
+
+	<!-- Datatype Definitions -->
+	<owl:DatatypeProperty rdf:about="&knowrob;quaternion"/>
+	<owl:DatatypeProperty rdf:about="&knowrob;translation"/>
+
+	<!-- Class Definitions -->
+	<owl:Class rdf:about="&knowrob;SemanticEnvironmentMap"/>
+	<owl:Class rdf:about="&knowrob;Pose"/>
+
+	<!-- Class PKLowerBoard1 -->
+	<owl:Class rdf:about="&knowrob;PKLowerBoard1">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">56.505966</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">365.79361</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.032501</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKLowerBoard1.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.600391</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSinkArea -->
+	<owl:Class rdf:about="&knowrob;PKSinkArea">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">260.060425</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">69.021606</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.184723</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSinkArea.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">27.906807</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCupboard2 -->
+	<owl:Class rdf:about="&knowrob;PKCupboard2">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">61.279007</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">70.266541</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">197.652618</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCupboard2.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">17.36334</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKLowerBoard -->
+	<owl:Class rdf:about="&knowrob;PKLowerBoard">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">358.678192</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">66.293335</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.03265</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKLowerBoard.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.642425</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCupboard1 -->
+	<owl:Class rdf:about="&knowrob;PKCupboard1">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">58.213638</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.000107</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">197.643951</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCupboard1.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">20.351488</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSinkDrain -->
+	<owl:Class rdf:about="&knowrob;PKSinkDrain">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.977173</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.917419</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.480774</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSinkDrain.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.039833</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKExtractorSmall -->
+	<owl:Class rdf:about="&knowrob;PKExtractorSmall">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">86.500031</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">35.437927</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.670837</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKExtractorSmall.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">9.664202</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKExtractorBig -->
+	<owl:Class rdf:about="&knowrob;PKExtractorBig">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">239.979523</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.260612</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">94.771805</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKExtractorBig.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">83.432556</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCoffeeMachine -->
+	<owl:Class rdf:about="&knowrob;PKCoffeeMachine">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.125275</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.473709</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">45.485809</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCoffeeMachine.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">16.652641</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSinkFilter -->
+	<owl:Class rdf:about="&knowrob;PKSinkFilter">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.874161</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.874023</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.189102</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSinkFilter.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.58398</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCupboard3 -->
+	<owl:Class rdf:about="&knowrob;PKCupboard3">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">58.213531</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.000107</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">197.643921</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCupboard3.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">73.949631</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKStool -->
+	<owl:Class rdf:about="&knowrob;PKStool">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">54.304173</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">54.833694</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">85.037491</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKStool.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">8.635629</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKHeater -->
+	<owl:Class rdf:about="&knowrob;PKHeater">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">28.793793</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">51.993767</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.486252</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKHeater.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">2.679767</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherInterior -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherInterior">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.968262</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">57.026978</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">87.83078</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherInterior.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">19.243956</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherDoor -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.457397</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.85495</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">69.925873</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.744431</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeInterior -->
+	<owl:Class rdf:about="&knowrob;PKFridgeInterior">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.088272</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">54.019989</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">185.200012</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeInterior.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">41.164333</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridge_bottom_door -->
+	<owl:Class rdf:about="&knowrob;PKFridge_bottom_door">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.749084</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">53.999992</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">61.539997</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridge_bottom_door.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">6.854465</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDrawerCab -->
+	<owl:Class rdf:about="&knowrob;PKDrawerCab">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">75.5</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">80.000015</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDrawerCab.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.238564</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDrawer -->
+	<owl:Class rdf:about="&knowrob;PKDrawer">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">75.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">56.30603</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.800011</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDrawer.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKOvenInterior -->
+	<owl:Class rdf:about="&knowrob;PKOvenInterior">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.20491</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.16127</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.804264</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKOvenInterior.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">31.743649</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKOvenDoor -->
+	<owl:Class rdf:about="&knowrob;PKOvenDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.88443</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.983826</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">48.674641</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKOvenDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">2.687784</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class SideBoard -->
+	<owl:Class rdf:about="&knowrob;SideBoard">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">62.000103</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">80.000015</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SideBoard.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">3.828498</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDrawerFront -->
+	<owl:Class rdf:about="&knowrob;PKDrawerFront">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">75.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.100006</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.800007</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDrawerFront.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.201266</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCupboard4 -->
+	<owl:Class rdf:about="&knowrob;PKCupboard4">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">58.213623</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.000092</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCupboard4.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">19.814463</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKUpperCupboard -->
+	<owl:Class rdf:about="&knowrob;PKUpperCupboard">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">362.400848</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">45.111511</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">114.467316</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKUpperCupboard.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">50.954224</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCooker -->
+	<owl:Class rdf:about="&knowrob;PKCooker">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">92.005707</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">52.155624</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.587128</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCooker.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">12.891198</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSink -->
+	<owl:Class rdf:about="&knowrob;PKSink">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">102.368668</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">69.021912</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.815094</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSink.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">9.505441</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKKitchenIsland -->
+	<owl:Class rdf:about="&knowrob;PKKitchenIsland">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">303.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">120.046326</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">89.986427</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKKitchenIsland.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">53.579144</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeHolder -->
+	<owl:Class rdf:about="&knowrob;PKFridgeHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">38.242279</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">47.360016</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.520477</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.085922</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeContainerSmall -->
+	<owl:Class rdf:about="&knowrob;PKFridgeContainerSmall">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.450867</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.160004</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.294403</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeContainerSmall.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.956907</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKTapBigButton -->
+	<owl:Class rdf:about="&knowrob;PKTapBigButton">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.829956</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">25.16687</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.843109</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKTapBigButton.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.513165</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKTapBigUpper -->
+	<owl:Class rdf:about="&knowrob;PKTapBigUpper">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.953171</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.977234</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.499603</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKTapBigUpper.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.13353</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKTapSmall -->
+	<owl:Class rdf:about="&knowrob;PKTapSmall">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.374802</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.007568</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.578369</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKTapSmall.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.116175</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeContainerBig -->
+	<owl:Class rdf:about="&knowrob;PKFridgeContainerBig">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.324036</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.350006</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.509525</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeContainerBig.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.329554</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeContainerBigBottom -->
+	<owl:Class rdf:about="&knowrob;PKFridgeContainerBigBottom">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.324036</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.350006</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.002907</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeContainerBigBottom.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.528711</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeTopDoorCladding -->
+	<owl:Class rdf:about="&knowrob;PKFridgeTopDoorCladding">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.910339</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">52.919991</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">110.904541</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeTopDoorCladding.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.966801</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherLowerHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherLowerHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">50.436188</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">51.262741</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">26.192314</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherLowerHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.454291</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherUpperHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherUpperHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">49.607666</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">47.726868</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.601746</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherUpperHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.763135</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class RevoluteJoint -->
+	<owl:Class rdf:about="&knowrob;RevoluteJoint"/>
+
+	<!-- Class PKHandleL66 -->
+	<owl:Class rdf:about="&knowrob;PKHandleL66">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">66.75</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.994263</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.200012</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKHandleL66.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1489</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class LinearJoint -->
+	<owl:Class rdf:about="&knowrob;LinearJoint"/>
+
+	<!-- Class PKHandleL52 -->
+	<owl:Class rdf:about="&knowrob;PKHandleL52">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">52.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.994232</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.199997</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKHandleL52.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.122821</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKHandleL86 -->
+	<owl:Class rdf:about="&knowrob;PKHandleL86">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.192596</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.560516</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">86.774994</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKHandleL86.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.25368</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeTopDoor -->
+	<owl:Class rdf:about="&knowrob;PKFridgeTopDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.781433</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">50.646393</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">108.56842</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeTopDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.58774</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeTopDoorShelfSmall -->
+	<owl:Class rdf:about="&knowrob;PKFridgeTopDoorShelfSmall">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.05365</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">46.060028</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.858795</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeTopDoorShelfSmall.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.408553</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeTopDoorShelfBig -->
+	<owl:Class rdf:about="&knowrob;PKFridgeTopDoorShelfBig">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.719696</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">47.048248</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.48381</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeTopDoorShelfBig.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.666119</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKWall -->
+	<owl:Class rdf:about="&knowrob;PKWall">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">705.049133</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">641.367798</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">282.178711</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKWall.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKCeiling -->
+	<owl:Class rdf:about="&knowrob;PKCeiling">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">705.049133</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">631.367798</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.000122</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKCeiling.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFloor -->
+	<owl:Class rdf:about="&knowrob;PKFloor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">705.049133</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">639.326843</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.000104</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFloor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKPKWindow -->
+	<owl:Class rdf:about="&knowrob;PKPKWindow">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">190.076904</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">116.323517</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKPKWindow.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">61.587482</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSwitch -->
+	<owl:Class rdf:about="&knowrob;PKSwitch">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">16.304829</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.634766</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSwitch.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.392978</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKPKBorder -->
+	<owl:Class rdf:about="&knowrob;PKPKBorder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">705.049072</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">631.367798</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.858669</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKPKBorder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">17.307028</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKVent -->
+	<owl:Class rdf:about="&knowrob;PKVent">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.788208</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">99.999283</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.000015</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKVent.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.146106</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDoor -->
+	<owl:Class rdf:about="&knowrob;PKDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">181.326111</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.859192</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">221.308472</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">105.739975</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSpotlight -->
+	<owl:Class rdf:about="&knowrob;PKSpotlight">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.299561</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.841125</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSpotlight.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.004905</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class VollMilch -->
+	<owl:Class rdf:about="&knowrob;VollMilch">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.991516</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.11731</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.982239</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/VollMilch.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Cup -->
+	<owl:Class rdf:about="&knowrob;Cup">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.657532</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.638947</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.073944</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Cup.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.868393</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ShortGlass -->
+	<owl:Class rdf:about="&knowrob;ShortGlass">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.593414</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.551819</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.029682</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ShortGlass.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.658367</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class DessertSpoon -->
+	<owl:Class rdf:about="&knowrob;DessertSpoon">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.242294</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.773773</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.531258</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/DessertSpoon.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.035233</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class TableKnife -->
+	<owl:Class rdf:about="&knowrob;TableKnife">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.746857</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.087677</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.418816</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/TableKnife.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.071344</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class DessertFork -->
+	<owl:Class rdf:about="&knowrob;DessertFork">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.348322</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.771729</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.910774</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/DessertFork.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.073609</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class KnusperSchokoKeks -->
+	<owl:Class rdf:about="&knowrob;KnusperSchokoKeks">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.064117</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.855652</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.051422</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/KnusperSchokoKeks.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MuellerFruchtButterMilchErdbeere -->
+	<owl:Class rdf:about="&knowrob;MuellerFruchtButterMilchErdbeere">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.532013</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.48587</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.15036</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MuellerFruchtButterMilchErdbeere.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.5</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MuellerReineButterMilch -->
+	<owl:Class rdf:about="&knowrob;MuellerReineButterMilch">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.464722</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.448029</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.266083</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MuellerReineButterMilch.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMilkJug01 -->
+	<owl:Class rdf:about="&knowrob;MPMilkJug01">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.893822</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.415705</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.008209</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMilkJug01.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.80742</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMilkJug02 -->
+	<owl:Class rdf:about="&knowrob;MPMilkJug02">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.84655</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.38972</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.903152</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMilkJug02.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.775501</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ClassicPlate18cm -->
+	<owl:Class rdf:about="&knowrob;ClassicPlate18cm">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.979401</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.979465</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.735535</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate18cm.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.350576</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BaerenMarkeFrischeAlpenmilch38 -->
+	<owl:Class rdf:about="&knowrob;BaerenMarkeFrischeAlpenmilch38">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.734314</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.643234</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.848724</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BaerenMarkeFrischeAlpenmilch38.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class AlbiHimbeerJuice -->
+	<owl:Class rdf:about="&knowrob;AlbiHimbeerJuice">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.386505</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.276611</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">25.129913</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/AlbiHimbeerJuice.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MeerSalz -->
+	<owl:Class rdf:about="&knowrob;MeerSalz">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.241936</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.028975</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.695</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MeerSalz.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.439032</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Mondamin -->
+	<owl:Class rdf:about="&knowrob;Mondamin">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.282196</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.485901</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.471701</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Mondamin.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.007056</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class SpitzenReis -->
+	<owl:Class rdf:about="&knowrob;SpitzenReis">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.428042</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.463229</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">16.340553</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SpitzenReis.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.209045</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class TomatoAlGustoBasilikum -->
+	<owl:Class rdf:about="&knowrob;TomatoAlGustoBasilikum">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.173393</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.164701</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.493301</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/TomatoAlGustoBasilikum.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.428475</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BigBowl -->
+	<owl:Class rdf:about="&knowrob;BigBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">16.884644</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">16.884644</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.428299</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BigBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Cappuccino -->
+	<owl:Class rdf:about="&knowrob;Cappuccino">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.737335</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.97876</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.049591</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Cappuccino.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BaerenMarkeAlpenfrischerKakao -->
+	<owl:Class rdf:about="&knowrob;BaerenMarkeAlpenfrischerKakao">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.778961</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.024078</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.031418</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BaerenMarkeAlpenfrischerKakao.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.032866</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPLime -->
+	<owl:Class rdf:about="&knowrob;MPLime">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.951843</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.280083</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.200012</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPLime.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.212077</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPAvocado -->
+	<owl:Class rdf:about="&knowrob;MPAvocado">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.211121</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.483032</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.256287</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPAvocado.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.282721</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPLemon -->
+	<owl:Class rdf:about="&knowrob;MPLemon">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.082397</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.869812</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.758118</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPLemon.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.192529</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPCabbageGreen -->
+	<owl:Class rdf:about="&knowrob;MPCabbageGreen">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.023102</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.828918</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.052292</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCabbageGreen.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.074709</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPArtichoke -->
+	<owl:Class rdf:about="&knowrob;MPArtichoke">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.526367</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">18.927429</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.889694</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPArtichoke.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.990629</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPCarrot -->
+	<owl:Class rdf:about="&knowrob;MPCarrot">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.024811</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.628693</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.88092</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCarrot.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.06324</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPTomato -->
+	<owl:Class rdf:about="&knowrob;MPTomato">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.744293</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.425018</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.041901</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPTomato.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.231235</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPCucumber -->
+	<owl:Class rdf:about="&knowrob;MPCucumber">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.016815</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.47094</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.455994</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCucumber.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.384274</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPZucchini -->
+	<owl:Class rdf:about="&knowrob;MPZucchini">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.705078</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.473145</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.95903</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPZucchini.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.254596</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPWatermelonHalf -->
+	<owl:Class rdf:about="&knowrob;MPWatermelonHalf">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.219849</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.768311</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.005432</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPWatermelonHalf.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">2.037451</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadDount_V2V -->
+	<owl:Class rdf:about="&knowrob;MPBreadDount_V2V">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.103241</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.08548</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.403534</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadDount_V2V.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.193995</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPSquashHalf -->
+	<owl:Class rdf:about="&knowrob;MPSquashHalf">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.514557</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.917389</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.333755</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPSquashHalf.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.328399</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MediumBowl -->
+	<owl:Class rdf:about="&knowrob;MediumBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.489441</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.485413</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.027191</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MediumBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.35314</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMandarinHalf -->
+	<owl:Class rdf:about="&knowrob;MPMandarinHalf">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.079987</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.269775</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.162201</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMandarinHalf.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.111316</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPLimeHalf -->
+	<owl:Class rdf:about="&knowrob;MPLimeHalf">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.134827</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.258911</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.454071</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPLimeHalf.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.088323</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MilramButterMilchDrinkErdbeere -->
+	<owl:Class rdf:about="&knowrob;MilramButterMilchDrinkErdbeere">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.643005</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.61969</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.123711</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MilramButterMilchDrinkErdbeere.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.100264</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadMuffin -->
+	<owl:Class rdf:about="&knowrob;MPBreadMuffin">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.677643</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.668793</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.309662</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadMuffin.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.130286</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ClassicPlate28cm -->
+	<owl:Class rdf:about="&knowrob;ClassicPlate28cm">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">27.865715</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">27.865509</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.427601</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate28cm.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.1</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ClassicPlate16cm -->
+	<owl:Class rdf:about="&knowrob;ClassicPlate16cm">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.951294</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.957764</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">0.848343</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate16cm.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.281687</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Saucer -->
+	<owl:Class rdf:about="&knowrob;Saucer">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.17996</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.18927</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.635239</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Saucer.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.332876</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class SmallBowl -->
+	<owl:Class rdf:about="&knowrob;SmallBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.732597</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.770813</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.062061</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SmallBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.224675</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ClassicPlate26cm -->
+	<owl:Class rdf:about="&knowrob;ClassicPlate26cm">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">25.877815</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">25.87706</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.31596</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate26cm.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.753363</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class EspressoCup -->
+	<owl:Class rdf:about="&knowrob;EspressoCup">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.4422</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.646508</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.865536</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/EspressoCup.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.314999</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMug02 -->
+	<owl:Class rdf:about="&knowrob;MPMug02">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.613647</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.070026</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.431442</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMug02.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.211451</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class RedwineGlass -->
+	<owl:Class rdf:about="&knowrob;RedwineGlass">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.086273</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.079468</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.709702</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/RedwineGlass.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.041069</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WhitewineGlass -->
+	<owl:Class rdf:about="&knowrob;WhitewineGlass">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.070709</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.093445</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">18.391464</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WhitewineGlass.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.936025</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class TallGlass -->
+	<owl:Class rdf:about="&knowrob;TallGlass">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.978088</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.942307</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">16.03891</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/TallGlass.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.761347</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPChoppingBoard -->
+	<owl:Class rdf:about="&knowrob;MPChoppingBoard">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.646393</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">29.768068</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.706844</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPChoppingBoard.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.55576</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPFruitBowl -->
+	<owl:Class rdf:about="&knowrob;MPFruitBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">32.680935</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">32.684906</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.804565</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPFruitBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">2.234885</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPSmallPot -->
+	<owl:Class rdf:about="&knowrob;MPSmallPot">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">17.180267</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">30.280142</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.164993</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPSmallPot.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.338711</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPPot -->
+	<owl:Class rdf:about="&knowrob;MPPot">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.764511</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">40.709038</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.753254</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPPot.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.316988</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPPotLid -->
+	<owl:Class rdf:about="&knowrob;MPPotLid">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.020538</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.902416</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.652153</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPPotLid.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.233557</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPSaltShaker01 -->
+	<owl:Class rdf:about="&knowrob;MPSaltShaker01">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.995926</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.996338</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.261047</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPSaltShaker01.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.100962</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPPepperShaker01 -->
+	<owl:Class rdf:about="&knowrob;MPPepperShaker01">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.996262</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.995911</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.261032</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPPepperShaker01.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.100969</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class CookingUtensilsHolder -->
+	<owl:Class rdf:about="&knowrob;CookingUtensilsHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">35.785309</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.568054</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.743088</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/CookingUtensilsHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">2.236416</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class SteelSpatula -->
+	<owl:Class rdf:about="&knowrob;SteelSpatula">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.430756</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.156921</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">30.208496</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SteelSpatula.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.092606</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WoodenFork -->
+	<owl:Class rdf:about="&knowrob;WoodenFork">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.761276</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.468811</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">29.515564</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WoodenFork.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.102113</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WoodenSpatula -->
+	<owl:Class rdf:about="&knowrob;WoodenSpatula">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">26.421295</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.801331</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.162766</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WoodenSpatula.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.109488</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WoodenSpoon01 -->
+	<owl:Class rdf:about="&knowrob;WoodenSpoon01">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.502609</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.10022</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">30.300003</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WoodenSpoon01.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.134013</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WoodenSpoon02 -->
+	<owl:Class rdf:about="&knowrob;WoodenSpoon02">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">27.069794</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.783691</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.933243</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WoodenSpoon02.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.114349</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class WoodenSpoon03 -->
+	<owl:Class rdf:about="&knowrob;WoodenSpoon03">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.099365</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.382813</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">30.088074</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/WoodenSpoon03.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.093844</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPApple -->
+	<owl:Class rdf:about="&knowrob;MPApple">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.906403</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.540028</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.371597</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPApple.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.198902</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPAppleGreen -->
+	<owl:Class rdf:about="&knowrob;MPAppleGreen">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.594131</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.241189</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.99054</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPAppleGreen.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.196491</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMandarin -->
+	<owl:Class rdf:about="&knowrob;MPMandarin">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.757324</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.665213</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.35498</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMandarin.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.229637</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPPlum -->
+	<owl:Class rdf:about="&knowrob;MPPlum">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.510178</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.539671</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.188797</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPPlum.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.21665</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBanana -->
+	<owl:Class rdf:about="&knowrob;MPBanana">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">11.912521</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.451088</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.78566</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBanana.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.135891</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPCantaloupe -->
+	<owl:Class rdf:about="&knowrob;MPCantaloupe">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.028015</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.256477</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.916199</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPCantaloupe.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.290907</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPMangoBig -->
+	<owl:Class rdf:about="&knowrob;MPMangoBig">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.745193</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.606752</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.789383</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPMangoBig.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.538301</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Kitchen_Steak_Knife -->
+	<owl:Class rdf:about="&knowrob;Kitchen_Steak_Knife">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.859375</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">34.7444</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.303329</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Kitchen_Steak_Knife.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.315158</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadLoafMulti -->
+	<owl:Class rdf:about="&knowrob;MPBreadLoafMulti">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.307404</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">18.220184</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.429977</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadLoafMulti.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.998661</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadBagel -->
+	<owl:Class rdf:about="&knowrob;MPBreadBagel">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.194427</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.030245</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">3.992294</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadBagel.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.279606</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadFrenchSliceLoaf -->
+	<owl:Class rdf:about="&knowrob;MPBreadFrenchSliceLoaf">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.487926</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.713554</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.85144</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadFrenchSliceLoaf.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.43697</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadFrenchSlice -->
+	<owl:Class rdf:about="&knowrob;MPBreadFrenchSlice">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.208138</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.443172</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.593613</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadFrenchSlice.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.094698</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBreadLoafMultiSliceEnd -->
+	<owl:Class rdf:about="&knowrob;MPBreadLoafMultiSliceEnd">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.997044</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.411719</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.871735</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBreadLoafMultiSliceEnd.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.097922</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BreadBoxBody -->
+	<owl:Class rdf:about="&knowrob;BreadBoxBody">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">23.610336</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">36.751213</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.450287</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BreadBoxBody.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">10.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class CutleryHolder -->
+	<owl:Class rdf:about="&knowrob;CutleryHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.792736</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.430473</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.498535</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/CutleryHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class SoupSpoon -->
+	<owl:Class rdf:about="&knowrob;SoupSpoon">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.912491</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.81311</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.665817</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SoupSpoon.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.155241</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN262289 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN262289">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.655289</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.173615</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.302704</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN262289.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.49148</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN196068 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN196068">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.887436</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.333679</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.943157</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN196068.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.360578</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN046088 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN046088">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.815918</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.390533</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.818087</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN046088.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.488169</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN015652 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN015652">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.921448</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">6.853882</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">28.711578</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN015652.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.236627</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN010055 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN010055">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.506073</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.133087</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.195724</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN010055.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.594274</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN004728 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN004728">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.841232</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.131531</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.731392</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN004728.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.893481</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN331372 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN331372">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.041016</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.205597</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.349165</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN331372.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.281928</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class ProductWithAN534910 -->
+	<owl:Class rdf:about="&knowrob;ProductWithAN534910">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.11879</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">10.947327</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">27.612671</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ProductWithAN534910.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">3.543006</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class VarieraFlatwareTrayWide -->
+	<owl:Class rdf:about="&knowrob;VarieraFlatwareTrayWide">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">31.287453</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">40.831406</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">5.265423</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/VarieraFlatwareTrayWide.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">1.404249</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class DinnerFork -->
+	<owl:Class rdf:about="&knowrob;DinnerFork">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.474266</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.776627</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.280037</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/DinnerFork.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.123386</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PeelingKnife -->
+	<owl:Class rdf:about="&knowrob;PeelingKnife">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.131302</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">19.289616</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.448048</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PeelingKnife.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.112001</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class CorkScrew -->
+	<owl:Class rdf:about="&knowrob;CorkScrew">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.693558</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.953131</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">2.046318</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/CorkScrew.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.109287</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PizzaCutter -->
+	<owl:Class rdf:about="&knowrob;PizzaCutter">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.219742</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">21.384235</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1.934486</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PizzaCutter.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.11183</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BluePlasticBowl -->
+	<owl:Class rdf:about="&knowrob;BluePlasticBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">36.680984</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">36.105103</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">8.934708</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BluePlasticBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.583525</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class MPBowl -->
+	<owl:Class rdf:about="&knowrob;MPBowl">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.242432</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">22.240662</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">7.900726</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/MPBowl.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.28821</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class BreadBoxDoor -->
+	<owl:Class rdf:about="&knowrob;BreadBoxDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">14.497589</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">33.478424</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">13.79129</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/BreadBoxDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.501999</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class LightIndividual -->
+	<owl:Class rdf:about="&knowrob;LightIndividual"/>
+
+	<!-- Class PKLightbox1 -->
+	<owl:Class rdf:about="&knowrob;PKLightbox1">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">866.670898</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">714.768188</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">412.546814</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKLightbox1.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKLightbox2 -->
+	<owl:Class rdf:about="&knowrob;PKLightbox2">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1015.327637</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">856.101318</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">483.309387</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKLightbox2.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKSkydome -->
+	<owl:Class rdf:about="&knowrob;PKSkydome">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9820.970703</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9820.972656</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9820.969727</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKSkydome.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class AtmosphericFog -->
+	<owl:Class rdf:about="&knowrob;AtmosphericFog"/>
+
+	<!-- Class PKLightbox3 -->
+	<owl:Class rdf:about="&knowrob;PKLightbox3">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">1100.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">20.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">250.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKLightbox3.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class DiningChair -->
+	<owl:Class rdf:about="&knowrob;DiningChair">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">51.603088</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">49.270844</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">108.618729</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/DiningChair.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">15.456908</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class DiningTable -->
+	<owl:Class rdf:about="&knowrob;DiningTable">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">82.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">110.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">77.132843</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/DiningTable.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">27.370241</knowrob:mass>
+	</owl:Class>
+
+	<!-- Semantic Map GttFys24Hbn -->
+	<owl:NamedIndividual rdf:about="&log;GttFys24Hbn">
+		<rdf:type rdf:resource="&knowrob;SemanticEnvironmentMap"/>
+		<knowrob:mapDescription rdf:datatype="&xsd;string">PK kitchen with loaded dishwasher after clean cycle.</knowrob:mapDescription>
+		<knowrob:levelName rdf:datatype="&xsd;string">CS_PKKitchen</knowrob:levelName>
+	</owl:NamedIndividual>
+
+
+	<!-- Individual PKDrawer -->
+	<owl:NamedIndividual rdf:about="&log;dgw8m90FnkuHUnOaFpBe2A">
+		<rdf:type rdf:resource="&knowrob;PKDrawer"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;CO5M3PlwMUawBEJ7HfhJag"/>
+		<knowrob:child rdf:resource="&log;hABYvYsiG0OQIs8IFNskDw"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
+		<knowrob:maskColor rdf:datatype="&xsd;string">5FDB00FF</knowrob:maskColor>
+		<knowrob:pose rdf:resource="&log;1WmVH1fr7kK7EIyMrgwNEQ"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Articulated; SemLogColl;ExtX,37.750141;ExtY,28.403196;ExtZ,20.150005;LocX,0.0;LocY,0.0;LocZ,0.0;QuatW,0.707109;QuatX,0.0;QuatY,0.0;QuatZ,0.707105; SemLog;Class,PKDrawer;Id,dgw8m90FnkuHUnOaFpBe2A;VisMask,5FDB00FF;VisualMask,DD0D01FF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;1WmVH1fr7kK7EIyMrgwNEQ">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">-0.000000 0.000000 -0.707105 0.707108</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-49.658432 -63.257744 67.706619</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;KQnEMKLLakaAtHyZPRrucg">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;auEKp48N5kWpIe5jqccKGA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,KQnEMKLLakaAtHyZPRrucg;VisualMask,7BAFC1FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;auEKp48N5kWpIe5jqccKGA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-160.000000 -246.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;COW9wiTWKU-0tqb0CRV8NA">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;XNiwkCE5qUyismeX8Cview"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,COW9wiTWKU-0tqb0CRV8NA;VisualMask,D22BE1FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;XNiwkCE5qUyismeX8Cview">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-150.000000 -260.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;SLdxs_XpxUerxojJlGH0Wg">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;EXwMm7ekt0a128qSqzb21A"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,SLdxs_XpxUerxojJlGH0Wg;VisualMask,4CCCF5FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;EXwMm7ekt0a128qSqzb21A">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-170.000000 -275.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;n_Ie4zszzUCSpWUDl_VViA">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;iGw4rxm4MEmZLLVlv2IY1g"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,n_Ie4zszzUCSpWUDl_VViA;Class,Cup;VisualMask,6ADE94FF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;iGw4rxm4MEmZLLVlv2IY1g">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-175.000000 -260.000000 75.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+
+	<!-- Class PKDishWasherInterior -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherInterior">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.968262</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">57.026978</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">87.83078</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherInterior.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">19.243956</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherDoor -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.457397</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.85495</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">69.925873</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.744431</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKFridgeInterior -->
+	<owl:Class rdf:about="&knowrob;PKFridgeInterior">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">60.088272</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">54.019989</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">185.200012</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKFridgeInterior.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">41.164333</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherLowerHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherLowerHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">50.436188</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">51.262741</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">26.192314</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherLowerHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.454291</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherUpperHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherUpperHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">49.607666</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">47.726868</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.601746</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherUpperHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.763135</knowrob:mass>
+	</owl:Class>
+
+	<!-- Individual PKDishWasherDoor -->
+	<owl:NamedIndividual rdf:about="&log;ys6UK2Uy8k2YbsE_z0EJ3w">
+		<rdf:type rdf:resource="&knowrob;PKDishWasherDoor"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;LgWgYOHiMU6cgk2RODMzjw"/>
+		<knowrob:child rdf:resource="&log;9WF1LTsS702qTT6fl4-udA"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
+		<knowrob:maskColor rdf:datatype="&xsd;string">000000FF</knowrob:maskColor>
+		<knowrob:pose rdf:resource="&log;4KeyoCFaHECqpeHS62pyhA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Articulated; SemLog;Class,PKDishWasherDoor;Id,ys6UK2Uy8k2YbsE_z0EJ3w;VisMask,000000FF;VisualMask,F535B7FF; SemLogColl;ExtX,29.978691;ExtY,2.677473;ExtZ,35.212933;LocX,0.0;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;4KeyoCFaHECqpeHS62pyhA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-173.350067 -237.000641 52.356094</knowrob:translation>
+	</owl:NamedIndividual>
+
+</rdf:RDF>
