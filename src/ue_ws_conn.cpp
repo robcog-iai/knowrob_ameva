@@ -2,9 +2,9 @@
 #include <SWI-cpp.h>
 
 // Start websocket server on port 8080
-PREDICATE(ue_start_srv, 1)
+PREDICATE(ue_start_srv, 0)
 { 
-	KRWSServer::getInstance()->listen((int) A1);
+	KRWSServer::getInstance()->listen(8888);
 	return TRUE;
 }
 

@@ -1,6 +1,6 @@
 :- module(am_tasks,   
     [
-        am_get_drawer_stack_max/14,
+        am_get_drawer_stack_max/15,
         am_stack_in_drawer/10
     ]).
 :- use_foreign_library('libknowrob_ameva.so').
@@ -15,24 +15,24 @@ am_stack_in_drawer(Client, Map, Task, Episode, OjectToStackClass, ObjNum, Drawer
     ue_start_logging(Client, Task, Episode),
     am_load_semantic_map(Map, MapInst),
     sleep(2),
-    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushX, PushY, PushZ, 10),
+    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushX, PushY, PushZ),
     sleep(10),
     ue_stop_logging(Client),
     ue_get_episode_data(Client,Task, Episode).
 
 
-am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ) :-
+am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, BatchSize) :-
     am_load_semantic_map(Map, MapInst),
     am_get_level_name(MapInst,LevelName),
 
     instance_of(DrawerInst, DrawerClass),
 
     am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum),
-    am_get_max_batch_size(BatchSize),
     
     am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, [], AllEpNames),   
     am_create_stack_episode_params(MaxNum, AllEpParams),
-    maplist(am_check_stack_episode, AllEpNames, AllEpParams, Results),
+    am_build_param_list(DrawerInst, MaxNum, DrawerInsts),
+    maplist(am_check_stack_episode, AllEpNames, AllEpParams, DrawerInsts, Results),
     max_list(Results, MaxNumToStack).
 
 am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
@@ -68,8 +68,7 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         am_build_param_list(PushX, EpisodeNum, PushXs),
         am_build_param_list(PushY, EpisodeNum, PushYs),
         am_build_param_list(PushZ, EpisodeNum, PushZs),
-        am_build_param_list(Duration, EpisodeNum, Durations),
-        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs, Durations),
+        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs),
         ue_wait_simulation(Duration),
         
         maplist(ue_stop_logging, UEClients),
@@ -92,11 +91,10 @@ am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum) :-
     MaxNum is floor(Factor).
 
 % stack cups on the drawer
-am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, ObjClass, ObjNum, PushX, PushY, PushZ, SimTime) :-
+am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, ObjClass, ObjNum, PushX, PushY, PushZ) :-
     am_get_individual_list(ObjClass, MapInst, ObjList),
     \+am_stack_up_on(UEClient, MapInst, DrawerInst, ObjList, 0, ObjNum),
     am_get_id(DrawerInst, DrawerId),
-    ue_start_simulation(UEClient, [DrawerId], SimTime),
     ue_apply_force_to(UEClient, DrawerId, PushX, PushY, PushZ).
 
 % stack a list of objects on top of a base objects 
@@ -118,10 +116,9 @@ am_stack_up_on(UEClient, MapInst, Base, ObjList, Index, Count) :-
     am_stack_up_on(UEClient, MapInst, Base, ObjList, N, Count).
 
 %check if stack episode work
-am_check_stack_episode(EpName, EpParam, Result) :-
+am_check_stack_episode(EpName, EpParam, DrawerInst, Result) :-
     am_load_episode(EpName, EpInst),
     EventType = 'http://knowrob.org/kb/knowrob.owl#TouchingSituation',
-    DrawerInst = 'http://knowrob.org/kb/ameva_log.owl#zVBHGrf9n0qEVqc8aDbF-w',
     findall(EventInst, 
         (
             am_occurs(EpInst, EventInst, EventType),
@@ -166,6 +163,3 @@ ag_wait_close_clients :-
 
 am_get_simulation_time(Duration) :-
     Duration is 10.
-
-am_get_max_batch_size(BatchSize)  :-
-    BatchSize is 2.
