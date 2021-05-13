@@ -33,7 +33,7 @@ PREDICATE(ag_create_clients, 3)
 			url.append(g_gs_launcher_addr);
 			url.append("/game-server");
 
-			std::string body = "{ \"KRServerPort\" : 8080, \"KRProtocol\" : \"kr_websocket\", \"LevelName\" : \"" + level_name + "\"}";
+			std::string body = "{ \"KRServerPort\" : 8888, \"KRProtocol\" : \"kr_websocket\", \"LevelName\" : \"" + level_name + "\"}";
 
 			curlpp::Cleanup cleanup;
 			curlpp::Easy request;

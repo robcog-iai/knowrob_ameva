@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF[
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY knowrob "http://knowrob.org/kb/knowrob.owl#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY log "http://knowrob.org/kb/ameva_log.owl#">
+]>
+
+<rdf:RDF xmlns="http://knowrob.org/kb/ameva_log.owl#"
+	 xml:base="http://knowrob.org/kb/ameva_log.owl#"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:log="http://knowrob.org/kb/ameva_log.owl#">
+
+	<!-- Ontologies: -->
+	<owl:Ontology rdf:about="http://knowrob.org/kb/ameva_log.owl">
+		<owl:imports rdf:resource="package://knowrob/owl/knowrob.owl"/>
+	</owl:Ontology>
+
+	<!-- Property Definitions -->
+	<owl:ObjectProperty rdf:about="&knowrob;describedInMap"/>
+	<owl:ObjectProperty rdf:about="&knowrob;pathToCadModel"/>
+	<owl:ObjectProperty rdf:about="&knowrob;overlapEvents"/>
+	<owl:ObjectProperty rdf:about="&knowrob;mobility"/>
+	<owl:ObjectProperty rdf:about="&knowrob;levelName"/>
+	<owl:ObjectProperty rdf:about="&knowrob;tagsData"/>
+	<owl:ObjectProperty rdf:about="&knowrob;gravity"/>
+	<owl:ObjectProperty rdf:about="&knowrob;mapDescription"/>
+
+	<!-- Datatype Definitions -->
+	<owl:DatatypeProperty rdf:about="&knowrob;quaternion"/>
+	<owl:DatatypeProperty rdf:about="&knowrob;translation"/>
+
+	<!-- Class Definitions -->
+	<owl:Class rdf:about="&knowrob;SemanticEnvironmentMap"/>
+	<owl:Class rdf:about="&knowrob;Pose"/>
+
+	<!-- Class PKDrawer -->
+	<owl:Class rdf:about="&knowrob;PKDrawer">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">75.0</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">56.30603</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">39.800011</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDrawer.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.0</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class Cup -->
+	<owl:Class rdf:about="&knowrob;Cup">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">12.657532</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.638947</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">9.073944</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/Cup.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">0.868393</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherDoor -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherDoor">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">59.457397</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">4.85495</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">69.925873</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherDoor.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.744431</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherLowerHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherLowerHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">50.436188</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">51.262741</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">26.192314</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherLowerHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">4.454291</knowrob:mass>
+	</owl:Class>
+
+	<!-- Class PKDishWasherUpperHolder -->
+	<owl:Class rdf:about="&knowrob;PKDishWasherUpperHolder">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;depthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">49.607666</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;widthOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">47.726868</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
+				<owl:hasValue rdf:datatype="&xsd;float">15.601746</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/PKDishWasherUpperHolder.dae</knowrob:pathToCadModel>
+		<knowrob:mass rdf:datatype="&xsd;float">5.763135</knowrob:mass>
+	</owl:Class>
+	
+	<!-- Semantic Map GttFys24Hbn -->
+	<owl:NamedIndividual rdf:about="&log;GttFys24Hbn">
+		<rdf:type rdf:resource="&knowrob;SemanticEnvironmentMap"/>
+		<knowrob:mapDescription rdf:datatype="&xsd;string">PK kitchen with loaded dishwasher after clean cycle.</knowrob:mapDescription>
+		<knowrob:levelName rdf:datatype="&xsd;string">CS_PKKitchen</knowrob:levelName>
+	</owl:NamedIndividual>
+
+	<!-- Individual PKDrawer -->
+	<owl:NamedIndividual rdf:about="&log;dgw8m90FnkuHUnOaFpBe2A">
+		<rdf:type rdf:resource="&knowrob;PKDrawer"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;CO5M3PlwMUawBEJ7HfhJag"/>
+		<knowrob:child rdf:resource="&log;hABYvYsiG0OQIs8IFNskDw"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
+		<knowrob:maskColor rdf:datatype="&xsd;string">5FDB00FF</knowrob:maskColor>
+		<knowrob:pose rdf:resource="&log;1WmVH1fr7kK7EIyMrgwNEQ"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Articulated; SemLogColl;ExtX,37.750141;ExtY,28.403196;ExtZ,20.150005;LocX,0.0;LocY,0.0;LocZ,0.0;QuatW,0.707109;QuatX,0.0;QuatY,0.0;QuatZ,0.707105; SemLog;Class,PKDrawer;Id,dgw8m90FnkuHUnOaFpBe2A;VisMask,5FDB00FF;VisualMask,DD0D01FF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;1WmVH1fr7kK7EIyMrgwNEQ">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">-0.000000 0.000000 -0.707105 0.707108</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-49.658432 -63.257744 67.706619</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;KQnEMKLLakaAtHyZPRrucg">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;auEKp48N5kWpIe5jqccKGA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,KQnEMKLLakaAtHyZPRrucg;VisualMask,7BAFC1FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;auEKp48N5kWpIe5jqccKGA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-160.000000 -246.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;COW9wiTWKU-0tqb0CRV8NA">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;XNiwkCE5qUyismeX8Cview"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,COW9wiTWKU-0tqb0CRV8NA;VisualMask,D22BE1FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;XNiwkCE5qUyismeX8Cview">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-150.000000 -260.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;SLdxs_XpxUerxojJlGH0Wg">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;EXwMm7ekt0a128qSqzb21A"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Dynamic; SemLog;Class,Cup;Id,SLdxs_XpxUerxojJlGH0Wg;VisualMask,4CCCF5FF; SemLogColl;ExtX,6.578767;ExtY,5.069478;ExtZ,4.786973;LocX,1.509293;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;EXwMm7ekt0a128qSqzb21A">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-170.000000 -275.000000 80.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual Cup -->
+	<owl:NamedIndividual rdf:about="&log;n_Ie4zszzUCSpWUDl_VViA">
+		<rdf:type rdf:resource="&knowrob;Cup"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;iGw4rxm4MEmZLLVlv2IY1g"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,n_Ie4zszzUCSpWUDl_VViA;Class,Cup;VisualMask,6ADE94FF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;iGw4rxm4MEmZLLVlv2IY1g">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-175.000000 -260.000000 75.000000</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual PKDishWasherDoor -->
+	<owl:NamedIndividual rdf:about="&log;ys6UK2Uy8k2YbsE_z0EJ3w">
+		<rdf:type rdf:resource="&knowrob;PKDishWasherDoor"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;LgWgYOHiMU6cgk2RODMzjw"/>
+		<knowrob:child rdf:resource="&log;9WF1LTsS702qTT6fl4-udA"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">true</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">false</knowrob:gravity>
+		<knowrob:maskColor rdf:datatype="&xsd;string">000000FF</knowrob:maskColor>
+		<knowrob:pose rdf:resource="&log;4KeyoCFaHECqpeHS62pyhA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">RoboWorld;ObjectType,Articulated; SemLog;Class,PKDishWasherDoor;Id,ys6UK2Uy8k2YbsE_z0EJ3w;VisMask,000000FF;VisualMask,F535B7FF; SemLogColl;ExtX,29.978691;ExtY,2.677473;ExtZ,35.212933;LocX,0.0;LocY,0.0;LocZ,0.0;QuatW,1.0;QuatX,0.0;QuatY,0.0;QuatZ,0.0;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;4KeyoCFaHECqpeHS62pyhA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 0.000000 0.000000 1.000000</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-173.350067 -237.000641 52.356094</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual PKDishWasherLowerHolder -->
+	<owl:NamedIndividual rdf:about="&log;mWSNVVYsTEy7Xqo-qnrriQ">
+		<rdf:type rdf:resource="&knowrob;PKDishWasherLowerHolder"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;hJRzddayqEGd8Vp9OTz5kQ"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;krbwbk32e0238mFhtXr8QA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,mWSNVVYsTEy7Xqo-qnrriQ;Class,PKDishWasherLowerHolder;VisualMask,5674EDFF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;krbwbk32e0238mFhtXr8QA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 -0.000000 0.707106 0.707108</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-173.601578 -264.370056 36.262745</knowrob:translation>
+	</owl:NamedIndividual>
+
+	<!-- Individual PKDishWasherUpperHolder -->
+	<owl:NamedIndividual rdf:about="&log;OYcKhdsnpkmy0uZX203YGA">
+		<rdf:type rdf:resource="&knowrob;PKDishWasherUpperHolder"/>
+		<knowrob:describedInMap rdf:resource="&log;GttFys24Hbn"/>
+		<knowrob:child rdf:resource="&log;W1klAPHCOkC7kK6CqO_1LQ"/>
+		<knowrob:mobility rdf:datatype="&xsd;string">dynamic</knowrob:mobility>
+		<knowrob:overlapEvents rdf:datatype="&xsd;boolean">false</knowrob:overlapEvents>
+		<knowrob:gravity rdf:datatype="&xsd;boolean">true</knowrob:gravity>
+		<knowrob:pose rdf:resource="&log;97oHXOzEr0CJjVqSXLPThA"/>
+		<knowrob:tagsData rdf:datatype="&xsd;string">SemLog;Id,OYcKhdsnpkmy0uZX203YGA;Class,PKDishWasherUpperHolder;VisualMask,2256C6FF;</knowrob:tagsData>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;97oHXOzEr0CJjVqSXLPThA">
+		<rdf:type rdf:resource="&knowrob;Pose"/>
+		<knowrob:quaternion rdf:datatype="&xsd;string">0.000000 -0.000000 0.707107 0.707106</knowrob:quaternion>
+		<knowrob:translation rdf:datatype="&xsd;string">-173.605560 -265.966858 63.470818</knowrob:translation>
+	</owl:NamedIndividual>
+</rdf:RDF>
