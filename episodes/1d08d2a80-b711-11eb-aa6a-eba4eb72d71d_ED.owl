@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF[
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY knowrob "http://knowrob.org/kb/knowrob.owl#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY log "http://knowrob.org/kb/ameva_log.owl#">
+]>
+
+<rdf:RDF xmlns="http://knowrob.org/kb/ameva_log.owl#"
+	 xml:base="http://knowrob.org/kb/ameva_log.owl#"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:log="http://knowrob.org/kb/ameva_log.owl#">
+
+	<!-- Ontologies: -->
+	<owl:Ontology rdf:about="http://knowrob.org/kb/ameva_log.owl">
+		<owl:imports rdf:resource="package://knowrob/owl/knowrob.owl"/>
+	</owl:Ontology>
+
+	<!-- Property Definitions -->
+	<owl:ObjectProperty rdf:about="&knowrob;taskContext"/>
+	<owl:ObjectProperty rdf:about="&knowrob;taskSuccess"/>
+	<owl:ObjectProperty rdf:about="&knowrob;startTime"/>
+	<owl:ObjectProperty rdf:about="&knowrob;endTime"/>
+	<owl:ObjectProperty rdf:about="&knowrob;experiment"/>
+	<owl:ObjectProperty rdf:about="&knowrob;inContact"/>
+	<owl:ObjectProperty rdf:about="&knowrob;performedBy"/>
+	<owl:ObjectProperty rdf:about="&knowrob;objectActedOn"/>
+	<owl:ObjectProperty rdf:about="&knowrob;deviceUsed"/>
+	<owl:ObjectProperty rdf:about="&knowrob;outputsCreated"/>
+	<owl:ObjectProperty rdf:about="&knowrob;isSupported"/>
+	<owl:ObjectProperty rdf:about="&knowrob;isSupporting"/>
+	<owl:ObjectProperty rdf:about="&knowrob;inEpisode"/>
+	<owl:ObjectProperty rdf:about="&knowrob;subAction"/>
+	<owl:ObjectProperty rdf:about="&knowrob;performedInMap"/>
+
+	<!-- Property Definitions -->
+	<owl:DatatypeProperty rdf:about="&knowrob;quaternion"/>
+	<owl:DatatypeProperty rdf:about="&knowrob;translation"/>
+
+	<!-- Class Definitions -->
+	<owl:Class rdf:about="&knowrob;AmevaExperiment"/>
+	<owl:Class rdf:about="&knowrob;GraspingSomething"/>
+	<owl:Class rdf:about="&knowrob;SlicingSomething"/>
+	<owl:Class rdf:about="&knowrob;TouchingSituation"/>
+	<owl:Class rdf:about="&knowrob;SupportedBySituation"/>
+	<owl:Class rdf:about="&knowrob;ContainerManipulation"/>
+	<owl:Class rdf:about="&knowrob;PickUpSituation"/>
+	<owl:Class rdf:about="&knowrob;PreGraspSituation"/>
+	<owl:Class rdf:about="&knowrob;PutDownSituation"/>
+	<owl:Class rdf:about="&knowrob;ReachingForSomething"/>
+	<owl:Class rdf:about="&knowrob;SlidingSituation"/>
+	<owl:Class rdf:about="&knowrob;TransportingSituation"/>
+
+	<!-- Event Individuals -->
+	<owl:NamedIndividual rdf:about="&log;4cFKajVKTdnTKjGSvwqo8w">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;mnUXPrVIQG7i4fSp2cy18A">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;HsqU_p1NZw1soqClQMahfQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;K0xozd1GxbjZJ6Otc-4UDA">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;MANXC_RLHgWAIwO9CPJl2A">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;LHOwmoNBQ6USXaCRjq7zJw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;ov6Y89tE2aoXeWeh64dEsQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;LucoyFtGxEevd_1tVVspKg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;llL2oEhJUhAh9naxEnQ0RQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;LucoyFtGxEevd_1tVVspKg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;Sr4wro5LEh1GuIiVBy4FjA">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;QR_wzLmidUGq2FDo1xDrMA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;tkBgAQROTUwEf4GIT_TKBg">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;QR_wzLmidUGq2FDo1xDrMA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;4wmsdZ5KSq_4alWCqiDp1g">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_25.667191"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:inContact rdf:resource="&log;zVBHGrf9n0qEVqc8aDbF-w"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;T7W2KodB_kOPxmGjwQExJw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_25.700523"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;2Spo7VY_TUqrog7CO9eaYg"/>
+		<knowrob:isSupporting rdf:resource="&log;zVBHGrf9n0qEVqc8aDbF-w"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;Y-9SN8BNGzxFtUKNjpNxuQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:inContact rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;0GAUgvpI_i1kr4-qdlRQvA">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:inContact rdf:resource="&log;LucoyFtGxEevd_1tVVspKg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;2F5_r7pMu0FGHoWTPypmEA">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:isSupporting rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;ao_zqT1Frkt4CX-IcI7TNQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;nJTVAbp2DUmWmS8ztMxN9g"/>
+		<knowrob:isSupporting rdf:resource="&log;LucoyFtGxEevd_1tVVspKg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;TZMtlq9D5iDR8ueUhaR3UQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:inContact rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;oMzelfxFqgb5cXKZCV8-pQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:inContact rdf:resource="&log;QR_wzLmidUGq2FDo1xDrMA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;2M8gMwpEWZZQQN61Y5uvKw">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:inContact rdf:resource="&log;2XrXZWrsy0GjnaRuAyfaUA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;ff8iDX5I5LdwY_yJjam70A">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:isSupporting rdf:resource="&log;61nqVeqryECsFlyF5fjcBQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;NBpN5_JDkNYETXiKNxDGSQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:isSupporting rdf:resource="&log;QR_wzLmidUGq2FDo1xDrMA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;GrVAo-9H_ukTcFKDY7Uw1A">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;fIKvJq-fk0ifTO8dDy0TJw"/>
+		<knowrob:isSupporting rdf:resource="&log;2XrXZWrsy0GjnaRuAyfaUA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;feHeB25CMZTSlhW6qbgbnA">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:inContact rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;ywVFmQ9OEIkk1MiWCOMS-A">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:inContact rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;4t6kL09L4EpQSDaOEfCMFw">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:inContact rdf:resource="&log;EXp2gCvlkUyTrDVwHdTRHQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;yL3yiVxDproofLm2BY0d7Q">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:isSupporting rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;_fmHkylN8hZJ6cSupPYoXA">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:isSupporting rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;bSxRPApLMpcxrDqHfzUnDA">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;WRFZkMNUG0GRoge_74dYKg"/>
+		<knowrob:isSupporting rdf:resource="&log;EXp2gCvlkUyTrDVwHdTRHQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;qAs1nwxPYoIleve_hkjE8g">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:inContact rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;wQL0Pw1CWIFQH66W03afMw">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:inContact rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;w_HT_ztEce4H_-6OjBSkGw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:isSupporting rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;sw_YfZNMrzR3WtOJ1dQzmw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;sV7fhNgnREGRbCY70WL4EA"/>
+		<knowrob:isSupporting rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;x1BetCtMmgm5pWKWPjGSMA">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;ljXOAz_zfEed0YIH2KZouw"/>
+		<knowrob:inContact rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;7JE_jd9CHke48DiPz4EfUg">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;ljXOAz_zfEed0YIH2KZouw"/>
+		<knowrob:inContact rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;5kMdd1VBf8oXBfixiuMgSQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;ljXOAz_zfEed0YIH2KZouw"/>
+		<knowrob:isSupporting rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;3pRKBOZNT23Zel2rJQhlzw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;ljXOAz_zfEed0YIH2KZouw"/>
+		<knowrob:isSupporting rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;FfssM0VG0CYv0NKUupkULg">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:inContact rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;dlOk5LBFfFiIsRmVDF0yEQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;ZWVP8YYm_Uanooj730XWmw"/>
+		<knowrob:isSupporting rdf:resource="&log;97o09wxWok-YBuhMzSYcfQ"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;iNV9JB1P1bfMcaCoONGZpg">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;tSA0S0WYFUuHfxe3RY4Gmg"/>
+		<knowrob:inContact rdf:resource="&log;03lxEFtTP0iJeD7iH3sGkA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;ElkkIR1NzaI5p1y3SYbrfQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;tSA0S0WYFUuHfxe3RY4Gmg"/>
+		<knowrob:inContact rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;FKa8rgVCnlxFnOWPFijbHA">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;tSA0S0WYFUuHfxe3RY4Gmg"/>
+		<knowrob:isSupporting rdf:resource="&log;03lxEFtTP0iJeD7iH3sGkA"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;e_4aZ1dD7NvRf3SIZSM3jg">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;tSA0S0WYFUuHfxe3RY4Gmg"/>
+		<knowrob:isSupporting rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;srwOAmZEkkGCfv-S6NBwOQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;03lxEFtTP0iJeD7iH3sGkA"/>
+		<knowrob:inContact rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;3YtD-4xPtQICUPKQpP-Utg">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;03lxEFtTP0iJeD7iH3sGkA"/>
+		<knowrob:isSupporting rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;rFZbfgVHqvYbjpmNeUSKRQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;a3achkGLE0G6xZItGla8QQ"/>
+		<knowrob:inContact rdf:resource="&log;w_rrPBYZIEayGwoGIeWfXg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;440hXmBCNpV9IEmoDEW2UQ">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;a3achkGLE0G6xZItGla8QQ"/>
+		<knowrob:inContact rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;5ZJuH_JJ1OL1dVGbzbC2jQ">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;a3achkGLE0G6xZItGla8QQ"/>
+		<knowrob:isSupporting rdf:resource="&log;w_rrPBYZIEayGwoGIeWfXg"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;lDz9isdKbLq5YeaxTdEIRw">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;a3achkGLE0G6xZItGla8QQ"/>
+		<knowrob:isSupporting rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;JYWCVE5NN7Olo7Swgbs1Eg">
+		<rdf:type rdf:resource="&knowrob;TouchingSituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:inContact rdf:resource="&log;w_rrPBYZIEayGwoGIeWfXg"/>
+		<knowrob:inContact rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;Mz3t_E5DkxG_Og2e-M_dYg">
+		<rdf:type rdf:resource="&knowrob;SupportedBySituation"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.666344"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:isSupported rdf:resource="&log;w_rrPBYZIEayGwoGIeWfXg"/>
+		<knowrob:isSupporting rdf:resource="&log;Dkkpmdu-L0Ssc3R5YJTftw"/>
+		<knowrob:inEpisode rdf:resource="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d"/>
+	</owl:NamedIndividual>
+
+	<!-- Timepoint Individuals -->
+	<owl:NamedIndividual rdf:about="&log;timepoint_8.52741">
+		<rdf:type rdf:resource="&knowrob;Timepoint"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;timepoint_8.666344">
+		<rdf:type rdf:resource="&knowrob;Timepoint"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;timepoint_25.667191">
+		<rdf:type rdf:resource="&knowrob;Timepoint"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;timepoint_25.700523">
+		<rdf:type rdf:resource="&knowrob;Timepoint"/>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="&log;timepoint_46.417889">
+		<rdf:type rdf:resource="&knowrob;Timepoint"/>
+	</owl:NamedIndividual>
+
+	<!-- Experiment Individual 1d08d2a80-b711-11eb-aa6a-eba4eb72d71d -->
+	<owl:NamedIndividual rdf:about="&log;1d08d2a80-b711-11eb-aa6a-eba4eb72d71d">
+		<rdf:type rdf:resource="&knowrob;AmevaExperiment"/>
+		<knowrob:performedInMap rdf:resource="&log;DefaultSemanticMapId"/>
+		<knowrob:performedTask rdf:resource="&log;StackCupsInIAI"/>
+		<knowrob:startTime rdf:resource="&log;timepoint_8.52741"/>
+		<knowrob:endTime rdf:resource="&log;timepoint_46.417889"/>
+		<knowrob:subAction rdf:resource="&log;4cFKajVKTdnTKjGSvwqo8w"/>
+		<knowrob:subAction rdf:resource="&log;mnUXPrVIQG7i4fSp2cy18A"/>
+		<knowrob:subAction rdf:resource="&log;HsqU_p1NZw1soqClQMahfQ"/>
+		<knowrob:subAction rdf:resource="&log;K0xozd1GxbjZJ6Otc-4UDA"/>
+		<knowrob:subAction rdf:resource="&log;MANXC_RLHgWAIwO9CPJl2A"/>
+		<knowrob:subAction rdf:resource="&log;LHOwmoNBQ6USXaCRjq7zJw"/>
+		<knowrob:subAction rdf:resource="&log;ov6Y89tE2aoXeWeh64dEsQ"/>
+		<knowrob:subAction rdf:resource="&log;llL2oEhJUhAh9naxEnQ0RQ"/>
+		<knowrob:subAction rdf:resource="&log;Sr4wro5LEh1GuIiVBy4FjA"/>
+		<knowrob:subAction rdf:resource="&log;tkBgAQROTUwEf4GIT_TKBg"/>
+		<knowrob:subAction rdf:resource="&log;4wmsdZ5KSq_4alWCqiDp1g"/>
+		<knowrob:subAction rdf:resource="&log;T7W2KodB_kOPxmGjwQExJw"/>
+		<knowrob:subAction rdf:resource="&log;Y-9SN8BNGzxFtUKNjpNxuQ"/>
+		<knowrob:subAction rdf:resource="&log;0GAUgvpI_i1kr4-qdlRQvA"/>
+		<knowrob:subAction rdf:resource="&log;2F5_r7pMu0FGHoWTPypmEA"/>
+		<knowrob:subAction rdf:resource="&log;ao_zqT1Frkt4CX-IcI7TNQ"/>
+		<knowrob:subAction rdf:resource="&log;TZMtlq9D5iDR8ueUhaR3UQ"/>
+		<knowrob:subAction rdf:resource="&log;oMzelfxFqgb5cXKZCV8-pQ"/>
+		<knowrob:subAction rdf:resource="&log;2M8gMwpEWZZQQN61Y5uvKw"/>
+		<knowrob:subAction rdf:resource="&log;ff8iDX5I5LdwY_yJjam70A"/>
+		<knowrob:subAction rdf:resource="&log;NBpN5_JDkNYETXiKNxDGSQ"/>
+		<knowrob:subAction rdf:resource="&log;GrVAo-9H_ukTcFKDY7Uw1A"/>
+		<knowrob:subAction rdf:resource="&log;feHeB25CMZTSlhW6qbgbnA"/>
+		<knowrob:subAction rdf:resource="&log;ywVFmQ9OEIkk1MiWCOMS-A"/>
+		<knowrob:subAction rdf:resource="&log;4t6kL09L4EpQSDaOEfCMFw"/>
+		<knowrob:subAction rdf:resource="&log;yL3yiVxDproofLm2BY0d7Q"/>
+		<knowrob:subAction rdf:resource="&log;_fmHkylN8hZJ6cSupPYoXA"/>
+		<knowrob:subAction rdf:resource="&log;bSxRPApLMpcxrDqHfzUnDA"/>
+		<knowrob:subAction rdf:resource="&log;qAs1nwxPYoIleve_hkjE8g"/>
+		<knowrob:subAction rdf:resource="&log;wQL0Pw1CWIFQH66W03afMw"/>
+		<knowrob:subAction rdf:resource="&log;w_HT_ztEce4H_-6OjBSkGw"/>
+		<knowrob:subAction rdf:resource="&log;sw_YfZNMrzR3WtOJ1dQzmw"/>
+		<knowrob:subAction rdf:resource="&log;x1BetCtMmgm5pWKWPjGSMA"/>
+		<knowrob:subAction rdf:resource="&log;7JE_jd9CHke48DiPz4EfUg"/>
+		<knowrob:subAction rdf:resource="&log;5kMdd1VBf8oXBfixiuMgSQ"/>
+		<knowrob:subAction rdf:resource="&log;3pRKBOZNT23Zel2rJQhlzw"/>
+		<knowrob:subAction rdf:resource="&log;FfssM0VG0CYv0NKUupkULg"/>
+		<knowrob:subAction rdf:resource="&log;dlOk5LBFfFiIsRmVDF0yEQ"/>
+		<knowrob:subAction rdf:resource="&log;iNV9JB1P1bfMcaCoONGZpg"/>
+		<knowrob:subAction rdf:resource="&log;ElkkIR1NzaI5p1y3SYbrfQ"/>
+		<knowrob:subAction rdf:resource="&log;FKa8rgVCnlxFnOWPFijbHA"/>
+		<knowrob:subAction rdf:resource="&log;e_4aZ1dD7NvRf3SIZSM3jg"/>
+		<knowrob:subAction rdf:resource="&log;srwOAmZEkkGCfv-S6NBwOQ"/>
+		<knowrob:subAction rdf:resource="&log;3YtD-4xPtQICUPKQpP-Utg"/>
+		<knowrob:subAction rdf:resource="&log;rFZbfgVHqvYbjpmNeUSKRQ"/>
+		<knowrob:subAction rdf:resource="&log;440hXmBCNpV9IEmoDEW2UQ"/>
+		<knowrob:subAction rdf:resource="&log;5ZJuH_JJ1OL1dVGbzbC2jQ"/>
+		<knowrob:subAction rdf:resource="&log;lDz9isdKbLq5YeaxTdEIRw"/>
+		<knowrob:subAction rdf:resource="&log;JYWCVE5NN7Olo7Swgbs1Eg"/>
+		<knowrob:subAction rdf:resource="&log;Mz3t_E5DkxG_Og2e-M_dYg"/>
+	</owl:NamedIndividual>
+</rdf:RDF>
