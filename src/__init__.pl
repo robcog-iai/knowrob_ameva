@@ -63,8 +63,10 @@ am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst,
 
     instance_of(DrawerInst, DrawerClass),
 
-    am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum),
-    
+    am_get_drawer_capacity(DrawerClass, OjectToStackClass, Capacity),
+    am_get_individual_num(OjectToStackClass, MapInst, TotalObjNum),
+    (Capacity > TotalObjNum -> MaxNum is TotalObjNum; MaxNum is Capacity),
+
     am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, [], AllEpNames),   
     am_create_stack_episode_params(MaxNum, AllEpParams),
     am_build_param_list(DrawerInst, MaxNum, DrawerInsts),
@@ -169,6 +171,7 @@ am_stack_up_on(UEClient, MapInst, Base, BaseOffsetX, BaseOffsetY, BaseOffsetZ, O
     am_get_height(ObjClass, ObjHeight),
     NewZ is NewBaseZ - 0.2 * BaseHeight + 1.1 * ObjHeight * Index,
     am_get_id(Obj, ObjId),
+    writeln(Obj),
     ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0, 1),
     sleep(1),
     ue_start_simulation(UEClient, [ObjId], -1),
@@ -236,7 +239,7 @@ ue_wait_simulation(Duration) :-
     sleep(SleepTime).
 
 ag_wait_close_clients :-
-    sleep(50).
+    sleep(80).
 
 am_get_simulation_time(Duration) :-
     Duration is 10.

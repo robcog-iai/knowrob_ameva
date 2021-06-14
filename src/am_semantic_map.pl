@@ -95,7 +95,7 @@ am_get_individual_list(Class, MapInst, IndiList) :-
 % am_get_individual_num(+Class, +MapInst, -Num)
 %
 am_get_individual_num(Class, MapInst, Num) :-
-    get_individual_list_by_class(Class, MapInst, IndiList),
+    am_get_individual_list(Class, MapInst, IndiList),
     length(IndiList, Num).
 
 % goad the semantic map and return instance of map
