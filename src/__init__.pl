@@ -1,7 +1,7 @@
 :- module(am_tasks,   
     [
-        am_get_drawer_stack_max/15,
-        am_stack_in_drawer/10
+        am_get_drawer_stack_max/18,
+        am_stack_in_drawer/13
     ]).
 :- use_foreign_library('libknowrob_ameva.so').
 :- use_module('./am_semantic_map.pl').
@@ -11,7 +11,7 @@
 %%%%%   Stack cups in the drawer in parallel      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% am_stack_in_drawer(+Client, +Map, +Task, +Episode, +OjectToStackClass, +ObjNum, +DrawerInst, +PushX, +PushY, +PushZ)
+% am_stack_in_drawer(+Client, +Map, +Task, +Episode, +OjectToStackClass, +ObjNum, +DrawerInst, +PushX, +PushY, +PushZ, +DrawerOffsetX, +DrawerOffsetY, +DrawerOffsetZ)
 % Client - client id
 % Map - semantic map name
 % Task - define task name
@@ -23,16 +23,23 @@
 % PushY - push force vector y value; push the drawer
 % PushZ - push force vector z value; push the drawer
 %
-am_stack_in_drawer(Client, Map, Task, Episode, OjectToStackClass, ObjNum, DrawerInst, PushX, PushY, PushZ) :-
-    ue_start_logging(Client, Task, Episode),
+am_stack_in_drawer(Client, Map, Task, Episode, OjectToStackClass, ObjNum, DrawerInst, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ) :-
     am_load_semantic_map(Map, MapInst),
+    writeln(MapInst),
+    ue_start_logging(Client, Task, Episode),
     sleep(2),
-    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, OjectToStackClass, ObjNum, PushX, PushY, PushZ),
+    DrawerPullX is DrawerOffsetX * 0.5,
+    DrawerPullY is DrawerOffsetY * 0.5,
+    DrawerPullZ is DrawerOffsetZ * 0.5,
+    am_get_id(DrawerInst, DrawerId),
+    ue_apply_force_to(Client, DrawerId, DrawerPullX, DrawerPullY, DrawerPullZ),
+    sleep(10),
+    am_stack_obj_in_drawer_action(Client, MapInst, DrawerInst, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, OjectToStackClass, ObjNum, PushX, PushY, PushZ),
     sleep(10),
     ue_stop_logging(Client),
     ue_get_episode_data(Client,Task, Episode).
 
-% am_get_drawer_stack_max(-MaxNumToStack, +Task, +Map, +OjectToStackClass, +DrawerInst, +PushX, +PushY, +PushZ, +DishWasherDoor, +UpperRacket, +LowerRacket, +PullX, +PullY, +PullZ)
+% am_get_drawer_stack_max(-MaxNumToStack, +Task, +Map, +OjectToStackClass, +DrawerInst, +PushX, +PushY, +PushZ, +DrawerOffsetX, +DrawerOffsetY, +DrawerOffsetZ, +DishWasherDoor, +UpperRacket, +LowerRacket, +PullX, +PullY, +PullZ)
 % MaxNumToStack - return value; the maximum number of objects can be stacked 
 % Map - semantic map name
 % Task - define task name
@@ -50,7 +57,7 @@ am_stack_in_drawer(Client, Map, Task, Episode, OjectToStackClass, ObjNum, Drawer
 % PullZ - pull force vector z value; open the dishwasher
 % BatchSize - the number of simulation in parallel
 %
-am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, BatchSize) :-
+am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, BatchSize) :-
     am_load_semantic_map(Map, MapInst),
     am_get_level_name(MapInst,LevelName),
 
@@ -58,15 +65,15 @@ am_get_drawer_stack_max(MaxNumToStack, Task, Map, OjectToStackClass, DrawerInst,
 
     am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum),
     
-    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, [], AllEpNames),   
+    am_stack_in_batch(Task, LevelName, 1, MaxNum, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, [], AllEpNames),   
     am_create_stack_episode_params(MaxNum, AllEpParams),
     am_build_param_list(DrawerInst, MaxNum, DrawerInsts),
     maplist(am_check_stack_episode, AllEpNames, AllEpParams, DrawerInsts, Results),
     max_list(Results, MaxNumToStack).
 
-% am_stack_in_batch(+Task, +LevelName, +EpisodeIdx, +TotalEpisode, +BatchSize, +MapInst, +DrawerInst, +OjectToStackClass, +PushX, +PushY, +PushZ, +DishWasherDoor, +UpperRacket, +LowerRacket, +PullX, +PullY, +PullZ, +SubEpNames, +AllEpNames) 
+% am_stack_in_batch(+Task, +LevelName, +EpisodeIdx, +TotalEpisode, +BatchSize, +MapInst, +DrawerInst, +OjectToStackClass, +PushX, +PushY, +PushZ, +DrawerOffsetX, +DrawerOffsetY, +DrawerOffsetZ, +DishWasherDoor, +UpperRacket, +LowerRacket, +PullX, +PullY, +PullZ, +SubEpNames, +AllEpNames) 
 %
-am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
+am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
     (EpisodeIdx =< TotalEpisode -> Start is EpisodeIdx,
         (TotalEpisode - EpisodeIdx + 1 < BatchSize -> End is TotalEpisode; End is EpisodeIdx + BatchSize -1),
         EpisodeNum is End - Start + 1,
@@ -80,6 +87,17 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         % start logging
         maplist(ue_start_logging, UEClients, Tasks, EpNames),
 
+        % open the drawer
+        DrawerPullX is DrawerOffsetX * 0.5,
+        DrawerPullY is DrawerOffsetY * 0.5,
+        DrawerPullZ is DrawerOffsetZ * 0.5,
+        am_get_id(DrawerInst, DrawerId),
+        am_build_param_list(DrawerId, EpisodeNum, DrawerIds), 
+        am_build_param_list(DrawerPullX, EpisodeNum, DrawerPullXs), 
+        am_build_param_list(DrawerPullY, EpisodeNum, DrawerPullYs), 
+        am_build_param_list(DrawerPullZ, EpisodeNum, DrawerPullZs),
+        maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerPullXs, DrawerPullYs, DrawerPullZs),
+        sleep(10),
         % pull the dishwasher
         am_build_param_list(PullX, EpisodeNum, PullXs), 
         am_build_param_list(PullY, EpisodeNum, PullYs), 
@@ -99,7 +117,10 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         am_build_param_list(PushX, EpisodeNum, PushXs),
         am_build_param_list(PushY, EpisodeNum, PushYs),
         am_build_param_list(PushZ, EpisodeNum, PushZs),
-        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs),
+        am_build_param_list(DrawerOffsetX, EpisodeNum, DrawerOffsetXs),
+        am_build_param_list(DrawerOffsetY, EpisodeNum, DrawerOffsetYs),
+        am_build_param_list(DrawerOffsetZ, EpisodeNum, DrawerOffsetZs),
+        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, DrawerOffsetXs, DrawerOffsetYs, DrawerOffsetZs, OjectToStackClasses, EpParams, PushXs, PushYs, PushZs),
         ue_wait_simulation(Duration),
         
         maplist(ue_stop_logging, UEClients),
@@ -108,7 +129,7 @@ am_stack_in_batch(Task, LevelName, EpisodeIdx, TotalEpisode, BatchSize, MapInst,
         ag_wait_close_clients,
 
         NextIdx is End + 1,
-        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, NewSubEpNames, AllEpNames)
+        am_stack_in_batch(Task, LevelName, NextIdx, TotalEpisode, BatchSize, MapInst, DrawerInst, OjectToStackClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DishWasherDoor, UpperRacket, LowerRacket, PullX, PullY, PullZ, NewSubEpNames, AllEpNames)
         ; 
         AllEpNames = SubEpNames,
         true
@@ -124,33 +145,36 @@ am_get_drawer_capacity(DrawerClass, OjectToStackClass, MaxNum) :-
     MaxNum is floor(Factor).
 
 % stack cups on the drawer
-% am_stack_obj_in_drawer_action(+UEClient, +MapInst, +DrawerInst, +ObjClass, +ObjNum, +PushX, +PushY, +PushZ)
+% am_stack_obj_in_drawer_action(+UEClient, +MapInst, +DrawerInst, +DrawerOffsetX, +DrawerOffsetY, +DrawerOffsetZ, +ObjClass, +ObjNum, +PushX, +PushY, +PushZ)
 %
-am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, ObjClass, ObjNum, PushX, PushY, PushZ) :-
+am_stack_obj_in_drawer_action(UEClient, MapInst, DrawerInst, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, ObjClass, ObjNum, PushX, PushY, PushZ) :-
     am_get_individual_list(ObjClass, MapInst, ObjList),
-    \+am_stack_up_on(UEClient, MapInst, DrawerInst, ObjList, 0, ObjNum),
+    \+am_stack_up_on(UEClient, MapInst, DrawerInst, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, ObjList, 0, ObjNum),
     am_get_id(DrawerInst, DrawerId),
     ue_apply_force_to(UEClient, DrawerId, PushX, PushY, PushZ).
 
 % stack a list of objects on top of a base objects 
-% am_stack_up_on(+UEClient, +MapInst, +Base, +ObjList, +Index, +Count)
+% am_stack_up_on(+UEClient, +MapInst, +Base, +BaseOffsetX, +BaseOffsetY, +BaseOffsetZ, +ObjList, +Index, +Count)
 %
-am_stack_up_on(UEClient, MapInst, Base, ObjList, Index, Count) :-
+am_stack_up_on(UEClient, MapInst, Base, BaseOffsetX, BaseOffsetY, BaseOffsetZ, ObjList, Index, Count) :-
     Index < Count,
     nth0(Index, ObjList, Obj),
     am_get_pose(MapInst, Base, BaseX, BaseY, BaseZ, BaseQX, BaseQY, BaseQZ, BaseQW),
+    NewBaseX is BaseX + BaseOffsetX,
+    NewBaseY is BaseY + BaseOffsetY,
+    NewBaseZ is BaseZ + BaseOffsetZ,
     instance_of(Base, BaseClass),
     instance_of(Obj, ObjClass),
     am_get_height(BaseClass, BaseHeight),
     am_get_height(ObjClass, ObjHeight),
-    NewZ is BaseZ - 0.2 * BaseHeight + 1.1 * ObjHeight * Index,
+    NewZ is NewBaseZ - 0.2 * BaseHeight + 1.1 * ObjHeight * Index,
     am_get_id(Obj, ObjId),
-    ue_set_individual_pose(UEClient, ObjId, BaseX, BaseY, NewZ, 0, 0, 0, 1),
+    ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0, 1),
     sleep(1),
     ue_start_simulation(UEClient, [ObjId], -1),
     sleep(1),
     N is Index + 1,
-    am_stack_up_on(UEClient, MapInst, Base, ObjList, N, Count).
+    am_stack_up_on(UEClient, MapInst, Base, BaseOffsetX, BaseOffsetY, BaseOffsetZ, ObjList, N, Count).
 
 % check if stack episode work
 % am_check_stack_episode(+EpName, +EpParam, +DrawerInst, -Result)

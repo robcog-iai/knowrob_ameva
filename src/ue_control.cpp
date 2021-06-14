@@ -113,9 +113,9 @@ PREDICATE(ue_apply_force_to, 5)
 	ameva_event.set_functocall(ameva_event.ApplyForceTo);
 	sl_pb::ApplyForceToParams* apply_force_params = ameva_event.mutable_applyforcetoparams();
 	apply_force_params->set_id((char*)A2);
-	apply_force_params->set_forcex((int)A3);
-	apply_force_params->set_forcey((int)A4);
-	apply_force_params->set_forcez((int)A5);
+	apply_force_params->set_forcex((double)A3);
+	apply_force_params->set_forcey((double)A4);
+	apply_force_params->set_forcez((double)A5);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
