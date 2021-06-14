@@ -58,7 +58,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
-				<owl:hasValue rdf:datatype="&xsd;float">11.955257</owl:hasValue>
+				<owl:hasValue rdf:datatype="&xsd;float">1.4955257</owl:hasValue>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/EspressoSaucer.dae</knowrob:pathToCadModel>
@@ -82,7 +82,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
-				<owl:hasValue rdf:datatype="&xsd;float">15.551651</owl:hasValue>
+				<owl:hasValue rdf:datatype="&xsd;float">1.5551651</owl:hasValue>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate16cm.dae</knowrob:pathToCadModel>
@@ -106,7 +106,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
-				<owl:hasValue rdf:datatype="&xsd;float">24.562317</owl:hasValue>
+				<owl:hasValue rdf:datatype="&xsd;float">1.562317</owl:hasValue>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/ClassicPlate23cm.dae</knowrob:pathToCadModel>
