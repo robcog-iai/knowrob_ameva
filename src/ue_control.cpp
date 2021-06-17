@@ -20,6 +20,9 @@ PREDICATE(ue_start_simulation, 3)
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
+
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Start simulation.." << std::endl;
+
 	delete message;
     return TRUE;
 }
@@ -40,6 +43,9 @@ PREDICATE(ue_stop_simulation, 2)
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
+
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Stop simulation.." << std::endl;
+
 	delete message;
     return TRUE;
 }
@@ -55,6 +61,9 @@ PREDICATE(ue_start_logging, 3)
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
+
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Start logging.." << std::endl;
+
 	delete message;
     return TRUE;
 }
@@ -67,6 +76,9 @@ PREDICATE(ue_stop_logging, 1)
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
+
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Stop logging.." << std::endl;
+
 	delete message;
     return TRUE;
 }
@@ -80,7 +92,10 @@ PREDICATE(ue_get_episode_data, 3)
     recv_log_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
+
 	KRWSServer::getInstance()->sendMessage(message);
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Get episode data.." << std::endl;
+	
 	delete message;
     return TRUE;
 }
@@ -100,8 +115,14 @@ PREDICATE(ue_set_individual_pose, 9)
 	set_individual_pose_params->set_quaty((double)A8);
 	set_individual_pose_params->set_quatz((double)A9);
 	std::string proto_str = ameva_event.SerializeAsString();
-	KRMessage* message = new KRMessage((int) A1, proto_str);
+	KRMessage* message = new KRMessage((int) A1, proto_str);	
 	KRWSServer::getInstance()->sendMessage(message);
+
+	std::string pose_val = std::to_string((double)A3) 
+	+ "," + std::to_string((double)A4) + "," + std::to_string((double)A5) + "," + std::to_string((double)A6) 
+	+ "," + std::to_string((double)A7) + "," + std::to_string((double)A8) + "," + std::to_string((double)A9);
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Set individual pose.. (" << (char*)A2 << ")->[" << pose_val << "]" << std::endl;
+	
 	delete message;
     return TRUE;
 }
@@ -119,6 +140,10 @@ PREDICATE(ue_apply_force_to, 5)
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
 	KRWSServer::getInstance()->sendMessage(message);
+	
+	std::string force_val = std::to_string((double)A3) + "," + std::to_string((double)A4) + "," + std::to_string((double)A5);
+	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Apply force.. (" << (char*)A2 << ")->[" << force_val << "]" << std::endl;
+
 	delete message;
     return TRUE;
 }

@@ -117,7 +117,7 @@ void KRWSServer::parseResponse(int client)
 	{
 		recv_buff_ = response.text();
 		wait_for_recv_ = false;
-		std::cout << LOG_LABEL << "CLIENT-" << client << " : " << recv_buff_ << std::endl;
+		std::cout << LOG_RECV << "CLIENT-" << client << ": " << recv_buff_ << std::endl;
 		break;
 	}
 	case sl_pb::KRAmevaResponse::FileCreation:
@@ -140,7 +140,7 @@ void KRWSServer::parseResponse(int client)
 			recv_file_.close();
 			recv_buff_ = "Received file " + file_name_;
 			wait_for_recv_ = false;
-			std::cout << LOG_LABEL << "CLIENT-" << client << " : " << recv_buff_ << std::endl;
+			std::cout << LOG_RECV << "CLIENT-" << client << ": " << recv_buff_ << std::endl;
 		}
 		break;
 	}
@@ -157,7 +157,7 @@ KRWSServer* KRWSServer::getInstance()
 
 void KRWSServer::serverThread(int port) 
 {
-	std::cout << LOG_LABEL << "Starting thread.." << std::endl;
+	std::cout << LOG_LABEL << "Starting ws server thread.." << std::endl;
 
     struct lws_context_creation_info info;
 	struct lws_context *context;
@@ -178,7 +178,7 @@ void KRWSServer::serverThread(int port)
 		return;
 	}
 
-	std::cout << LOG_LABEL << "Thread running.." << std::endl;
+	std::cout << LOG_LABEL << "Ws server thread running.." << std::endl;
     while( n >= 0 && !is_finish_ )
 	{
 		// service andy pending websocket activity, non-blocking
@@ -188,23 +188,25 @@ void KRWSServer::serverThread(int port)
 		if (!ready_to_send_) continue;
 		if (client_ws_.find(send_buff_->client_id_) == client_ws_.end()) 
 		{
-			std::cout << LOG_LABEL << "Client " << send_buff_->client_id_ << " is not connected\n";
+			std::cout << LOG_LABEL << "Client " << send_buff_->client_id_ << " is not connected" << std::endl;
 			send_buff_ = NULL;
 			wait_for_recv_ = false;
-		} else {
+		}
+		else
+		{
 			lws_callback_on_writable(client_ws_.find(send_buff_->client_id_)->second);
 		}		
 		ready_to_send_ = false;	
 	}
 	lws_context_destroy( context );
-	std::cout << LOG_LABEL << "Thread finished.." << std::endl;
+	std::cout << LOG_LABEL << "Ws thread finished.." << std::endl;
 }
 
 void KRWSServer::listen(int port)
 {
     if (is_listen_)
     {
-        std::cout << LOG_LABEL << "Server is already listening" << std::endl;
+        std::cout << LOG_LABEL << "Ws server is already listening.." << std::endl;
         return;
     }
     //std::thread (serverThread, port).detach();
@@ -216,11 +218,11 @@ void KRWSServer::listen(int port)
 
 void KRWSServer::printClients()
 {
-    std::cout << LOG_LABEL << "Connected clients:\n";
+    std::cout << LOG_LABEL << "Ws connected clients: " << std::endl;
     std::map<int, struct lws *>::iterator itr;
     for (itr = client_ws_.begin(); itr != client_ws_.end(); ++itr) 
     { 
-        std::cout << "client - " << itr->first << "\n";
+        std::cout << "client - " << itr->first << std::endl;
     } 
 }
 
@@ -243,7 +245,7 @@ void KRWSServer::sendMessage(KRMessage* message)
 {
     if (!is_listen_)
     {
-        std::cout << LOG_LABEL << "Server is not started yet\n";
+        std::cout << LOG_LABEL << "Ws server is not yet started.." << std::endl;
 		return;
     }
 	send_buff_ = message;
@@ -256,7 +258,7 @@ void KRWSServer::setClientAddr(int client_id, std::string client_addr)
 {
 	if (!checkClient(client_id))
 	{
-		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		std::cout << LOG_LABEL << "Error: ws client " << client_id << " does not exist.." << std::endl;
 		return;
 	}
 
@@ -267,7 +269,7 @@ std::string KRWSServer::getClientAddr(int client_id)
 {
 	if (!checkClient(client_id))
 	{
-		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		std::cout << LOG_LABEL << "Error: ws client " << client_id << " does not exist.." << std::endl;
 		return "";
 	}
 
@@ -278,7 +280,7 @@ void KRWSServer::removeClientAddr(int client_id)
 {
 	if (!checkClient(client_id))
 	{
-		std::cout << LOG_LABEL << "error: client not exist" << std::endl;
+		std::cout << LOG_LABEL << "Error: es client " << client_id << " does not exist.." << std::endl;
 		return;
 	}
 	client_addrs_.erase(client_addrs_.find(client_id));
@@ -286,7 +288,7 @@ void KRWSServer::removeClientAddr(int client_id)
 
 void KRWSServer::shutdown()
 {
-	std::cout << LOG_LABEL << "shutdown" << std::endl;
+	std::cout << LOG_LABEL << "Shuting down ws server.. " << std::endl;
     unique_id_ = 0;
     client_ws_.clear();
     recv_buff_.empty();
@@ -301,6 +303,6 @@ void KRWSServer::shutdown()
 // Dtor
 KRWSServer::~KRWSServer()
 {
-	std::cout << LOG_LABEL << "Dtor" << std::endl;
+	std::cout << LOG_LABEL << "Ws server dtor.." << std::endl;
 	shutdown();
 }

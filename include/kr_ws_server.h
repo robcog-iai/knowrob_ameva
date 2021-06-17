@@ -2,7 +2,9 @@
 #define KR_WSSERVER_H
 
 #define WS_PROTOCOL "kr_websocket"
-#define LOG_LABEL "[AMEVA] "
+#define LOG_LABEL   "[AMEVA]"
+#define LOG_REQ     "[AMEVA][Req]"
+#define LOG_RECV    "[AMEVA][Recv]"
 
 #include <libwebsockets.h>
 #include <map>
