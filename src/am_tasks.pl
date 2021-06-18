@@ -202,9 +202,12 @@ am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerIns
 %         am_build_param_list(DrawerForceX, EpisodeNum, DrawerForceXs),
 %         am_build_param_list(DrawerForceY, EpisodeNum, DrawerForceYs),
 %         am_build_param_list(DrawerForceZ, EpisodeNum, DrawerForceZs),
-%         % am_build_param_list(-DrawerForceX, EpisodeNum, NegDrawerForceXs), 
-%         % am_build_param_list(-DrawerForceY, EpisodeNum, NegDrawerForceYs), 
-%         % am_build_param_list(-DrawerForceZ, EpisodeNum, NegDrawerForceZs),
+%         NegDrawerForceX is -1 * DrawerForceX,
+%         NegDrawerForceY is -1 * DrawerForceY,
+%         NegDrawerForceZ is -1 * DrawerForceZ,
+%         am_build_param_list(NegDrawerForceX, EpisodeNum, NegDrawerForceXs), 
+%         am_build_param_list(NegDrawerForceY, EpisodeNum, NegDrawerForceYs), 
+%         am_build_param_list(NegDrawerForceZ, EpisodeNum, NegDrawerForceZs),
 
 %         % open the drawer
 %         am_get_id(DrawerInst, DrawerId),
