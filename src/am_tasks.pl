@@ -74,69 +74,7 @@ am_get_drawer_stack_max(MaxStacked, Task, Map, StackObjClass, DrawerInst, Drawer
 
 % am_stack_in_batch(+Task, +LevelName, +EpIdx, +EpTotal, +BatchSize, +MapInst, +DrawerInst, +StackObjClass, +PushX, +PushY, +PushZ, +DrawerOffsetX, +DrawerOffsetY, +DrawerOffsetZ, +DWDoorInst, +DWUpperRackInst, +DWLowerRackInst, +PullX, +PullY, +PullZ, +SubEpNames, +AllEpNames) 
 %
-am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
-    (EpIdx =< EpTotal -> Start is EpIdx,
-        (EpTotal - EpIdx + 1 < BatchSize -> End is EpTotal; End is EpIdx + BatchSize -1),
-        EpisodeNum is End - Start + 1,
-        ag_create_clients(EpisodeNum, LevelName, UEClients),
-    
-        am_build_param_list(Task, EpisodeNum, Tasks),
-        am_create_stack_episode_params(Start, End, EpParams),
-        am_create_unique_episode_names(EpParams, EpNames),
-        append(SubEpNames, EpNames, NewSubEpNames),
-
-        % start logging
-        maplist(ue_start_logging, UEClients, Tasks, EpNames),
-
-        % open the drawer
-        DrawerPullX is DrawerOffsetX * 0.5,
-        DrawerPullY is DrawerOffsetY * 0.5,
-        DrawerPullZ is DrawerOffsetZ * 0.5,
-        am_get_id(DrawerInst, DrawerId),
-        am_build_param_list(DrawerId, EpisodeNum, DrawerIds), 
-        am_build_param_list(DrawerPullX, EpisodeNum, DrawerPullXs), 
-        am_build_param_list(DrawerPullY, EpisodeNum, DrawerPullYs), 
-        am_build_param_list(DrawerPullZ, EpisodeNum, DrawerPullZs),
-        maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerPullXs, DrawerPullYs, DrawerPullZs),
-        sleep(10),
-        % pull the dishwasher
-        am_build_param_list(PullX, EpisodeNum, PullXs), 
-        am_build_param_list(PullY, EpisodeNum, PullYs), 
-        am_build_param_list(PullZ, EpisodeNum, PullZs), 
-        am_build_param_list(DWLowerRackInst, EpisodeNum, DWLowerRackInsts),
-        am_build_param_list(DWUpperRackInst,EpisodeNum,DWUpperRackInsts),
-        am_build_param_list(DWDoorInst,EpisodeNum,DWDoorInsts),
-        maplist(am_pull_objct, UEClients, DWDoorInsts, PullXs, PullYs, PullZs),
-        maplist(am_pull_objct, UEClients, DWUpperRackInsts, PullXs, PullYs, PullZs),
-        maplist(am_pull_objct, UEClients, DWLowerRackInsts, PullXs, PullYs, PullZs),
-        
-        % stack objects in the drawer
-        am_get_simulation_time(Duration), 
-        am_build_param_list(MapInst, EpisodeNum, MapInsts),
-        am_build_param_list(DrawerInst, EpisodeNum, DrawerInsts),
-        am_build_param_list(StackObjClass, EpisodeNum, StackObjClasses),
-        am_build_param_list(PushX, EpisodeNum, PushXs),
-        am_build_param_list(PushY, EpisodeNum, PushYs),
-        am_build_param_list(PushZ, EpisodeNum, PushZs),
-        am_build_param_list(DrawerOffsetX, EpisodeNum, DrawerOffsetXs),
-        am_build_param_list(DrawerOffsetY, EpisodeNum, DrawerOffsetYs),
-        am_build_param_list(DrawerOffsetZ, EpisodeNum, DrawerOffsetZs),
-        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, DrawerOffsetXs, DrawerOffsetYs, DrawerOffsetZs, StackObjClasses, EpParams, PushXs, PushYs, PushZs),
-        ue_wait_simulation(Duration),
-        
-        maplist(ue_stop_logging, UEClients),
-        maplist(ue_get_episode_data,  UEClients, Tasks, EpNames),
-        ag_close_clients(UEClients),
-        ag_wait_close_clients,
-
-        NextIdx is End + 1,
-        am_stack_in_batch(Task, LevelName, NextIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, PullX, PullY, PullZ, NewSubEpNames, AllEpNames)
-        ; 
-        AllEpNames = SubEpNames,
-        true
-    ).
-
-% am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, DrawerForceX, DrawerForceY, DrawerForceZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, DWForceX, DWForceY, DWForceZ, SubEpNames, AllEpNames) :-
+% am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, PullX, PullY, PullZ, SubEpNames, AllEpNames) :-
 %     (EpIdx =< EpTotal -> Start is EpIdx,
 %         (EpTotal - EpIdx + 1 < BatchSize -> End is EpTotal; End is EpIdx + BatchSize -1),
 %         EpisodeNum is End - Start + 1,
@@ -147,116 +85,178 @@ am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerIns
 %         am_create_unique_episode_names(EpParams, EpNames),
 %         append(SubEpNames, EpNames, NewSubEpNames),
 
-%         % start ue loggers
+%         % start logging
 %         maplist(ue_start_logging, UEClients, Tasks, EpNames),
- 
-
-%         %%%
-%         % set dishwasher force mappings
-%         am_build_param_list(DWForceX, EpisodeNum, DWForceXs),
-%         am_build_param_list(DWForceY, EpisodeNum, DWForceYs), 
-%         am_build_param_list(DWForceZ, EpisodeNum, DWForceZs),
-%         SmallDWForceX is DWForceX * 0.1,
-%         SmallDWForceY is DWForceY * 0.1,
-%         SmallDWForceZ is DWForceZ * 0.1,
-%         am_build_param_list(SmallDWForceX, EpisodeNum, SmallDWForceXs),
-%         am_build_param_list(SmallDWForceY, EpisodeNum, SmallDWForceYs),
-%         am_build_param_list(SmallDWForceZ, EpisodeNum, SmallDWForceZs),
-        
-%         % open diswhasher door
-%         am_get_id(DWDoorInst, DWDoorId),
-%         am_build_param_list(DWDoorId, EpisodeNum, DWDoorIds),
-%         maplist(ue_apply_force_to, UEClients, DWDoorIds, DWForceXs, DWForceYs, DWForceZs),
-%         sleep(3),
-
-%         % pull upper rack
-%         am_get_id(DWUpperRackInst, DWUpperRackId),
-%         am_build_param_list(DWUpperRackId, EpisodeNum, DWUpperRackIds),
-%         maplist(ue_apply_force_to, UEClients, DWUpperRackIds, DWForceXs, DWForceYs, DWForceZs),
-%         sleep(3),
-
-%         % pull lower rack
-
-%         am_get_id(DWLowerRackInst, DWLowerRackId),
-%         am_build_param_list(DWLowerRackId, EpisodeNum, DWLowerRackIds),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-%         maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
-%         sleep(0.25),
-
-
-%         %%%
-%         % set drawer open/close force mappings
-%         am_build_param_list(DrawerForceX, EpisodeNum, DrawerForceXs),
-%         am_build_param_list(DrawerForceY, EpisodeNum, DrawerForceYs),
-%         am_build_param_list(DrawerForceZ, EpisodeNum, DrawerForceZs),
-%         NegDrawerForceX is -1 * DrawerForceX,
-%         NegDrawerForceY is -1 * DrawerForceY,
-%         NegDrawerForceZ is -1 * DrawerForceZ,
-%         am_build_param_list(NegDrawerForceX, EpisodeNum, NegDrawerForceXs), 
-%         am_build_param_list(NegDrawerForceY, EpisodeNum, NegDrawerForceYs), 
-%         am_build_param_list(NegDrawerForceZ, EpisodeNum, NegDrawerForceZs),
 
 %         % open the drawer
+%         DrawerPullX is DrawerOffsetX * 0.5,
+%         DrawerPullY is DrawerOffsetY * 0.5,
+%         DrawerPullZ is DrawerOffsetZ * 0.5,
 %         am_get_id(DrawerInst, DrawerId),
 %         am_build_param_list(DrawerId, EpisodeNum, DrawerIds), 
-%         maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerForceXs, DrawerForceYs, DrawerForceZs),
-%         sleep(3),
-
-
-%         %%%
-%         % set stack location offset mappings
-%         am_build_param_list(DrawerOffsetX, EpisodeNum, DrawerOffsetXs),
-%         am_build_param_list(DrawerOffsetY, EpisodeNum, DrawerOffsetYs),
-%         am_build_param_list(DrawerOffsetZ, EpisodeNum, DrawerOffsetZs),
-
-%         % set objects to stack mappings
+%         am_build_param_list(DrawerPullX, EpisodeNum, DrawerPullXs), 
+%         am_build_param_list(DrawerPullY, EpisodeNum, DrawerPullYs), 
+%         am_build_param_list(DrawerPullZ, EpisodeNum, DrawerPullZs),
+%         maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerPullXs, DrawerPullYs, DrawerPullZs),
+%         sleep(10),
+%         % pull the dishwasher
+%         am_build_param_list(PullX, EpisodeNum, PullXs), 
+%         am_build_param_list(PullY, EpisodeNum, PullYs), 
+%         am_build_param_list(PullZ, EpisodeNum, PullZs), 
+%         am_build_param_list(DWLowerRackInst, EpisodeNum, DWLowerRackInsts),
+%         am_build_param_list(DWUpperRackInst,EpisodeNum,DWUpperRackInsts),
+%         am_build_param_list(DWDoorInst,EpisodeNum,DWDoorInsts),
+%         maplist(am_pull_objct, UEClients, DWDoorInsts, PullXs, PullYs, PullZs),
+%         maplist(am_pull_objct, UEClients, DWUpperRackInsts, PullXs, PullYs, PullZs),
+%         maplist(am_pull_objct, UEClients, DWLowerRackInsts, PullXs, PullYs, PullZs),
+        
+%         % stack objects in the drawer
+%         am_get_simulation_time(Duration), 
 %         am_build_param_list(MapInst, EpisodeNum, MapInsts),
 %         am_build_param_list(DrawerInst, EpisodeNum, DrawerInsts),
 %         am_build_param_list(StackObjClass, EpisodeNum, StackObjClasses),
-
-%         % stack items and close the drawer
-%         maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, DrawerOffsetXs, DrawerOffsetYs, DrawerOffsetZs, StackObjClasses, EpParams, NegDrawerForceXs, NegDrawerForceYs, NegDrawerForceZs),
-%         sleep(3),
-
-
-%         %%%
-%         % re-open the drawer
-%         maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerForceXs, DrawerForceYs, DrawerForceZs),
-%         sleep(3),
-
-
-%         %%%
-%         % wait for the simulation to settle
-%         am_get_simulation_time(Duration), 
+%         am_build_param_list(PushX, EpisodeNum, PushXs),
+%         am_build_param_list(PushY, EpisodeNum, PushYs),
+%         am_build_param_list(PushZ, EpisodeNum, PushZs),
+%         am_build_param_list(DrawerOffsetX, EpisodeNum, DrawerOffsetXs),
+%         am_build_param_list(DrawerOffsetY, EpisodeNum, DrawerOffsetYs),
+%         am_build_param_list(DrawerOffsetZ, EpisodeNum, DrawerOffsetZs),
+%         maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, DrawerOffsetXs, DrawerOffsetYs, DrawerOffsetZs, StackObjClasses, EpParams, PushXs, PushYs, PushZs),
 %         ue_wait_simulation(Duration),
-
-
-%         % stop logger, get the data, close current clients
+        
 %         maplist(ue_stop_logging, UEClients),
 %         maplist(ue_get_episode_data,  UEClients, Tasks, EpNames),
 %         ag_close_clients(UEClients),
 %         ag_wait_close_clients,
 
-%         % continue with the next batch
 %         NextIdx is End + 1,
-%         am_stack_in_batch(Task, LevelName, NextIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, DrawerForceX, DrawerForceY, DrawerForceZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, DWForceX, DWForceY, DWForceZ, NewSubEpNames, AllEpNames)
+%         am_stack_in_batch(Task, LevelName, NextIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, PushX, PushY, PushZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, PullX, PullY, PullZ, NewSubEpNames, AllEpNames)
 %         ; 
 %         AllEpNames = SubEpNames,
 %         true
 %     ).
+
+am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, DrawerForceX, DrawerForceY, DrawerForceZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, DWForceX, DWForceY, DWForceZ, SubEpNames, AllEpNames) :-
+    (EpIdx =< EpTotal -> Start is EpIdx,
+        (EpTotal - EpIdx + 1 < BatchSize -> End is EpTotal; End is EpIdx + BatchSize -1),
+        EpisodeNum is End - Start + 1,
+        ag_create_clients(EpisodeNum, LevelName, UEClients),
+    
+        am_build_param_list(Task, EpisodeNum, Tasks),
+        am_create_stack_episode_params(Start, End, EpParams),
+        am_create_unique_episode_names(EpParams, EpNames),
+        append(SubEpNames, EpNames, NewSubEpNames),
+
+        % start ue loggers
+        maplist(ue_start_logging, UEClients, Tasks, EpNames),
+ 
+
+        %%%
+        % set dishwasher force mappings
+        am_build_param_list(DWForceX, EpisodeNum, DWForceXs),
+        am_build_param_list(DWForceY, EpisodeNum, DWForceYs), 
+        am_build_param_list(DWForceZ, EpisodeNum, DWForceZs),
+        SmallDWForceX is DWForceX * 0.1,
+        SmallDWForceY is DWForceY * 0.1,
+        SmallDWForceZ is DWForceZ * 0.1,
+        am_build_param_list(SmallDWForceX, EpisodeNum, SmallDWForceXs),
+        am_build_param_list(SmallDWForceY, EpisodeNum, SmallDWForceYs),
+        am_build_param_list(SmallDWForceZ, EpisodeNum, SmallDWForceZs),
+        
+        % open diswhasher door
+        am_get_id(DWDoorInst, DWDoorId),
+        am_build_param_list(DWDoorId, EpisodeNum, DWDoorIds),
+        maplist(ue_apply_force_to, UEClients, DWDoorIds, DWForceXs, DWForceYs, DWForceZs),
+        sleep(3),
+
+        % pull upper rack
+        am_get_id(DWUpperRackInst, DWUpperRackId),
+        am_build_param_list(DWUpperRackId, EpisodeNum, DWUpperRackIds),
+        maplist(ue_apply_force_to, UEClients, DWUpperRackIds, DWForceXs, DWForceYs, DWForceZs),
+        sleep(3),
+
+        % pull lower rack
+
+        am_get_id(DWLowerRackInst, DWLowerRackId),
+        am_build_param_list(DWLowerRackId, EpisodeNum, DWLowerRackIds),
+        maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        sleep(0.25),
+        maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+        % maplist(ue_apply_force_to, UEClients, DWLowerRackIds, SmallDWForceXs, SmallDWForceYs, SmallDWForceZs),
+        % sleep(0.25),
+
+
+        %%%
+        % set drawer open force mappings
+        am_build_param_list(DrawerForceX, EpisodeNum, DrawerForceXs),
+        am_build_param_list(DrawerForceY, EpisodeNum, DrawerForceYs),
+        am_build_param_list(DrawerForceZ, EpisodeNum, DrawerForceZs),
+        NegDrawerForceX is -1 * DrawerForceX,
+        NegDrawerForceY is -1 * DrawerForceY,
+        NegDrawerForceZ is -1 * DrawerForceZ,
+        am_build_param_list(NegDrawerForceX, EpisodeNum, NegDrawerForceXs), 
+        am_build_param_list(NegDrawerForceY, EpisodeNum, NegDrawerForceYs), 
+        am_build_param_list(NegDrawerForceZ, EpisodeNum, NegDrawerForceZs),
+
+        % open the drawer
+        am_get_id(DrawerInst, DrawerId),
+        am_build_param_list(DrawerId, EpisodeNum, DrawerIds), 
+        maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerForceXs, DrawerForceYs, DrawerForceZs),
+        sleep(3),
+
+
+        %%%
+        % set stack location offset mappings
+        am_build_param_list(DrawerOffsetX, EpisodeNum, DrawerOffsetXs),
+        am_build_param_list(DrawerOffsetY, EpisodeNum, DrawerOffsetYs),
+        am_build_param_list(DrawerOffsetZ, EpisodeNum, DrawerOffsetZs),
+
+        % set objects to stack mappings
+        am_build_param_list(MapInst, EpisodeNum, MapInsts),
+        am_build_param_list(DrawerInst, EpisodeNum, DrawerInsts),
+        am_build_param_list(StackObjClass, EpisodeNum, StackObjClasses),
+
+        % stack items and close the drawer
+        maplist(am_stack_obj_in_drawer_action, UEClients, MapInsts, DrawerInsts, DrawerOffsetXs, DrawerOffsetYs, DrawerOffsetZs, StackObjClasses, EpParams, NegDrawerForceXs, NegDrawerForceYs, NegDrawerForceZs),
+        sleep(3),
+
+
+        %%%
+        % re-open the drawer
+        maplist(ue_apply_force_to, UEClients, DrawerIds, DrawerForceXs, DrawerForceYs, DrawerForceZs),
+        sleep(3),
+
+
+        %%%
+        % wait for the simulation to settle
+        am_get_simulation_time(Duration), 
+        ue_wait_simulation(Duration),
+
+
+        % stop logger, get the data, close current clients
+        maplist(ue_stop_logging, UEClients),
+        maplist(ue_get_episode_data,  UEClients, Tasks, EpNames),
+        ag_close_clients(UEClients),
+        ag_wait_close_clients,
+
+        % continue with the next batch
+        NextIdx is End + 1,
+        am_stack_in_batch(Task, LevelName, NextIdx, EpTotal, BatchSize, MapInst, DrawerInst, StackObjClass, DrawerForceX, DrawerForceY, DrawerForceZ, DrawerOffsetX, DrawerOffsetY, DrawerOffsetZ, DWDoorInst, DWUpperRackInst, DWLowerRackInst, DWForceX, DWForceY, DWForceZ, NewSubEpNames, AllEpNames)
+        ; 
+        AllEpNames = SubEpNames,
+        true
+    ).
 
 % check how many cups can be stacked in the drawer
 % am_get_drawer_capacity(+DrawerClass, +StackObjClass, -MaxNum) 

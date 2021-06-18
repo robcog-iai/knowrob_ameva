@@ -92,8 +92,8 @@ PREDICATE(ue_get_episode_data, 3)
     recv_log_params->set_episodeid((char*)A3);
 	std::string proto_str = ameva_event.SerializeAsString();
 	KRMessage* message = new KRMessage((int) A1, proto_str);
-
 	KRWSServer::getInstance()->sendMessage(message);
+	
 	std::cout << LOG_REQ << " CLIENT-" << (int) A1 << ": Get episode data.." << std::endl;
 	
 	delete message;
