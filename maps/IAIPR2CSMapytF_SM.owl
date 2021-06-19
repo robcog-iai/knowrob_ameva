@@ -4921,7 +4921,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&knowrob;heightOfObject"/>
-				<owl:hasValue rdf:datatype="&xsd;float">5.723732</owl:hasValue>
+				<owl:hasValue rdf:datatype="&xsd;float">4.723732</owl:hasValue>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<knowrob:pathToCadModel rdf:datatype="&xsd;string">package://robcog/SmallBowl.dae</knowrob:pathToCadModel>
