@@ -117,6 +117,8 @@ watch -n 1 nvidia-smi
 
 ### build docker map
 
+* login first `docker login`, user robcog: https://hub.docker.com/u/robcog
+
 ```bash
 docker build -t robcog/cs_pr2dishwasher_fix . 
 docker push robcog/cs_pr2dishwasher_fix
