@@ -38,27 +38,41 @@ register_ros_package('knowrob_ameva'), ue_start_srv.
 # EspressoCup / DrawerForce / DishwasherForce
 
 ```bash
-am_semantic_map:am_get_drawer_stack_max(Num,'EC_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 13, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_LF_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 
-am_semantic_map:am_get_drawer_stack_max(Num,'EsprFix5','IAIPR2CSMapytG','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 13, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_LF','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_3','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_UD_LF','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'EC_128_UD','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoCup','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 ```
 
 ## SmallBowl
 
 ```bash
-am_semantic_map:am_get_drawer_stack_max(Num,'SB_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+am_semantic_map:am_get_drawer_stack_max(Num,'SB_128_LF_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 
-am_semantic_map:am_get_drawer_stack_max(Num,'SB_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 14, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 10, 0, 0, 1).
+am_semantic_map:am_get_drawer_stack_max(Num,'SB_128_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'SB_128_LF','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'SB_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#SmallBowl','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 ```
 
 ## EspressoSaucer
 
 ```bash
+am_semantic_map:am_get_drawer_stack_max(Num,'ES_128_LF_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'ES_128_SL','IAIPR2CSMapytG128SL','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+am_semantic_map:am_get_drawer_stack_max(Num,'ES_128_LF','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
 am_semantic_map:am_get_drawer_stack_max(Num,'ES_128_3','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
-
-am_semantic_map:am_get_drawer_stack_max(Num,'ES_3264','IAIPR2CSMapytG3264','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
-
-am_semantic_map:am_get_drawer_stack_max(Num,'ES_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#EspressoSaucer','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 ```
 
 ## ClassicPlate16cm
@@ -72,6 +86,9 @@ am_semantic_map:am_get_drawer_stack_max(Num,'CP16_128','IAIPR2CSMapytG128','http
 ## ClassicPlate23cm
 
 ```bash
+am_semantic_map:am_get_drawer_stack_max(Num,'CP23_128_LF','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#ClassicPlate23cm','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 25, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
+
+
 am_semantic_map:am_get_drawer_stack_max(Num,'CP23_128','IAIPR2CSMapytG128','http://knowrob.org/kb/knowrob.owl#ClassicPlate23cm','http://knowrob.org/kb/ameva_log.owl#5hJLcyxGBEaaac6EwzeRQQ', 15, 0, 0, 45, 0, 0, 'http://knowrob.org/kb/ameva_log.owl#eiueD8tubk-Sp7yA-iPlHg', 'http://knowrob.org/kb/ameva_log.owl#MXcLSBHNyUWQsTN847usYw', 'http://knowrob.org/kb/ameva_log.owl#_0Dwd6opXUyImm9_yY0uCw', 5, 0, 0, 1).
 ```
 
@@ -125,6 +142,11 @@ docker push robcog/cs_pr2dishwasher_fix
 
 docker build -t robcog/cs_pr2dishwasher_fix128 . 
 docker push robcog/cs_pr2dishwasher_fix128
+
+docker build -t robcog/cs_pr2dishwasher_fix128_sl . 
+docker push robcog/cs_pr2dishwasher_fix128_sl
+
+
 ```
 
 

@@ -207,9 +207,9 @@ am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerIns
         am_build_param_list(DrawerForceX, EpisodeNum, DrawerForceXs),
         am_build_param_list(DrawerForceY, EpisodeNum, DrawerForceYs),
         am_build_param_list(DrawerForceZ, EpisodeNum, DrawerForceZs),
-        NegDrawerForceX is -0.32 * DrawerForceX,
-        NegDrawerForceY is -0.32 * DrawerForceY,
-        NegDrawerForceZ is -0.32 * DrawerForceZ,
+        NegDrawerForceX is -0.35 * DrawerForceX,
+        NegDrawerForceY is -0.35 * DrawerForceY,
+        NegDrawerForceZ is -0.35 * DrawerForceZ,
         am_build_param_list(NegDrawerForceX, EpisodeNum, NegDrawerForceXs), 
         am_build_param_list(NegDrawerForceY, EpisodeNum, NegDrawerForceYs), 
         am_build_param_list(NegDrawerForceZ, EpisodeNum, NegDrawerForceZs),
@@ -247,17 +247,17 @@ am_stack_in_batch(Task, LevelName, EpIdx, EpTotal, BatchSize, MapInst, DrawerIns
         % wait for the simulation to settle
         %am_get_simulation_time(Duration), 
         %ue_wait_simulation(Duration),
-        sleep(12),
+        sleep(10),
 
 
         % stop logger, get the data, close current clients
         maplist(ue_stop_logging, UEClients),
-        sleep(3),
+        sleep(2),
         maplist(ue_get_episode_data,  UEClients, Tasks, EpNames),
-        sleep(3),
+        sleep(2),
         ag_close_clients(UEClients),
         %ag_wait_close_clients,
-        sleep(40),
+        sleep(30),
 
         % continue with the next batch
         NextIdx is End + 1,
@@ -303,7 +303,11 @@ am_stack_up_on(UEClient, MapInst, Base, BaseOffsetX, BaseOffsetY, BaseOffsetZ, O
     NewZ is NewBaseZ - 0.2 * BaseHeight + 1.01 * ObjHeight * Index,
     am_get_id(Obj, ObjId),
     writeln(Obj),
-    ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0, 1),
+    % ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0, 1),
+    % 90 def on Z axis
+    ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0.707, 0.707),
+    % upside down
+    %ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0.707, -0.707, 0, 0),
     sleep(1),
     ue_start_simulation(UEClient, [ObjId], -1),
     sleep(1),
