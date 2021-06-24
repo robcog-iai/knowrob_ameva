@@ -304,9 +304,9 @@ am_stack_up_on(UEClient, MapInst, Base, BaseOffsetX, BaseOffsetY, BaseOffsetZ, O
     am_get_id(Obj, ObjId),
     writeln(Obj),
     % ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0, 1),
-    % 90 def on Z axis
+    % 90 deg rotate on Z axis
     ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0, 0, 0.707, 0.707),
-    % upside down
+    % uside down and 90 deg rot on Z
     %ue_set_individual_pose(UEClient, ObjId, NewBaseX, NewBaseY, NewZ, 0.707, -0.707, 0, 0),
     sleep(1),
     ue_start_simulation(UEClient, [ObjId], -1),
