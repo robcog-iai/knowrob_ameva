@@ -1,17 +1,9 @@
 
 # knowrob_ameva
 
-## Install/Dependencies
-
-* todo
-
 ### 20.04
 
 * sudo apt install libcurlpp-dev
-
-### 18.04
-
-* todo
  
 ## Usage
 
