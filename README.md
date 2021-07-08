@@ -1,11 +1,9 @@
 
 # knowrob_ameva
 
-## Examples
-
 ![](documentation/GIF/pr2_sim_prospection.gif)
 
-![](Documentation/GIF/drawer_sim_prospection.gif)
+![](documentation/GIF/drawer_sim_prospection.gif)
 
 ### 18.04
 
