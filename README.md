@@ -1,7 +1,7 @@
 
 # knowrob_ameva
 
-![](documentation/GIF/pr2_sim_prospection.gif)
+![](documentation/GIF/dw_sim_prospection.gif)
 
 ![](documentation/GIF/drawer_sim_prospection.gif)
 
